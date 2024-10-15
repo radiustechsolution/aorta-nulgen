@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  outline: 0;
+  outline: none;
+}
+
+/* Hide scrollbar but allow scrolling */
+html,
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Proxima Nova Thin */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/Fontspring-DEMO-proximanova-thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Proxima Nova Thin Italic */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/Fontspring-DEMO-proximanova-thinitalic.otf")
+    format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Proxima Nova Light */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/Fontspring-DEMO-proximanova-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Proxima Nova Light Italic */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/Fontspring-DEMO-proximanova-lightitalic.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Proxima Nova Regular */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/Fontspring-DEMO-proximanova-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Proxima Nova Italic */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/Fontspring-DEMO-proximanova-italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Proxima Nova Semibold */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/Fontspring-DEMO-proximanova-semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Proxima Nova Semibold Italic */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/Fontspring-DEMO-proximanova-semibolditalic.otf")
+    format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Proxima Nova Bold */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/Fontspring-DEMO-proximanova-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Proxima Nova Bold Italic */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/Fontspring-DEMO-proximanova-bolditalic.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Proxima Nova Black */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/Fontspring-DEMO-proximanova-black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Proxima Nova Black Italic */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/Fontspring-DEMO-proximanova-blackitalic.otf")
+    format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+.square {
+  /* width: 200px; */
+  height: 200px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30px 100%, 0 85%);
+}
+
+.mid-shadow {
+  box-shadow:
+    0 0 6px rgba(0, 0, 0, 0.1),
+    0 0 3px rgba(0, 0, 0, 0.08);
+}
