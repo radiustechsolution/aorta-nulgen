@@ -165,6 +165,7 @@ export const NetworkComp = () => {
               <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-2">
                 {[1, 2, 3].map((_, i) => (
                   <div
+                    role="presentation"
                     key={i}
                     onClick={() => setCurrentSlide(i)}
                     className={`cursor-pointer w-2 h-2 mx-1 rounded-full ${
