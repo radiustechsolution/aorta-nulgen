@@ -64,6 +64,7 @@ export const NetworkComp = () => {
       <div className="border-t hidden border-b h-[70px] border-[#D8D9DC] lg:flex items-center justify-between">
         {ControlObject.map((v) => (
           <div
+            role="presentation"
             key={v.id}
             className={`w-full cursor-pointer ${
               active === v.id ? "bg-[#173A9E]" : "bg-transparent"
