@@ -253,6 +253,23 @@ export const NetworkComp = () => {
               </div>
             </div>
           </div>
+
+          {/* Fourth profile card */}
+          <div
+            className="w-full lg:hidden mid-shadow lg:w-[calc(50%-10px)] xl:w-[calc(25%-10px)] bg-cover bg-center px-3 pt-3 relative h-[200px] lg:h-auto mt-10 lg:mt-0"
+            style={{ backgroundImage: "url('/asset/card-bg.jpg')" }}
+          >
+            {/* Overlay Text */}
+            <div className="absolute inset-0 h-full w-full flex items-center justify-center bg-black bg-opacity-50 text-white">
+              <div className="max-w-[70%] flex flex-col items-center gap-3">
+                <p className="text-[20px] font-bold text-white text-center">
+                  Discover 20,000+ more talents
+                </p>
+                <p className="text-white text-center">in the TopTal Network</p>
+                <NulgenButton width={170} title="Discover Top Talents" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
