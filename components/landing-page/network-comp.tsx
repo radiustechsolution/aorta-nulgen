@@ -50,14 +50,16 @@ const ControlObject = [
 
 export const NetworkComp = () => {
   const [active, setActive] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   // Carousel settings for small screens
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    beforeChange: (oldIndex: any, newIndex: any) => setCurrentSlide(newIndex),
   };
 
   return (
@@ -113,8 +115,9 @@ export const NetworkComp = () => {
       <div className="mt-8 w-full">
         <div className="w-full">
           {/* Conditional rendering: show carousel on small screens, grid on larger screens */}
-          <div className=" md:hidden">
-            <Slider {...settings} className="w-full">
+          <div className="relative md:hidden w-full pb-11 overflow-hidden">
+            {/* The container now holds only the slides with overflow hidden */}
+            <Slider {...settings} className="relative">
               {[1, 2, 3].map((v, i) => (
                 <div key={i} className="w-full px-3">
                   <div className="relative h-[200px] w-full ">
@@ -156,6 +159,21 @@ export const NetworkComp = () => {
                 </div>
               ))}
             </Slider>
+
+            {/* Pagination dots (if custom pagination) */}
+            <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-2">
+              <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-2">
+                {[1, 2, 3].map((_, i) => (
+                  <div
+                    key={i}
+                    onClick={() => setCurrentSlide(i)}
+                    className={`cursor-pointer w-2 h-2 mx-1 rounded-full ${
+                      currentSlide === i ? "bg-blue-500" : "bg-gray-300"
+                    }`}
+                  ></div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* // Grid layout for larger screens */}
