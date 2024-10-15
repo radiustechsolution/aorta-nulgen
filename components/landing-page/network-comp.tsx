@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaCode } from "react-icons/fa6";
 import { LuPenTool, LuBarChart2, LuListTodo } from "react-icons/lu";
 import { AiOutlineProduct } from "react-icons/ai";
@@ -7,6 +7,7 @@ import { MdOutlineSell } from "react-icons/md";
 import { VscVerifiedFilled } from "react-icons/vsc";
 import { NulgenButton } from "../button";
 import { Select, SelectItem } from "@nextui-org/react";
+import Slider from "react-slick";
 
 const ControlObject = [
   {
@@ -50,17 +51,18 @@ const ControlObject = [
 export const NetworkComp = () => {
   const [active, setActive] = useState(0);
 
-  const SelectLabel = ({ title, icon }: { title: string; icon: any }) => {
-    return (
-      <div className="flex items-center gap-2">
-        {icon}
-        <p className="text-[16px]">{title}</p>
-      </div>
-    );
+  // Carousel settings for small screens
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   };
 
   return (
-    <div className="px-10 md:px-0">
+    <div className="px-5 md:px-0">
+      {/* Controls for larger screens */}
       <div className="border-t hidden border-b h-[70px] border-[#D8D9DC] lg:flex items-center justify-between">
         {ControlObject.map((v) => (
           <div
@@ -97,7 +99,7 @@ export const NetworkComp = () => {
           labelPlacement="inside"
           placeholder={`${ControlObject[active]?.title}`}
           className="w-full border border-zinc-300 bg-white"
-          onChange={(e) => setActive(Number(e.target.value))} // Ensure the target value is captured
+          onChange={(e) => setActive(Number(e.target.value))}
         >
           {ControlObject.map((v) => (
             <SelectItem className="rounded-none" key={v.id}>
@@ -110,127 +112,100 @@ export const NetworkComp = () => {
       {/* Profile cards section */}
       <div className="mt-8 w-full">
         <div className="w-full">
-          <div className="flex flex-wrap lg:flex-nowrap gap-5 w-full">
-            {/* Profile Card 1 */}
-            <div className="w-full mid-shadow md:w-[calc(32%-10px)] lg:w-[calc(50%-10px)] xl:w-[calc(25%-10px)] bg-white px-3 pt-3">
-              <div className="relative h-[200px] w-full ">
-                <Image
-                  layout="fill"
-                  src={"/asset/images-3.avif"}
-                  alt="profile-card-img"
-                  objectFit="cover"
-                />
-              </div>
-              <div className="bg-white my-6 px-4">
-                <p className="font-ProximaNova font-semibold text-[#204ecf]">
-                  Carole Crawford, CFA
-                </p>
-                {/* Verified */}
-                <div className="my-4">
-                  <div className="flex items-center gap-0">
-                    <VscVerifiedFilled size={14} color="green" />
-                    <p className="font-ProximaNova font-semibold text-[12px] text-green-700">
-                      Verified Expert
+          {/* Conditional rendering: show carousel on small screens, grid on larger screens */}
+          <div className=" md:hidden">
+            <Slider {...settings} className="w-full">
+              {[1, 2, 3].map((v, i) => (
+                <div key={i} className="w-full px-3">
+                  <div className="relative h-[200px] w-full ">
+                    <Image
+                      layout="fill"
+                      src={"/asset/images-3.avif"}
+                      alt="profile-card-img"
+                      objectFit="cover"
+                    />
+                  </div>
+                  <div className="bg-white my-6 px-4">
+                    <p className="font-ProximaNova font-semibold text-[#204ecf]">
+                      Carole Crawford, CFA
                     </p>
-                    <p className="font-ProximaNova ml-1 text-[12px] text-green-700">
-                      In France
-                    </p>
+                    {/* Verified */}
+                    <div className="my-4">
+                      <div className="flex items-center gap-0">
+                        <VscVerifiedFilled size={14} color="green" />
+                        <p className="font-ProximaNova font-semibold text-[12px] text-green-700">
+                          Verified Expert
+                        </p>
+                        <p className="font-ProximaNova ml-1 text-[12px] text-green-700">
+                          In France
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <p className="uppercase text-[13px] text-gray-600">
+                        Previously at
+                      </p>
+                      <Image
+                        width={150}
+                        height={40}
+                        src={"/asset/svg/comp2.svg"}
+                        alt="at"
+                      />
+                    </div>
                   </div>
                 </div>
-                <div className="flex flex-col gap-2">
-                  <p className="uppercase text-[13px] text-gray-600">
-                    Previously at
-                  </p>
-                  <Image
-                    width={150}
-                    height={40}
-                    src={"/asset/svg/comp2.svg"}
-                    alt="at"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="w-full mid-shadow md:w-[calc(32%-10px)] lg:w-[calc(50%-10px)] xl:w-[calc(25%-10px)] bg-white px-3 pt-3">
-              <div className="relative h-[200px] w-full ">
-                <Image
-                  layout="fill"
-                  src={"/asset/images-3.avif"}
-                  alt="profile-card-img"
-                  objectFit="cover"
-                />
-              </div>
-              <div className="bg-white my-6 px-4">
-                <p className="font-ProximaNova font-semibold text-[#204ecf]">
-                  Carole Crawford, CFA
-                </p>
-                {/* Verified */}
-                <div className="my-4">
-                  <div className="flex items-center gap-0">
-                    <VscVerifiedFilled size={14} color="green" />
-                    <p className="font-ProximaNova font-semibold text-[12px] text-green-700">
-                      Verified Expert
-                    </p>
-                    <p className="font-ProximaNova ml-1 text-[12px] text-green-700">
-                      In France
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <p className="uppercase text-[13px] text-gray-600">
-                    Previously at
-                  </p>
-                  <Image
-                    width={150}
-                    height={40}
-                    src={"/asset/svg/comp2.svg"}
-                    alt="at"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="w-full mid-shadow md:w-[calc(32%-10px)] lg:w-[calc(50%-10px)] xl:w-[calc(25%-10px)] bg-white px-3 pt-3">
-              <div className="relative h-[200px] w-full ">
-                <Image
-                  layout="fill"
-                  src={"/asset/images-3.avif"}
-                  alt="profile-card-img"
-                  objectFit="cover"
-                />
-              </div>
-              <div className="bg-white my-6 px-4">
-                <p className="font-ProximaNova font-semibold text-[#204ecf]">
-                  Carole Crawford, CFA
-                </p>
-                {/* Verified */}
-                <div className="my-4">
-                  <div className="flex items-center gap-0">
-                    <VscVerifiedFilled size={14} color="green" />
-                    <p className="font-ProximaNova font-semibold text-[12px] text-green-700">
-                      Verified Expert
-                    </p>
-                    <p className="font-ProximaNova ml-1 text-[12px] text-green-700">
-                      In France
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <p className="uppercase text-[13px] text-gray-600">
-                    Previously at
-                  </p>
-                  <Image
-                    width={150}
-                    height={40}
-                    src={"/asset/svg/comp2.svg"}
-                    alt="at"
-                  />
-                </div>
-              </div>
-            </div>
+              ))}
+            </Slider>
+          </div>
 
-            {/* Other profile cards */}
+          {/* // Grid layout for larger screens */}
+          <div className="hidden md:flex flex-wrap gap-7 lg:gap-5">
+            {[1, 2, 3].map((v, i) => (
+              <div
+                key={i}
+                className="mid-shadow w-[calc(32%-10px)] lg:w-[calc(24%-10px)] bg-white px-3 pt-3"
+              >
+                <div className="relative h-[200px] w-full ">
+                  <Image
+                    layout="fill"
+                    src={"/asset/images-3.avif"}
+                    alt="profile-card-img"
+                    objectFit="cover"
+                  />
+                </div>
+                <div className="bg-white my-6 px-4">
+                  <p className="font-ProximaNova font-semibold text-[#204ecf]">
+                    Carole Crawford, CFA
+                  </p>
+                  <div className="my-4">
+                    <div className="flex items-center gap-0">
+                      <VscVerifiedFilled size={14} color="green" />
+                      <p className="font-ProximaNova font-semibold text-[12px] text-green-700">
+                        Verified Expert
+                      </p>
+                      <p className="font-ProximaNova ml-1 text-[12px] text-green-700">
+                        In France
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="uppercase text-[13px] text-gray-600">
+                      Previously at
+                    </p>
+                    <Image
+                      width={150}
+                      height={40}
+                      src={"/asset/svg/comp2.svg"}
+                      alt="at"
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
 
+            {/* Fourth profile card */}
             <div
-              className="w-full mid-shadow lg:w-[calc(50%-10px)] xl:w-[calc(25%-10px)] bg-cover bg-center px-3 pt-3 relative h-[200px] lg:h-auto"
+              className="w-full hidden lg:flex mid-shadow md:w-[calc(24%-10px)] bg-cover bg-center px-3 pt-3 relative h-[200px] lg:h-auto mt-5 lg:mt-0"
               style={{ backgroundImage: "url('/asset/card-bg.jpg')" }}
             >
               {/* Overlay Text */}
@@ -244,6 +219,23 @@ export const NetworkComp = () => {
                   </p>
                   <NulgenButton width={170} title="Discover Top Talents" />
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Fourth profile card */}
+          <div
+            className="w-full lg:hidden mid-shadow lg:w-[calc(50%-10px)] xl:w-[calc(25%-10px)] bg-cover bg-center px-3 pt-3 relative h-[200px] lg:h-auto mt-10 lg:mt-0"
+            style={{ backgroundImage: "url('/asset/card-bg.jpg')" }}
+          >
+            {/* Overlay Text */}
+            <div className="absolute inset-0 h-full w-full flex items-center justify-center bg-black bg-opacity-50 text-white">
+              <div className="max-w-[70%] flex flex-col items-center gap-3">
+                <p className="text-[20px] font-bold text-white text-center">
+                  Discover 20,000+ more talents
+                </p>
+                <p className="text-white text-center">in the TopTal Network</p>
+                <NulgenButton width={170} title="Discover Top Talents" />
               </div>
             </div>
           </div>
