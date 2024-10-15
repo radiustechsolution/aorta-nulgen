@@ -8,6 +8,7 @@ import { VscVerifiedFilled } from "react-icons/vsc";
 import { NulgenButton } from "../button";
 import { Select, SelectItem } from "@nextui-org/react";
 import Slider from "react-slick";
+import { ProfilesByCategory } from "@/lib/demo";
 
 const ControlObject = [
   {
@@ -49,10 +50,25 @@ const ControlObject = [
 ];
 
 export const NetworkComp = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState<any>(0);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Carousel settings for small screens
+  // Dynamic category mapping
+  const categoryMap = [
+    "Developers",
+    "Designers",
+    "FinanceExperts",
+    "ProjectManagers",
+    "ProductManagers",
+    "MarketingExperts",
+  ];
+
+  // Get the active category name
+  const activeCategory = categoryMap[active];
+
+  // Get profiles for the active category
+  const profiles: any = ProfilesByCategory[activeCategory] || [];
+
   const settings = {
     dots: false,
     infinite: true,
@@ -116,23 +132,21 @@ export const NetworkComp = () => {
         <div className="w-full">
           {/* Conditional rendering: show carousel on small screens, grid on larger screens */}
           <div className="relative md:hidden w-full pb-11 overflow-hidden">
-            {/* The container now holds only the slides with overflow hidden */}
             <Slider {...settings} className="relative">
-              {[1, 2, 3].map((v, i) => (
+              {profiles.map((profile: any, i: any) => (
                 <div key={i} className="w-full px-3">
-                  <div className="relative h-[200px] w-full ">
+                  <div className="relative h-[200px] w-full">
                     <Image
                       layout="fill"
-                      src={"/asset/images-3.avif"}
+                      src={profile.img}
                       alt="profile-card-img"
                       objectFit="cover"
                     />
                   </div>
                   <div className="bg-white my-6 px-4">
                     <p className="font-ProximaNova font-semibold text-[#204ecf]">
-                      Carole Crawford, CFA
+                      {profile.name}
                     </p>
-                    {/* Verified */}
                     <div className="my-4">
                       <div className="flex items-center gap-0">
                         <VscVerifiedFilled size={14} color="green" />
@@ -140,7 +154,7 @@ export const NetworkComp = () => {
                           Verified Expert
                         </p>
                         <p className="font-ProximaNova ml-1 text-[12px] text-green-700">
-                          In France
+                          {profile.location}
                         </p>
                       </div>
                     </div>
@@ -151,8 +165,8 @@ export const NetworkComp = () => {
                       <Image
                         width={150}
                         height={40}
-                        src={"/asset/svg/comp2.svg"}
-                        alt="at"
+                        src={profile.companyImg}
+                        alt="company"
                       />
                     </div>
                   </div>
@@ -160,41 +174,39 @@ export const NetworkComp = () => {
               ))}
             </Slider>
 
-            {/* Pagination dots (if custom pagination) */}
+            {/* Pagination dots */}
             <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-2">
-              <div className="absolute bottom-0 left-0 right-0 flex justify-center pb-2">
-                {[1, 2, 3].map((_, i) => (
-                  <div
-                    role="presentation"
-                    key={i}
-                    onClick={() => setCurrentSlide(i)}
-                    className={`cursor-pointer w-2 h-2 mx-1 rounded-full ${
-                      currentSlide === i ? "bg-blue-500" : "bg-gray-300"
-                    }`}
-                  ></div>
-                ))}
-              </div>
+              {[...Array(profiles.length).keys()].map((_, i) => (
+                <div
+                  role="presentation"
+                  key={i}
+                  onClick={() => setCurrentSlide(i)}
+                  className={`cursor-pointer w-2 h-2 mx-1 rounded-full ${
+                    currentSlide === i ? "bg-blue-500" : "bg-gray-300"
+                  }`}
+                ></div>
+              ))}
             </div>
           </div>
 
-          {/* // Grid layout for larger screens */}
+          {/* Grid layout for larger screens */}
           <div className="hidden md:flex flex-wrap gap-7 lg:gap-5">
-            {[1, 2, 3].map((v, i) => (
+            {profiles.map((profile: any, i: any) => (
               <div
                 key={i}
                 className="mid-shadow w-[calc(32%-10px)] lg:w-[calc(24%-10px)] bg-white px-3 pt-3"
               >
-                <div className="relative h-[200px] w-full ">
+                <div className="relative h-[200px] w-full">
                   <Image
                     layout="fill"
-                    src={"/asset/images-3.avif"}
+                    src={profile.img}
                     alt="profile-card-img"
                     objectFit="cover"
                   />
                 </div>
                 <div className="bg-white my-6 px-4">
                   <p className="font-ProximaNova font-semibold text-[#204ecf]">
-                    Carole Crawford, CFA
+                    {profile.name}
                   </p>
                   <div className="my-4">
                     <div className="flex items-center gap-0">
@@ -203,7 +215,7 @@ export const NetworkComp = () => {
                         Verified Expert
                       </p>
                       <p className="font-ProximaNova ml-1 text-[12px] text-green-700">
-                        In France
+                        {profile.location}
                       </p>
                     </div>
                   </div>
@@ -214,8 +226,8 @@ export const NetworkComp = () => {
                     <Image
                       width={150}
                       height={40}
-                      src={"/asset/svg/comp2.svg"}
-                      alt="at"
+                      src={profile.companyImg}
+                      alt="company"
                     />
                   </div>
                 </div>
@@ -238,23 +250,6 @@ export const NetworkComp = () => {
                   </p>
                   <NulgenButton width={170} title="Discover Top Talents" />
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Fourth profile card */}
-          <div
-            className="w-full lg:hidden mid-shadow lg:w-[calc(50%-10px)] xl:w-[calc(25%-10px)] bg-cover bg-center px-3 pt-3 relative h-[200px] lg:h-auto mt-10 lg:mt-0"
-            style={{ backgroundImage: "url('/asset/card-bg.jpg')" }}
-          >
-            {/* Overlay Text */}
-            <div className="absolute inset-0 h-full w-full flex items-center justify-center bg-black bg-opacity-50 text-white">
-              <div className="max-w-[70%] flex flex-col items-center gap-3">
-                <p className="text-[20px] font-bold text-white text-center">
-                  Discover 20,000+ more talents
-                </p>
-                <p className="text-white text-center">in the TopTal Network</p>
-                <NulgenButton width={170} title="Discover Top Talents" />
               </div>
             </div>
           </div>
