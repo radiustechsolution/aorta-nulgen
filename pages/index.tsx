@@ -4,6 +4,7 @@ import { ProfileCard } from "@/components/landing-page/profile-card";
 import { SectionWithTitle } from "@/components/landing-page/section-with-title";
 import { TrustedByMany } from "@/components/landing-page/TrustedByMany";
 import DefaultLayout from "@/layouts/default";
+import { WhyObjects } from "@/lib/objects";
 import Image from "next/image";
 import { MdArrowRightAlt } from "react-icons/md";
 
@@ -225,6 +226,46 @@ export default function IndexPage() {
           <div className="mt-[70px]">
             {/* Control Large */}
             <NetworkComp />
+          </div>
+        </SectionWithTitle>
+
+        {/* Image Section */}
+        <SectionWithTitle
+          subtitle="Discover the many ways in which our clients have embraced the benefits of the Toptal network."
+          title="Why Organizations Choose Toptal"
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px] lg:grid-cols-3 mt-10">
+            {WhyObjects.map((v) => (
+              <div
+                key={v.id}
+                className="relative h-[340px] cursor-pointer bg-[#EBECED] flex flex-col gap-10 p-[35px] group"
+              >
+                <Image
+                  src={v.bgImg}
+                  layout="fill"
+                  priority
+                  quality={40}
+                  objectFit="cover"
+                  alt={v.bgImg}
+                />
+
+                {/* overlay */}
+                <div className="w-full h-full absolute bg-[#00000063] top-0 left-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-100 group-hover:from-blue-900 z-20 transition-all duration-300"></div>
+
+                {/* Logo */}
+                <div className="z-30 absolute top-10 left-10">
+                  <Image
+                    src={v.logo}
+                    objectFit="cover"
+                    width={120}
+                    height={100}
+                    alt={v.logo}
+                  />
+                </div>
+
+                <p>cnskcnksnk</p>
+              </div>
+            ))}
           </div>
         </SectionWithTitle>
       </section>
