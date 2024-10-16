@@ -8,6 +8,7 @@ import { WhyObjects } from "@/lib/objects";
 import Image from "next/image";
 import { MdArrowRightAlt } from "react-icons/md";
 import { HiSearchCircle } from "react-icons/hi";
+import PartnershipSection from "@/components/landing-page/partnership";
 
 const TalentsObject = [
   {
@@ -107,12 +108,10 @@ export default function IndexPage() {
       <section className="">
         {/* Hero */}
         <HomeHero />
-
         {/* Trusted By Many */}
         <div className="hidden lg:block">
           <TrustedByMany />
         </div>
-
         {/* Talents */}
         <SectionWithTitle
           subtitle="We are the largest, globally-distributed network of top business, design, and technology talent, ready to tackle your most important initiatives."
@@ -164,7 +163,6 @@ export default function IndexPage() {
             ))}
           </div>
         </SectionWithTitle>
-
         {/* On Demands */}
         <SectionWithTitle bgColor="bg-[#FCFCFC]">
           <div className="flex flex-col lg:flex-row items-center lg:items-start ">
@@ -221,7 +219,6 @@ export default function IndexPage() {
             </div>
           </div>
         </SectionWithTitle>
-
         {/* Network */}
         <SectionWithTitle title="Meet Talent in Our Network">
           <div className="mt-[70px]">
@@ -229,13 +226,12 @@ export default function IndexPage() {
             <NetworkComp />
           </div>
         </SectionWithTitle>
-
         {/* Image Section */}
         <SectionWithTitle
-          subtitle="Discover the many ways in which our clients have embraced the benefits of the Toptal network."
           title="Why Organizations Choose Toptal"
+          subtitle="Discover the many ways in which our clients have embraced the benefits of the Toptal network."
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 px-5 sm:px-0 gap-[20px] lg:grid-cols-3 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 px-5 md:px-0 gap-[20px] lg:grid-cols-3 mt-10">
             {WhyObjects.map((v) => (
               <div
                 key={v.id}
@@ -280,6 +276,14 @@ export default function IndexPage() {
               </div>
             ))}
           </div>
+        </SectionWithTitle>
+
+        {/* partnerships  */}
+        <SectionWithTitle
+          title="Collaborations With Leading Brands"
+          subtitle="We collaborate with a number of top-tier companies on imagining the future of work. Have a look."
+        >
+          <PartnershipSection />
         </SectionWithTitle>
       </section>
     </DefaultLayout>
