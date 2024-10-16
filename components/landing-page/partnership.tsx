@@ -44,7 +44,7 @@ export default function PartnershipSection() {
               <h3 className="text-blue-900 font-semibold text-sm">
                 Toptal Partnership
               </h3>
-              <h2 className="text-[25px] font-bold mt-2">
+              <h2 className="text-[25px] text-black font-bold mt-2">
                 {partnership.title}
               </h2>
               <div className="mt-4 flex items-center space-x-2">
