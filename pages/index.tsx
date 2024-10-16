@@ -114,7 +114,7 @@ export default function IndexPage() {
         {/* Talents */}
         <SectionWithTitle
           subtitle="We are the largest, globally-distributed network of top business, design, and technology talent, ready to tackle your most important initiatives."
-          title="Leverage World-Class Talent"
+          title="Master in-demand job skills"
         >
           <div className="grid grid-cols-1 bg-[#D8D9DC] sm:grid-cols-2 gap-[1px] lg:grid-cols-3 mt-10">
             {TalentsObject.map((v) => (

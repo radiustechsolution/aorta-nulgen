@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Toptal - Hire Freelance Talent from the Top 3%",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Nulgen - AI Powered Career Companion",
+  description: "Learn in-demand job skills for free and apply for internships",
   siteColors: {
     primary: "#0F256E",
     secondary: "#03CC83",
