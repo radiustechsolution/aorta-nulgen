@@ -7,6 +7,7 @@ import DefaultLayout from "@/layouts/default";
 import { WhyObjects } from "@/lib/objects";
 import Image from "next/image";
 import { MdArrowRightAlt } from "react-icons/md";
+import { HiSearchCircle } from "react-icons/hi";
 
 const TalentsObject = [
   {
@@ -234,7 +235,7 @@ export default function IndexPage() {
           subtitle="Discover the many ways in which our clients have embraced the benefits of the Toptal network."
           title="Why Organizations Choose Toptal"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-[20px] lg:grid-cols-3 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 px-5 sm:px-0 gap-[20px] lg:grid-cols-3 mt-10">
             {WhyObjects.map((v) => (
               <div
                 key={v.id}
@@ -253,7 +254,7 @@ export default function IndexPage() {
                 <div className="w-full h-full absolute bg-[#00000063] top-0 left-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-100 group-hover:from-blue-900 z-20 transition-all duration-300"></div>
 
                 {/* Logo */}
-                <div className="z-30 absolute top-10 left-10">
+                <div className="z-30 absolute top-5 sm:top-10 left-5 sm:left-10">
                   <Image
                     src={v.logo}
                     objectFit="cover"
@@ -261,6 +262,18 @@ export default function IndexPage() {
                     height={100}
                     alt={v.logo}
                   />
+                </div>
+
+                {/* Know more */}
+                <div className=" absolute bottom-5 sm:bottom-10 flex items-center gap-4 left-5 sm:left-10 z-30">
+                  <div className="h-[35px] bg-white w-[35px] flex items-center justify-center rounded-full">
+                    <HiSearchCircle
+                      size={24}
+                      className=" text-primary"
+                      color="primary"
+                    />
+                  </div>
+                  <p className="text-white font-semibold ">Know more</p>
                 </div>
 
                 <p>cnskcnksnk</p>
