@@ -12,22 +12,17 @@ export const siteConfig = {
   path: {
     navbarLinks: [
       {
-        title: "Top 3%",
+        title: "Get Internship",
         path: "/",
         isDropDown: false,
       },
       {
-        title: "Hire Talent",
+        title: "Master Skill",
         path: "/",
         isDropDown: true,
       },
       {
-        title: "Consulting & Services",
-        path: "/",
-        isDropDown: false,
-      },
-      {
-        title: "Clients",
+        title: "About Us",
         path: "/",
         isDropDown: false,
       },
@@ -37,7 +32,7 @@ export const siteConfig = {
         isDropDown: false,
       },
       {
-        title: "About Us",
+        title: "Contact",
         path: "/",
         isDropDown: false,
       },
