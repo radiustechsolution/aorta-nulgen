@@ -56,7 +56,7 @@ export default function PartnershipSection() {
           </div>
         ))}
       </div>
-      <div className="flex justify-center gap-2 items-center mt-10">
+      <div className="flex flex-col sm:flex-row justify-center gap-2 items-center mt-10">
         <p className="text-black font-semibold text-[18px]">
           Ready to get started?
         </p>
