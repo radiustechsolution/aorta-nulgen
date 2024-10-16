@@ -13,7 +13,7 @@ export const Navbar = () => {
           src="/asset/logo.svg"
           alt="Logo"
           width={110}
-          className="w-[100px] md:w-[110px]"
+          className="w-[105px] md:w-[110px]"
           height={32}
         />
         <ul className="hidden xl:flex items-center gap-5">
