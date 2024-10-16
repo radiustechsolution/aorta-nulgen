@@ -29,7 +29,7 @@ export const Navbar = () => {
       <div className="flex items-center gap-8">
         <div className="hidden lg:flex items-center gap-5">
           <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
-            Post Internship 
+            Post Internship
           </p>
           <NulgenButton />
           <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
