@@ -28,7 +28,7 @@ export default function DefaultLayout({
   }, []);
 
   return (
-    <div className="relative bg-white flex items-center flex-col">
+    <div className="relative bg-white flex items-center flex-col h-svh">
       <Head />
       <div
         className={`flex z-50 ${
