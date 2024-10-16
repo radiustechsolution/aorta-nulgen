@@ -16,7 +16,7 @@ export const NulgenButton = ({
       style={{ height, width, fontSize }}
       className="font-semibold bg-secondary rounded-[5px] text-white"
     >
-      {title ? title : "Hire Top Talent"}
+      {title ? title : "Get Started"}
     </button>
   );
 };
