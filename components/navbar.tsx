@@ -7,13 +7,13 @@ import { IoMdMenu } from "react-icons/io";
 
 export const Navbar = () => {
   return (
-    <nav className="max-w-[1220px] flex items-center justify-between h-[50px] md:h-[64px] w-full">
+    <nav className="max-w-[1220px] flex items-center justify-between h-[64px] w-full">
       <div className="flex items-center gap-10">
         <Image
           src="/asset/logo.svg"
           alt="Logo"
           width={110}
-          className="w-[105px] md:w-[110px]"
+          className="w-[110px]"
           height={32}
         />
         <ul className="hidden xl:flex items-center gap-5">

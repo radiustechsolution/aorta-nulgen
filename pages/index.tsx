@@ -108,10 +108,12 @@ export default function IndexPage() {
       <section className="">
         {/* Hero */}
         <HomeHero />
+
         {/* Trusted By Many */}
         <div className="hidden lg:block">
           <TrustedByMany />
         </div>
+
         {/* Talents */}
         <SectionWithTitle
           subtitle="We are the largest, globally-distributed network of top business, design, and technology talent, ready to tackle your most important initiatives."
@@ -163,6 +165,7 @@ export default function IndexPage() {
             ))}
           </div>
         </SectionWithTitle>
+
         {/* On Demands */}
         <SectionWithTitle bgColor="bg-[#FCFCFC]">
           <div className="flex flex-col lg:flex-row items-center lg:items-start ">
@@ -219,6 +222,7 @@ export default function IndexPage() {
             </div>
           </div>
         </SectionWithTitle>
+
         {/* Network */}
         <SectionWithTitle title="Meet Talent in Our Network">
           <div className="mt-[70px]">
@@ -226,6 +230,7 @@ export default function IndexPage() {
             <NetworkComp />
           </div>
         </SectionWithTitle>
+
         {/* Image Section */}
         <SectionWithTitle
           title="Why Organizations Choose Toptal"
@@ -241,6 +246,7 @@ export default function IndexPage() {
                   src={v.bgImg}
                   layout="fill"
                   priority
+                  className="transition-transform duration-500 ease-in-out"
                   quality={40}
                   objectFit="cover"
                   alt={v.bgImg}
