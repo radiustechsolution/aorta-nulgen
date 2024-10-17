@@ -303,7 +303,7 @@ export default function IndexPage() {
           title="Our Clients’ Satisfaction is Our Top Priority"
           subtitle="We have a reputation for helping clients around the world find success on their most important projects."
         >
-          <div></div>
+          <div className="mt-[40px] border border-gray-200"></div>
         </SectionWithTitle>
       </section>
     </DefaultLayout>

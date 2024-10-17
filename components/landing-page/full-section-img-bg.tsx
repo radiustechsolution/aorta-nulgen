@@ -5,7 +5,7 @@ import Image from "next/image";
 export const FullWidthSection = () => {
   return (
     <div
-      className="relative flex flex-col items-start px-[50px] sm:px-[100px]  md:px-[150px] lg:px-[200px] justify-center h-[440px] text-white bg-cover bg-center"
+      className="relative flex flex-col items-start px-[30px] sm:px-[100px]  md:px-[150px] lg:px-[200px] justify-center h-[440px] text-white bg-cover bg-center"
       style={{
         backgroundImage: "url(/asset/full-img.jpeg)",
       }}
@@ -28,14 +28,14 @@ export const FullWidthSection = () => {
             alt="CNBC Logo"
           />
         </div>
-      </div>
 
-      {/* Watch Video Button */}
-      <div className="relative z-10 flex items-center space-x-2 mt-4">
-        <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
-          <HiSearchCircle size={20} color="blue" />
+        {/* Watch Video Button */}
+        <div className="relative z-10 flex items-center gap-2 mt-4">
+          <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
+            <HiSearchCircle size={20} color="blue" />
+          </div>
+          <p className="text-white font-medium">Know more</p>
         </div>
-        <p className="text-white font-medium">Know more</p>
       </div>
     </div>
   );
