@@ -295,7 +295,7 @@ export default function IndexPage() {
 
         {/* New Quote Section */}
         <div
-          className="relative flex flex-col items-start px-[200px] justify-center h-[440px] text-white bg-cover bg-center"
+          className="relative flex flex-col items-start px-[50px] sm:px-[100px]  md:px-[150px] lg:px-[200px] justify-center h-[440px] text-white bg-cover bg-center"
           style={{
             backgroundImage: "url(/asset/full-img.jpeg)",
           }}
