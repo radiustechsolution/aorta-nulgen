@@ -14,7 +14,7 @@ export const TestimonialComp = () => {
             height={50}
           />
           <div className="">
-            <p className="text-[17px] sm:text-[20px] font-ProximaNova font-bold">
+            <p className="text-[17px] text-black sm:text-[20px] font-ProximaNova font-bold">
               140+
             </p>
             <p className="text-[12px] text-gray-500">Countries Served</p>
@@ -29,7 +29,7 @@ export const TestimonialComp = () => {
             height={50}
           />
           <div className="">
-            <p className="text-[17px] sm:text-[20px] font-ProximaNova font-bold">
+            <p className="text-[17px] text-black sm:text-[20px] font-ProximaNova font-bold">
               25,000+
             </p>
             <p className="text-[12px] text-gray-500">Clients Served</p>
