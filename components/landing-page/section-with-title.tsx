@@ -23,7 +23,7 @@ export const SectionWithTitle = ({
         {/* heading */}
         <div className="flex gap-1 md:gap-3 flex-col items-center">
           {title && (
-            <p className="font-ProximaNova leading-[40px] md:leading-[56px] font-semibold text-[#191e28] text-center text-[28px] md:text-[40px]">
+            <p className="font-ProximaNova px-2 sm:px-0 leading-[40px] md:leading-[56px] font-semibold text-[#191e28] text-center text-[28px] md:text-[40px]">
               {title}
             </p>
           )}
