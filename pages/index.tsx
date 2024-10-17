@@ -11,6 +11,7 @@ import { HiSearchCircle } from "react-icons/hi";
 import PartnershipSection from "@/components/landing-page/partnership";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import { FullWidthSection } from "@/components/landing-page/full-section-img-bg";
+import { TestimonialComp } from "@/components/landing-page/TestimonialComp";
 
 const TalentsObject = [
   {
@@ -304,6 +305,8 @@ export default function IndexPage() {
           subtitle="We have a reputation for helping clients around the world find success on their most important projects."
         >
           <div className="mt-[40px] border border-gray-200"></div>
+
+          <TestimonialComp />
         </SectionWithTitle>
       </section>
     </DefaultLayout>
