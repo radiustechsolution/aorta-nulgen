@@ -56,12 +56,12 @@ export default function PartnershipSection() {
             </div>
 
             {/* Content */}
-            <div className="p-5 flex flex-col justify-between group-hover:bg-gray-50 h-[250px]">
+            <div className="p-5 flex flex-col justify-between group-hover:bg-gray-50 h-[200px] sm:h-[250px]">
               <div className="">
                 <h3 className="text-blue-900 font-semibold text-sm">
                   Toptal Partnership
                 </h3>
-                <h2 className="text-[22px] text-black group-hover:text-blue-800 font-bold mt-2">
+                <h2 className="text-[18px] sm:text-[22px] text-black group-hover:text-blue-800 font-bold mt-2">
                   {partnership.title}
                 </h2>
               </div>
@@ -70,6 +70,7 @@ export default function PartnershipSection() {
                 <Image
                   src={ToptalLogo}
                   width={100}
+                  className="w-[80px] sm:w-[100px]"
                   height={20}
                   alt="Toptal Logo"
                 />
@@ -78,6 +79,7 @@ export default function PartnershipSection() {
                 <Image
                   src={partnership.logo}
                   width={100}
+                  className="w-[80px] sm:w-[100px]"
                   height={20}
                   alt={`${partnership.partnership} Logo`}
                 />
