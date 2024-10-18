@@ -12,6 +12,7 @@ import PartnershipSection from "@/components/landing-page/partnership";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import { FullWidthSection } from "@/components/landing-page/full-section-img-bg";
 import { TestimonialComp } from "@/components/landing-page/TestimonialComp";
+import { LatestPublication } from "@/components/landing-page/latest";
 
 const TalentsObject = [
   {
@@ -307,6 +308,16 @@ export default function IndexPage() {
           <div className="mt-[40px] border border-gray-200"></div>
 
           <TestimonialComp />
+        </SectionWithTitle>
+
+        {/* Latest */}
+        <SectionWithTitle title="Explore Trending Toptal Publications">
+          <LatestPublication />
+          <div className="w-full flex items-center justify-center">
+            <p className="text-black py-2 cursor-pointer hover:text-secondaryBlue font-semibold mt-8 px-4 text-[14px] border w-max border-gray-400 rounded-md">
+              Read More Thought Leadership
+            </p>
+          </div>
         </SectionWithTitle>
       </section>
     </DefaultLayout>

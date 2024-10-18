@@ -26,6 +26,7 @@ module.exports = {
           colors: {
             primary: siteConfig.siteColors.primary,
             secondary: siteConfig.siteColors.secondary,
+            secondaryBlue: "#204ECF",
             bgPrimary: siteConfig.siteColors.bgPrimary,
             bgPrimaryFaint: siteConfig.siteColors.bgPrimaryFaint,
           },
@@ -34,6 +35,7 @@ module.exports = {
           colors: {
             primary: siteConfig.siteColors.primary,
             secondary: siteConfig.siteColors.secondary,
+            secondaryBlue: "#204ECF",
             bgPrimary: siteConfig.siteColors.bgPrimary,
             bgPrimaryFaint: siteConfig.siteColors.bgPrimaryFaint,
           },
