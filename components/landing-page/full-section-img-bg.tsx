@@ -11,7 +11,7 @@ export const FullWidthSection = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-0"></div>
 
       {/* Quote and Logos */}
       <div className="relative z-10 text-left px-4 md:px-0">

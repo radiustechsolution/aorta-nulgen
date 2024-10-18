@@ -36,3 +36,33 @@ export const WhyObjects = [
     path: "/",
   },
 ];
+
+export const testimonials = [
+  {
+    heading: "I have been working with Toptal...",
+    testimony:
+      "I have been working with Toptal engineers for several years now. They have all been exceptionally talented, very professional, highly productive, great team players, good communicators, and willing to go above and beyond...",
+    author: "Ian Stokes-Rees",
+    title: "Partner",
+    company: "/asset/svg/comp3.svg",
+    rating: 5,
+  },
+  {
+    heading: "Toptal is my go-to source",
+    testimony:
+      "Toptal is my go-to source to find high-quality talent I can’t find elsewhere. I’ve been very impressed with the breadth and depth of talent they have been able to deliver.",
+    author: "Tess Caputo",
+    title: "Chief Operations Officer",
+    company: "/asset/svg/comp6.svg",
+    rating: 5,
+  },
+  {
+    heading: "Creating an app for game",
+    testimony:
+      "With the pressure on and millions watching the Cleveland Cavaliers during the NBA Playoffs, Toptal delivered the talent and expertise needed to launch a brand-new fan engagement platform.",
+    author: "Conor Kenney",
+    title: "VP, Product and Technology",
+    company: "/asset/svg/comp4.svg",
+    rating: 5,
+  },
+];
