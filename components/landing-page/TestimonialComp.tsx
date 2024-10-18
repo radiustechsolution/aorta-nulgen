@@ -150,6 +150,7 @@ export const TestimonialComp = () => {
         <div className="flex justify-center mt-5">
           {testimonials.map((_, i) => (
             <div
+              role="presentation"
               key={i}
               onClick={() => setCurrentSlide(i)} // Allow clicking on dots to change the slide
               className={`cursor-pointer w-2 h-2 mx-1 rounded-full ${
