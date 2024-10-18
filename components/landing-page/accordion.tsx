@@ -38,6 +38,7 @@ export const AccordionComp = () => {
       <div className="w-full basis-[50%]">
         {categories1.map((v) => (
           <Accordion
+            key={v.id}
             selectedKeys={selectedKeys}
             onSelectionChange={setSelectedKeys}
             selectionMode="single"
@@ -71,6 +72,7 @@ export const AccordionComp = () => {
       <div className="w-full basis-[50%]">
         {categories2.map((v) => (
           <Accordion
+            key={v.id}
             selectedKeys={selectedKeys}
             onSelectionChange={setSelectedKeys}
             selectionMode="single"
