@@ -18,17 +18,17 @@ export const HomeHero = () => {
       <div className="max-w-[1220px] flex flex-col lg:flex-row items-start w-full">
         <div className="basis-[100%] text-center lg:text-left lg:basis-[45%] xl:basis-[45%] w-full">
           <h1 className="font-semibold font-ProximaNova text-[35px] sm:text-[42px] xl:text-[48px] text-[#191e28] leading-[48px] sm:leading-[56px] xl:leading-[64px]">
-            The {" "}
+            The{" "}
             <span className=" cursor-pointer hover:no-underline">
-              AI Powered 
+              AI Powered
             </span>{" "}
             <br /> Career Companion
           </h1>
           <p className="text-[15px] font-ProximaNova xl:text-[18px] text-[#455065] pt-3 pb-5 xl:pt-5 xl:pb-8 leading-[28px]">
-          Master in-demand job skills for free and boost your career. 
-          Get personalized learning paths and apply directly for internships 
-          that match your ambitions. Start your journey toward a successful career 
-          with the power of AI at your side.
+            Master in-demand job skills for free and boost your career. Get
+            personalized learning paths and apply directly for internships that
+            match your ambitions. Start your journey toward a successful career
+            with the power of AI at your side.
           </p>
           <div className="hidden sm:block">
             <NulgenButton height={52} fontSize={20} width={264} />
@@ -57,22 +57,16 @@ export const HomeHero = () => {
           </div>
         </div>
         <div className="relative hidden basis-[100%] lg:flex flex-col justify-end lg:basis-[55%] xl:basis-[55%] h-full w-full">
-          <Image
-            src="/asset/hero-3.png"
-            alt="hero-img"
-            className="w-[75%]"
-          />
+          <Image src="/asset/hero-3.png" alt="hero-img" className="w-[75%]" />
           <div className="absolute p-3 square top-[100px] z-10 right-[0px] w-[275px] xl:w-[300px] h-max bg-white block">
             <p className="text-[#204ecf] text-[14px] font-semibold">
-            Anna D. Fischer
+              Anna D. Fischer
             </p>
-            <p className=" font-ProximaNova text-[30px] text-black">
-              Berlin
-            </p>
+            <p className=" font-ProximaNova text-[30px] text-black">Berlin</p>
 
             <p className=" font-ProximaNova text-[14px] text-gray-500">
-            The process of getting my student pratikum was painless and seeamless
-            I had the whole process completed in minutes.
+              The process of getting my student pratikum was painless and
+              seeamless I had the whole process completed in minutes.
             </p>
           </div>
         </div>

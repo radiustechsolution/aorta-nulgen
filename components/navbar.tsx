@@ -16,7 +16,7 @@ export const Navbar = () => {
           className="w-[110px]"
           height={32}
         /> */}
-        <p className="font-bold font-ProximaNova text-[20px]">
+        <p className="font-bold font-ProximaNova text-black text-[20px]">
           Nulgen
         </p>
         <ul className="hidden xl:flex items-center gap-5">

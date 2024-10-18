@@ -14,6 +14,7 @@ import { FullWidthSection } from "@/components/landing-page/full-section-img-bg"
 import { TestimonialComp } from "@/components/landing-page/TestimonialComp";
 import { LatestPublication } from "@/components/landing-page/latest";
 import { AccordionComp } from "@/components/landing-page/accordion";
+import { NulgenButton } from "@/components/button";
 
 const TalentsObject = [
   {
@@ -327,6 +328,16 @@ export default function IndexPage() {
           bgColor="bg-[#FCFCFC]"
         >
           <AccordionComp />
+        </SectionWithTitle>
+
+        {/* Hire */}
+        <SectionWithTitle>
+          <div className="flex flex-col items-center sm:flex-row justify-center gap-5">
+            <p className="text-black font-normal font-ProximaNova text-[18px] sm:text-[24px]">
+              Top talent is in high demand.
+            </p>
+            <NulgenButton />
+          </div>
         </SectionWithTitle>
       </section>
     </DefaultLayout>

@@ -4,6 +4,7 @@ import { Head } from "./head";
 
 import { Navbar } from "@/components/navbar";
 import { useState, useEffect } from "react";
+import { Footer } from "@/components/landing-page/footer";
 
 export default function DefaultLayout({
   children,
@@ -38,6 +39,7 @@ export default function DefaultLayout({
         <Navbar />
       </div>
       <main className="w-full">{children}</main>
+      <Footer />
     </div>
   );
 }
