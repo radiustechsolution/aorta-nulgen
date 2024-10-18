@@ -13,6 +13,7 @@ import { RiDoubleQuotesL } from "react-icons/ri";
 import { FullWidthSection } from "@/components/landing-page/full-section-img-bg";
 import { TestimonialComp } from "@/components/landing-page/TestimonialComp";
 import { LatestPublication } from "@/components/landing-page/latest";
+import { AccordionComp } from "@/components/landing-page/accordion";
 
 const TalentsObject = [
   {
@@ -318,6 +319,14 @@ export default function IndexPage() {
               Read More Thought Leadership
             </p>
           </div>
+        </SectionWithTitle>
+
+        {/* Accordion */}
+        <SectionWithTitle
+          title="Discover Our Expert Skillsets"
+          bgColor="bg-[#FCFCFC]"
+        >
+          <AccordionComp />
         </SectionWithTitle>
       </section>
     </DefaultLayout>

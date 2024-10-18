@@ -1,17 +1,23 @@
 import Image from "next/image";
 import Slider from "react-slick";
 import { RiDoubleQuotesL } from "react-icons/ri";
-import { testimonials } from "@/lib/objects";
-import { RatingComp } from "../rating";
+import { testimonials } from "@/lib/objects"; // Import your testimonials array
+import { RatingComp } from "../rating"; // Assuming RatingComp is a reusable rating component
+import { useState } from "react";
 
 export const TestimonialComp = () => {
-  // Settings
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Settings for react-slick Slider
   const settings = {
-    dots: true,
+    dots: false, // Disable built-in dots because we are creating custom dots
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    beforeChange: (oldIndex: number, newIndex: number) => {
+      setCurrentSlide(newIndex);
+    },
     responsive: [
       {
         breakpoint: 768, // Mobile and tablet sizes
@@ -30,7 +36,7 @@ export const TestimonialComp = () => {
           <Image
             src="/asset/globe.svg"
             className="w-[30px] sm:w-[50px]"
-            alt=""
+            alt="Countries Served"
             width={50}
             height={50}
           />
@@ -45,7 +51,7 @@ export const TestimonialComp = () => {
           <Image
             src="/asset/clients.svg"
             className="w-[30px] sm:w-[50px]"
-            alt=""
+            alt="Clients Served"
             width={50}
             height={50}
           />
@@ -59,8 +65,9 @@ export const TestimonialComp = () => {
       </div>
 
       <div className="container mx-auto px-4 mt-10">
-        {/* Heading  */}
+        {/* Heading */}
 
+        {/* Desktop version */}
         <div className="hidden lg:grid grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <div
@@ -69,10 +76,10 @@ export const TestimonialComp = () => {
             >
               <div>
                 <RiDoubleQuotesL size={30} color="#204ECF" className="mb-3" />
-                <p className="text-[15px] font-ProximaNova font-semibold mb-2">
+                <p className="text-[15px] text-black font-ProximaNova font-semibold mb-2">
                   {testimonial.heading}
                 </p>
-                <p className="text-[13px] opacity-70 leading-6">
+                <p className="text-[13px] text-black opacity-70 leading-6">
                   {testimonial.testimony}
                 </p>
                 <div className="mt-3">
@@ -80,10 +87,10 @@ export const TestimonialComp = () => {
                 </div>
               </div>
               <div className="mt-3">
-                <h3 className="font-bold text-[13px] font-ProximaNova">
+                <h3 className="font-bold text-black text-[13px] font-ProximaNova">
                   {testimonial.author}
                 </h3>
-                <p className="text-[12px] font-ProximaNova opacity-70">
+                <p className="text-[12px] text-black font-ProximaNova opacity-70">
                   {testimonial.title}
                 </p>
                 <Image
@@ -98,7 +105,8 @@ export const TestimonialComp = () => {
           ))}
         </div>
 
-        <div className="lg:hidden">
+        {/* Mobile version */}
+        <div className="lg:hidden overflow-hidden">
           <Slider {...settings}>
             {testimonials.map((testimonial, index) => (
               <div
@@ -107,10 +115,10 @@ export const TestimonialComp = () => {
               >
                 <div className="">
                   <RiDoubleQuotesL size={30} color="#204ECF" className="mb-3" />
-                  <p className="text-[15px] font-ProximaNova font-semibold mb-2">
+                  <p className="text-[15px] text-black font-ProximaNova font-semibold mb-2">
                     {testimonial.heading}
                   </p>
-                  <p className="text-[13px] opacity-70 leading-6">
+                  <p className="text-[13px] text-black opacity-70 leading-6">
                     {testimonial.testimony}
                   </p>
                   <div className="mt-3">
@@ -119,10 +127,10 @@ export const TestimonialComp = () => {
                 </div>
 
                 <div className="mt-3">
-                  <h3 className="font-bold text-[13px] font-ProximaNova">
+                  <h3 className="font-bold text-black text-[13px] font-ProximaNova">
                     {testimonial.author}
                   </h3>
-                  <p className="text-[12px] font-ProximaNova opacity-70">
+                  <p className="text-[12px] text-black font-ProximaNova opacity-70">
                     {testimonial.title}
                   </p>
                   <Image
@@ -136,6 +144,19 @@ export const TestimonialComp = () => {
               </div>
             ))}
           </Slider>
+        </div>
+
+        {/* Custom Pagination dots */}
+        <div className="flex justify-center mt-5">
+          {testimonials.map((_, i) => (
+            <div
+              key={i}
+              onClick={() => setCurrentSlide(i)} // Allow clicking on dots to change the slide
+              className={`cursor-pointer w-2 h-2 mx-1 rounded-full ${
+                currentSlide === i ? "bg-blue-500" : "bg-gray-300"
+              }`}
+            ></div>
+          ))}
         </div>
       </div>
     </div>
