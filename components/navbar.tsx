@@ -8,8 +8,10 @@ import { useTranslations } from "next-intl";
 import { loadTranslations } from "@/lib/loadTranslations";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { NulgenButton } from "@/components/button";
+import { useRouter } from "next/router";
 
 export const Navbar = () => {
+  const router = useRouter();
   const t = useTranslations("common");
   const tn = useTranslations("navbar");
 
@@ -43,7 +45,9 @@ export const Navbar = () => {
           <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
             {tn("postInternship")}
           </p>
-          <NulgenButton />
+          <NulgenButton
+            action={() => router.push(siteConfig.path.paths.flow1)}
+          />
           <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
             {tn("login")}
           </p>

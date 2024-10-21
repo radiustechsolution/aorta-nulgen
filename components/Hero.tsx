@@ -1,6 +1,8 @@
 import { NulgenButton } from "@/components/button";
+import { siteConfig } from "@/config/site";
 import { Image } from "@nextui-org/react";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/router";
 
 const object = [
   {
@@ -14,6 +16,7 @@ const object = [
 ];
 
 export const HomeHero = () => {
+  const router = useRouter();
   const t = useTranslations("common");
 
   return (
@@ -27,7 +30,12 @@ export const HomeHero = () => {
             {t("hero_sub_heading_text")}
           </p>
           <div className="hidden sm:block">
-            <NulgenButton height={52} fontSize={20} width={264} />
+            <NulgenButton
+              action={() => router.push(siteConfig.path.paths.flow1)}
+              height={52}
+              fontSize={20}
+              width={264}
+            />
           </div>
           <button className="font-semibold font-ProximaNova sm:hidden text-[20px] h-[52px] w-full bg-secondary rounded-[5px] text-white">
             {t("hero_get_started")}

@@ -7,6 +7,7 @@ interface Type {
   width?: number | string;
   fontSize?: number | string;
   title?: string;
+  action?: () => void;
 }
 
 export const NulgenButton = ({
@@ -14,10 +15,12 @@ export const NulgenButton = ({
   width = 144,
   fontSize = 14,
   title,
+  action,
 }: Type) => {
   const t = useTranslations("common");
   return (
     <button
+      onClick={action && action}
       style={{ height, width, fontSize }}
       className="font-semibold bg-secondary rounded-[5px] text-white"
     >

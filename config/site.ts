@@ -38,5 +38,9 @@ export const siteConfig = {
         isDropDown: false,
       },
     ],
+
+    paths: {
+      flow1: "/auth/flow",
+    },
   },
 };
