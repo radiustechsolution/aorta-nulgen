@@ -136,3 +136,54 @@ export const Latest: LatestType[][] = [
     },
   ],
 ];
+
+export const TalentsObject = [
+  {
+    id: 0,
+    talent: "talent_developers", // Translation key
+    description: "description_developers", // Translation key
+    icon_dark: "/asset/icons/tools-icon1.svg",
+    icon_white: "/asset/icons/tools-icon1-white.svg",
+    path: "/",
+  },
+  {
+    id: 1,
+    talent: "talent_marketing_experts", // Translation key
+    description: "description_marketing_experts", // Translation key
+    icon_dark: "/asset/icons/tools-icon2.svg",
+    icon_white: "/asset/icons/tools-icon2-white.svg",
+    path: "/",
+  },
+  {
+    id: 2,
+    talent: "talent_designers", // Translation key
+    description: "description_designers", // Translation key
+    icon_dark: "/asset/icons/tools-icon1.svg",
+    icon_white: "/asset/icons/tools-icon1-white.svg",
+    path: "/",
+  },
+  {
+    id: 3,
+    talent: "talent_engineers", // Translation key
+    description: "description_engineers", // Translation key
+    icon_dark: "/asset/icons/tools-icon2.svg",
+    icon_white: "/asset/icons/tools-icon2-white.svg",
+    path: "/",
+  },
+  {
+    id: 4,
+    talent: "talent_product_managers", // Translation key
+    description: "description_product_managers", // Translation key
+    icon_dark: "/asset/icons/tools-icon1.svg",
+    icon_white: "/asset/icons/tools-icon1-white.svg",
+    path: "/",
+  },
+  {
+    id: 5,
+    talent: "talent_content_creators", // Translation key
+    description: "description_content_creators", // Translation key
+    icon_dark: "/asset/icons/tools-icon2.svg",
+    icon_white: "/asset/icons/tools-icon2-white.svg",
+    path: "/",
+  },
+];

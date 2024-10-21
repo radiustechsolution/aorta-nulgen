@@ -6,6 +6,7 @@ import { fontSans, fontMono } from "@/config/fonts";
 import "@/styles/globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { NextIntlClientProvider } from "next-intl";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -13,7 +14,13 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <NextUIProvider navigate={router.push}>
       <NextThemesProvider>
-        <Component {...pageProps} />
+        <NextIntlClientProvider
+          locale={router.locale}
+          timeZone="Europe/London"
+          messages={pageProps.messages}
+        >
+          <Component {...pageProps} />
+        </NextIntlClientProvider>
       </NextThemesProvider>
     </NextUIProvider>
   );

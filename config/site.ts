@@ -2,6 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Nulgen - AI Powered Career Companion",
+  shortName: "Nulgen",
   description: "Learn in-demand job skills for free and apply for internships",
   siteColors: {
     primary: "#0F256E",
@@ -12,27 +13,27 @@ export const siteConfig = {
   path: {
     navbarLinks: [
       {
-        title: "Get Internship",
+        title: "getInternship",
         path: "/",
         isDropDown: false,
       },
       {
-        title: "Master Skill",
+        title: "masterSkill",
         path: "/",
         isDropDown: true,
       },
       {
-        title: "About Us",
+        title: "aboutUs",
         path: "/",
         isDropDown: false,
       },
       {
-        title: "Blog",
+        title: "blog",
         path: "/",
         isDropDown: false,
       },
       {
-        title: "Contact",
+        title: "contact",
         path: "/",
         isDropDown: false,
       },

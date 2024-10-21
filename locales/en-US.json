@@ -1,0 +1,53 @@
+{
+  "common": {
+    "general_previously_at": "Previously at",
+    "general_verified_expert": "Verified Expert",
+    "hero_heading_text": "The AI Powered Career Companion!",
+    "hero_sub_heading_text": "Master in-demand job skills for free and boost your career. Get personalized learning paths and apply directly for internships that match your ambitions. Start your journey toward a successful career with the power of AI at your side.",
+    "hero_get_started": "Get Started",
+    "hero_trusted_by": "Trusted by students and employers",
+    "hero_testimonial_name": "Anna D. Fischer",
+    "hero_testimonial_city": "Berlin",
+    "hero_testimonial_text": "The process of getting my student pratikum was painless and seamless. I had the whole process completed in minutes.",
+    "trusted_by_leading": "Trusted by leading brands and startups",
+    "landing_talent": {
+      "title": "Master in-demand job skills",
+      "subtitle": "We are the largest, globally-distributed network of top business, design, and technology talent, ready to tackle your most important initiatives.",
+      "talent_developers": "Developers",
+      "description_developers": "Seasoned software engineers, coders, and architects with expertise across hundreds of technologies.",
+      "talent_marketing_experts": "Marketing Experts",
+      "description_marketing_experts": "Experts in digital marketing, growth marketing, content creation, market research, brand strategy execution, social media marketing, and more.",
+      "talent_designers": "Designers",
+      "description_designers": "Creative professionals who specialize in visual aesthetics, user experiences, and brand identity.",
+      "talent_engineers": "Engineers",
+      "description_engineers": "Problem solvers and innovators working on technology and systems that drive efficiency and productivity.",
+      "talent_product_managers": "Product Managers",
+      "description_product_managers": "Leaders who drive product vision, strategy, and execution in various markets.",
+      "talent_content_creators": "Content Creators",
+      "description_content_creators": "Skilled individuals who produce engaging and informative content across multiple platforms."
+    },
+    "on_demands": {
+      "title": "Build Amazing Teams,\nOn Demand",
+      "subtitle": "Quickly assemble the teams you need, exactly when you need them.",
+      "object": {
+        "on_demand_hire_quickly": "Hire Quickly",
+        "on_demand_hire_quickly_description": "Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.",
+        "on_demand_top_3_percent": "The Top 3%",
+        "on_demand_top_3_percent_description": "Every applicant to the Toptal network is rigorously tested and vetted. Our highly selective process leads to a 98% trial-to-hire success rate.",
+        "on_demand_leading_future_work": "Leading the Future of Work",
+        "on_demand_leading_future_work_description": "Our network is ready for tomorrow's business challenges by embracing advanced and specialized skills including blockchain and AI.",
+        "on_demand_a_level_above": "A Level Above",
+        "on_demand_a_level_above_description": "Every single freelancer in our global network embodies the highest levels of integrity, professionalism, and communication."
+      }
+    }
+  },
+  "navbar": {
+    "getInternship": "Get Internship",
+    "masterSkill": "Master Skill",
+    "aboutUs": "About Us",
+    "blog": "Blog",
+    "contact": "Contact",
+    "postInternship": "Post Internship",
+    "login": "Log In"
+  }
+}

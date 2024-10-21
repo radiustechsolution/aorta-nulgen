@@ -1,10 +1,6 @@
-import { HomeHero } from "@/components/Hero";
 import { NetworkComp } from "@/components/landing-page/network-comp";
-import { ProfileCard } from "@/components/landing-page/profile-card";
-import { SectionWithTitle } from "@/components/landing-page/section-with-title";
-import { TrustedByMany } from "@/components/landing-page/TrustedByMany";
 import DefaultLayout from "@/layouts/default";
-import { WhyObjects } from "@/lib/objects";
+import { TalentsObject, WhyObjects } from "@/lib/objects";
 import Image from "next/image";
 import { MdArrowRightAlt } from "react-icons/md";
 import { HiSearchCircle } from "react-icons/hi";
@@ -15,100 +11,50 @@ import { TestimonialComp } from "@/components/landing-page/TestimonialComp";
 import { LatestPublication } from "@/components/landing-page/latest";
 import { AccordionComp } from "@/components/landing-page/accordion";
 import { NulgenButton } from "@/components/button";
-
-const TalentsObject = [
-  {
-    id: 0,
-    talant: "Developers",
-    description:
-      "Seasoned software engineers, coders, and architects with expertise across hundreds of technologies.",
-    icon_dark: "/asset/icons/tools-icon1.svg",
-    icon_white: "/asset/icons/tools-icon1-white.svg",
-    path: "/",
-  },
-  {
-    id: 1,
-    talant: "Marketing Experts",
-    description:
-      "Experts in digital marketing, growth marketing, content creation, market research, brand strategy execution, social media marketing, and more.",
-    icon_dark: "/asset/icons/tools-icon2.svg",
-    icon_white: "/asset/icons/tools-icon2-white.svg",
-    path: "/",
-  },
-  {
-    id: 2,
-    talant: "Marketing Experts",
-    description:
-      "Experts in digital marketing, growth marketing, content creation, market research, brand strategy execution, social media marketing, and more.",
-    icon_dark: "/asset/icons/tools-icon1.svg",
-    icon_white: "/asset/icons/tools-icon1-white.svg",
-    path: "/",
-  },
-  {
-    id: 3,
-    talant: "Developers",
-    description:
-      "Seasoned software engineers, coders, and architects with expertise across hundreds of technologies.",
-    icon_dark: "/asset/icons/tools-icon2.svg",
-    icon_white: "/asset/icons/tools-icon2-white.svg",
-    path: "/",
-  },
-  {
-    id: 4,
-    talant: "Marketing Experts",
-    description:
-      "Experts in digital marketing, growth marketing, content creation, market research, brand strategy execution, social media marketing, and more.",
-    icon_dark: "/asset/icons/tools-icon1.svg",
-    icon_white: "/asset/icons/tools-icon1-white.svg",
-    path: "/",
-  },
-  {
-    id: 5,
-    talant: "Marketing Experts",
-    description:
-      "Experts in digital marketing, growth marketing, content creation, market research, brand strategy execution, social media marketing, and more.",
-    icon_dark: "/asset/icons/tools-icon2.svg",
-    icon_white: "/asset/icons/tools-icon2-white.svg",
-    path: "/",
-  },
-];
+import { ProfileSlider } from "@/components/landing-page/profile-slide";
+import { GetStaticPropsContext } from "next";
+import { loadTranslations } from "@/lib/loadTranslations";
+import { useTranslations } from "next-intl";
+import { HomeHero } from "./components/landing-page/Hero";
+import { TrustedByMany } from "./components/landing-page/TrustedByMany";
+import { SectionWithTitle } from "./components/landing-page/section-with-title";
+import React from "react";
+import { ProfileCard } from "./components/landing-page/profile-card";
 
 const OnDemandObject = [
   {
     id: 0,
-    title: "Hire Quickly",
-    description:
-      "Hire in under 48 hours. Scale up or down, no strings attached. We offer flexible engagements from hourly to full-time.",
+    title: "on_demand_hire_quickly",
+    description: "on_demand_hire_quickly_description",
     icon_dark: "/asset/icons/tools-icon6.svg",
     path: "/",
   },
   {
     id: 1,
-    title: "The Top 3%",
-    description:
-      "Every applicant to the Toptal network is rigorously tested and vetted. Our highly selective process leads to a 98% trial-to-hire success rate.",
+    title: "on_demand_top_3_percent",
+    description: "on_demand_top_3_percent_description",
     icon_dark: "/asset/icons/tools-icon7.svg",
     path: "/",
   },
   {
     id: 2,
-    title: "Leading the Future of Work",
-    description:
-      "Our network is ready for tomorrow's business challenges by embracing advanced and specialized skills including blockchain and AI.",
+    title: "on_demand_leading_future_work",
+    description: "on_demand_leading_future_work_description",
     icon_dark: "/asset/icons/tools-icon8.svg",
     path: "/",
   },
   {
     id: 3,
-    title: "A Level Above",
-    description:
-      "Every single freelancer in our global network embodies the highest levels of integrity, professionalism, and communication.",
+    title: "on_demand_a_level_above",
+    description: "on_demand_a_level_above_description",
     icon_dark: "/asset/icons/tools-icon9.svg",
     path: "/",
   },
 ];
 
 export default function IndexPage() {
+  const t = useTranslations("common");
+
   return (
     <DefaultLayout>
       <section className="">
@@ -120,10 +66,16 @@ export default function IndexPage() {
           <TrustedByMany />
         </div>
 
+        <div className="flex flex-col mt-10 items-center">
+          <div className="max-w-[1220px] overflow-hidden">
+            <ProfileSlider />
+          </div>
+        </div>
+
         {/* Talents */}
         <SectionWithTitle
-          subtitle="We are the largest, globally-distributed network of top business, design, and technology talent, ready to tackle your most important initiatives."
-          title="Master in-demand job skills"
+          title={t("landing_talent.title")}
+          subtitle={t("landing_talent.subtitle")}
         >
           <div className="grid grid-cols-1 bg-[#D8D9DC] sm:grid-cols-2 gap-[1px] lg:grid-cols-3 mt-10">
             {TalentsObject.map((v) => (
@@ -148,18 +100,18 @@ export default function IndexPage() {
                       className="group-hover:block hidden"
                     />
                     <p className="font-ProximaNova text-[20px] text-black group-hover:text-white">
-                      {v.talant}
+                      {t(`landing_talent.${v.talent}`)}
                     </p>
                   </div>
 
                   <p className="text-black font-ProximaNova text-[15px] group-hover:text-white">
-                    {v.description}
+                    {t(`landing_talent.${v.description}`)}
                   </p>
                 </div>
                 <div>
                   <div className="hidden group-hover:flex items-center justify-between">
                     <p className="text-[16px] text-black group-hover:text-white group-hover:underline">
-                      View {v.talant}
+                      View {t(`landing_talent.${v.talent}`)}
                     </p>
                     <MdArrowRightAlt
                       size={20}
@@ -178,11 +130,20 @@ export default function IndexPage() {
             <div className="w-full basis-[100%] lg:basis-[60%]">
               <div className="flex flex-col text-center md:text-left items-center md:items-start gap-2">
                 <p className="font-ProximaNova leading-[30px] md:leading-[56px] font-semibold text-[#191e28] text-[28px] md:text-[40px]">
-                  Build Amazing Teams, <br /> On Demand
+                  {t("on_demands.title")
+                    .split("\n")
+                    .map((line, index) => (
+                      <React.Fragment key={index}>
+                        {line}
+                        {index <
+                          t("on_demands.title").split("\n").length - 1 && (
+                          <br />
+                        )}
+                      </React.Fragment>
+                    ))}
                 </p>
                 <p className="text-[14px] md:text-[15px] text-[#84888e]">
-                  Quickly assemble the teams you need, exactly when you need
-                  them.
+                  {t("on_demands.subtitle")}
                 </p>
               </div>
 
@@ -203,12 +164,12 @@ export default function IndexPage() {
                           className="group-hover:hidden"
                         />
                         <p className="font-ProximaNova text-[20px] text-black group-hover:text-white">
-                          {v.title}
+                          {t(`on_demands.object.${v.title}`)}
                         </p>
                       </div>
 
                       <p className="text-[#4B556A] sm:text-left text-center font-ProximaNova text-[15px] group-hover:text-white">
-                        {v.description}
+                        {t(`on_demands.object.${v.description}`)}
                       </p>
                     </div>
                   </div>
@@ -308,7 +269,6 @@ export default function IndexPage() {
           subtitle="We have a reputation for helping clients around the world find success on their most important projects."
         >
           <div className="mt-[40px] border border-gray-200"></div>
-
           <TestimonialComp />
         </SectionWithTitle>
 
@@ -342,4 +302,15 @@ export default function IndexPage() {
       </section>
     </DefaultLayout>
   );
+}
+
+// Fetch the translations based on the locale
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  const messages = await loadTranslations(locale || "en-US");
+
+  return {
+    props: {
+      messages,
+    },
+  };
 }

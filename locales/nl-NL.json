@@ -1,0 +1,53 @@
+{
+  "common": {
+    "general_previously_at": "Eerder bij",
+    "general_verified_expert": "Geverifieerde Expert",
+    "hero_heading_text": "De AI-aangedreven carrièregenoot!",
+    "hero_sub_heading_text": "Beheers in-demand vaardigheden gratis en geef je carrière een boost. Krijg gepersonaliseerde leerpaden en solliciteer direct naar stages die aansluiten bij jouw ambities. Begin je reis naar een succesvolle carrière met de kracht van AI aan je zijde.",
+    "hero_get_started": "Begin nu",
+    "hero_trusted_by": "Vertrouwd door studenten en werkgevers",
+    "hero_testimonial_name": "Anna D. Fischer",
+    "hero_testimonial_city": "Berlijn",
+    "hero_testimonial_text": "Het proces om mijn studentenpratikum te krijgen was pijnloos en naadloos. Ik had het hele proces in enkele minuten afgerond.",
+    "trusted_by_leading": "Vertrouwd door toonaangevende merken en startups",
+    "landing_talent": {
+      "title": "Beheers in-demand vaardigheden",
+      "subtitle": "Wij zijn het grootste, wereldwijd verspreide netwerk van top talent in business, design en technologie, klaar om jouw belangrijkste initiatieven aan te pakken.",
+      "talent_developers": "Ontwikkelaars",
+      "description_developers": "Ervaren software-ingenieurs, programmeurs en architecten met expertise in honderden technologieën.",
+      "talent_marketing_experts": "Marketing Experts",
+      "description_marketing_experts": "Experts in digitale marketing, groeimarketing, contentcreatie, marktonderzoek, uitvoering van merkstrategie, sociale media-marketing en meer.",
+      "talent_designers": "Ontwerpers",
+      "description_designers": "Creatieve professionals die zich specialiseren in visuele esthetiek, gebruikerservaringen en merkidentiteit.",
+      "talent_engineers": "Ingenieurs",
+      "description_engineers": "Probleemoplossers en innovatoren die werken aan technologie en systemen die efficiëntie en productiviteit bevorderen.",
+      "talent_product_managers": "Productmanagers",
+      "description_product_managers": "Leiders die de productvisie, strategie en uitvoering in verschillende markten aandrijven.",
+      "talent_content_creators": "Inhoudscreators",
+      "description_content_creators": "Vaardige individuen die boeiende en informatieve inhoud produceren op meerdere platforms."
+    },
+    "on_demands": {
+      "title": "Bouw Geweldige Teams,\nOp Afroep",
+      "subtitle": "Stel snel de teams samen die je nodig hebt, precies wanneer je ze nodig hebt.",
+      "object": {
+        "on_demand_hire_quickly": "Snel Huren",
+        "on_demand_hire_quickly_description": "Huur binnen 48 uur. Schaal omhoog of omlaag, zonder verplichtingen. We bieden flexibele samenwerking van per uur tot fulltime.",
+        "on_demand_top_3_percent": "De Top 3%",
+        "on_demand_top_3_percent_description": "Elke aanvrager voor het Toptal-netwerk wordt grondig getest en gescreend. Ons zeer selectieve proces leidt tot een 98% succespercentage van proef- naar aanstelling.",
+        "on_demand_leading_future_work": "De Toekomst van Werk Leiden",
+        "on_demand_leading_future_work_description": "Ons netwerk is voorbereid op de zakelijke uitdagingen van morgen door geavanceerde en gespecialiseerde vaardigheden te omarmen, waaronder blockchain en AI.",
+        "on_demand_a_level_above": "Een Niveau Boven",
+        "on_demand_a_level_above_description": "Elke freelancer in ons wereldwijde netwerk belichaamt de hoogste niveaus van integriteit, professionaliteit en communicatie."
+      }
+    }
+  },
+  "navbar": {
+    "getInternship": "Stage vinden",
+    "masterSkill": "Beheers Vaardigheid",
+    "aboutUs": "Over ons",
+    "blog": "Blog",
+    "contact": "Contact",
+    "postInternship": "Plaats Stage",
+    "login": "Inloggen"
+  }
+}

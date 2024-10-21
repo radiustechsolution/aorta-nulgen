@@ -2,9 +2,9 @@ import { Link } from "@nextui-org/link";
 
 import { Head } from "./head";
 
-import { Navbar } from "@/components/navbar";
 import { useState, useEffect } from "react";
 import { Footer } from "@/components/landing-page/footer";
+import { Navbar } from "@/pages/components/navbar";
 
 export default function DefaultLayout({
   children,
