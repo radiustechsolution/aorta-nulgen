@@ -1,3 +1,7 @@
+import { loadTranslations } from "@/lib/loadTranslations";
+import { GetStaticPropsContext } from "next";
+import { useTranslations } from "next-intl";
+
 interface Type {
   height?: number | string;
   width?: number | string;
@@ -11,12 +15,13 @@ export const NulgenButton = ({
   fontSize = 14,
   title,
 }: Type) => {
+  const t = useTranslations("common");
   return (
     <button
       style={{ height, width, fontSize }}
       className="font-semibold bg-secondary rounded-[5px] text-white"
     >
-      {title ? title : "Get Started"}
+      {title ? title : t("hero_get_started")}
     </button>
   );
 };

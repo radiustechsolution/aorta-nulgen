@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { VscVerifiedFilled } from "react-icons/vsc";
 
@@ -8,6 +9,7 @@ interface Types {
 }
 
 export const ProfileCard = ({ noShadow, pic, noBottomPadding }: Types) => {
+  const t = useTranslations("common");
   return (
     <div className={`${!noShadow && "shadow-md"} w-[250px]`}>
       <div className="relative bg-red-200 h-[250px] w-full ">
@@ -28,7 +30,7 @@ export const ProfileCard = ({ noShadow, pic, noBottomPadding }: Types) => {
           <div className="flex items-center gap-0">
             <VscVerifiedFilled size={14} color="green" />
             <p className="font-ProximaNova font-semibold text-[12px] text-green-700">
-              Verified Expert
+              {t("general_verified_expert")}
             </p>
             <p className="font-ProximaNova ml-1 text-[12px] text-green-700">
               In France
@@ -37,7 +39,9 @@ export const ProfileCard = ({ noShadow, pic, noBottomPadding }: Types) => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <p className=" uppercase text-[13px] text-gray-600">Previously at</p>
+          <p className=" uppercase text-[13px] text-gray-600">
+            {t("general_previously_at")}
+          </p>
           <Image
             width={150}
             height={40}

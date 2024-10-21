@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const object = [
@@ -28,12 +29,13 @@ const object = [
 ];
 
 export const TrustedByMany = () => {
+  const t = useTranslations("common");
   return (
     <div className="bg-bgPrimaryFaint flex flex-col items-center px-5 xl:px-10 w-full">
       <div className="max-w-[1220px] w-full flex items-center h-[90px] gap-8 ">
         <div className="w-[250px]">
           <p className="text-[#646A76] uppercase leading-6 font-ProximaNova text-[14px]">
-            Trusted by leading <br /> brands and startups
+            {t("trusted_by_leading")}
           </p>
         </div>
         <div className="flex items-center justify-between w-full">

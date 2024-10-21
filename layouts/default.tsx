@@ -4,7 +4,7 @@ import { Head } from "./head";
 
 import { useState, useEffect } from "react";
 import { Footer } from "@/components/landing-page/footer";
-import { Navbar } from "@/pages/components/navbar";
+import { Navbar } from "@/components/navbar";
 
 export default function DefaultLayout({
   children,

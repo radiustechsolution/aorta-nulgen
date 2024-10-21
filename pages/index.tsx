@@ -15,11 +15,11 @@ import { ProfileSlider } from "@/components/landing-page/profile-slide";
 import { GetStaticPropsContext } from "next";
 import { loadTranslations } from "@/lib/loadTranslations";
 import { useTranslations } from "next-intl";
-import { HomeHero } from "./components/landing-page/Hero";
-import { TrustedByMany } from "./components/landing-page/TrustedByMany";
-import { SectionWithTitle } from "./components/landing-page/section-with-title";
 import React from "react";
-import { ProfileCard } from "./components/landing-page/profile-card";
+import { HomeHero } from "@/components/Hero";
+import { ProfileCard } from "@/components/landing-page/profile-card";
+import { SectionWithTitle } from "@/components/landing-page/section-with-title";
+import { TrustedByMany } from "@/components/landing-page/TrustedByMany";
 
 const OnDemandObject = [
   {

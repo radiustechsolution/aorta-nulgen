@@ -2,21 +2,22 @@ import { siteConfig } from "@/config/site";
 import { GetStaticPropsContext } from "next";
 import Image from "next/image";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { NulgenButton } from "./button";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdMenu } from "react-icons/io";
-import LanguageSwitcher from "./LanguageSwitcher";
 import { useTranslations } from "next-intl";
 import { loadTranslations } from "@/lib/loadTranslations";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { NulgenButton } from "@/components/button";
 
 export const Navbar = () => {
-  // const t = useTranslations("common");
+  const t = useTranslations("common");
+  const tn = useTranslations("navbar");
 
   return (
     <nav className="max-w-[1220px] flex items-center justify-between h-[64px] w-full">
       <div className="flex items-center gap-10">
         <p className="font-bold font-ProximaNova text-black text-[20px]">
-          Nulgen
+          {siteConfig.shortName}
         </p>
         <ul className="hidden xl:flex items-center gap-5">
           {siteConfig.path.navbarLinks.map((data) => (
@@ -25,7 +26,7 @@ export const Navbar = () => {
               key={data.title}
             >
               <span className="flex items-center">
-                {data.title}
+                {tn(data.title)}
                 {data.isDropDown && (
                   <MdOutlineKeyboardArrowDown color="#262d3d" />
                 )}
@@ -40,11 +41,11 @@ export const Navbar = () => {
         <LanguageSwitcher />
         <div className="hidden lg:flex items-center gap-5">
           <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
-            Post Internship
+            {tn("postInternship")}
           </p>
           <NulgenButton />
           <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
-            Log In
+            {tn("login")}
           </p>
         </div>
         <IoMdMenu className="flex xl:hidden" size={33} color="#262d3d" />

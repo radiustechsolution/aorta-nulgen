@@ -1,5 +1,6 @@
+import { NulgenButton } from "@/components/button";
 import { Image } from "@nextui-org/react";
-import { NulgenButton } from "./button";
+import { useTranslations } from "next-intl";
 
 const object = [
   {
@@ -13,33 +14,28 @@ const object = [
 ];
 
 export const HomeHero = () => {
+  const t = useTranslations("common");
+
   return (
     <section className="flex pt-[115px] sm:pt-[100px] max-h-max pb-5 lg:pb-0 lg:h-max px-5 xl:px-10 flex-col bg-bgPrimary items-center">
       <div className="max-w-[1220px] flex flex-col lg:flex-row items-start w-full">
         <div className="basis-[100%] text-center lg:text-left lg:basis-[45%] xl:basis-[45%] w-full">
           <h1 className="font-semibold font-ProximaNova text-[35px] sm:text-[42px] xl:text-[48px] text-[#191e28] leading-[48px] sm:leading-[56px] xl:leading-[64px]">
-            The{" "}
-            <span className=" cursor-pointer hover:no-underline">
-              AI Powered
-            </span>{" "}
-            <br /> Career Companion
+            {t("hero_heading_text")}
           </h1>
           <p className="text-[15px] font-ProximaNova xl:text-[18px] text-[#455065] pt-3 pb-5 xl:pt-5 xl:pb-8 leading-[28px]">
-            Master in-demand job skills for free and boost your career. Get
-            personalized learning paths and apply directly for internships that
-            match your ambitions. Start your journey toward a successful career
-            with the power of AI at your side.
+            {t("hero_sub_heading_text")}
           </p>
           <div className="hidden sm:block">
             <NulgenButton height={52} fontSize={20} width={264} />
           </div>
           <button className="font-semibold font-ProximaNova sm:hidden text-[20px] h-[52px] w-full bg-secondary rounded-[5px] text-white">
-            Get Started
+            {t("hero_get_started")}
           </button>
 
           <div className="mt-10">
-            <p className="text-[#646A76] text-[14px] tracking-widest uppercase font-ProximaNova">
-              Trusted by students and employers
+            <p className="text-[#646A76] lg:hidden text-[14px] tracking-widest uppercase font-ProximaNova">
+              {t("hero_trusted_by")}
             </p>
             <div className="flex lg:hidden items-center gap-4 justify-center w-full">
               {object.map((v) => (
@@ -65,8 +61,7 @@ export const HomeHero = () => {
             <p className=" font-ProximaNova text-[30px] text-black">Berlin</p>
 
             <p className=" font-ProximaNova text-[14px] text-gray-500">
-              The process of getting my student pratikum was painless and
-              seeamless I had the whole process completed in minutes.
+              {t("hero_testimonial_text")}
             </p>
           </div>
         </div>
