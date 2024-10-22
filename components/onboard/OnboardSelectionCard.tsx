@@ -16,15 +16,13 @@ export const OnboardSelectionCard = ({ title, path, subtitle }: Types) => {
 
   const goNext = () => {
     setIsLoading(true);
-    setTimeout(() => {
-      path ? router.push(path) : setIsLoading(false);
-    }, 500);
+    path ? router.push(path) : setIsLoading(false);
   };
 
   return (
     <div
       role="presentation"
-      onClick={() => router.push(path)}
+      onClick={goNext}
       className="w-full cursor-pointer p-4 sm:p-5 mid-shadow hover:bg-gradient-to-b from-[#1F4DCD] to-[#173BA0] group h-max flex items-center justify-between"
     >
       <div className="flex items-start gap-3 sm:gap-5">
