@@ -25,12 +25,14 @@ const Flow1 = () => {
         {/* Selections */}
         <div className="mt-10 flex flex-col gap-3">
           <OnboardSelectionCard
-            title="Learn new skill"
-            subtitle="Unlock your potential with hands-on learning and real-world experience"
-          />
-          <OnboardSelectionCard
+            path={"/auth/flow/internship"}
             title="Get Internship"
             subtitle="Gain real-world experience and kickstart your professional journey."
+          />
+          <OnboardSelectionCard
+            path={"/auth/flow/skill"}
+            title="Learn new skill"
+            subtitle="Unlock your potential with hands-on learning and real-world experience"
           />
         </div>
       </div>

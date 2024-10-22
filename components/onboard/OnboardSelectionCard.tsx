@@ -1,21 +1,30 @@
 import Image from "next/image";
-import { MdOutlineArrowRightAlt } from "react-icons/md";
 import { BsArrowRight } from "react-icons/bs";
 import { useState } from "react";
 import { Spinner } from "@nextui-org/react";
+import { useRouter } from "next/router";
 
 interface Types {
   title: string;
   subtitle: string;
+  path?: any;
 }
 
-export const OnboardSelectionCard = ({ title, subtitle }: Types) => {
+export const OnboardSelectionCard = ({ title, path, subtitle }: Types) => {
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+
+  const goNext = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      path ? router.push(path) : setIsLoading(false);
+    }, 2000);
+  };
 
   return (
     <div
       role="presentation"
-      onClick={() => setIsLoading(true)}
+      onClick={goNext}
       className="w-full cursor-pointer p-4 sm:p-5 mid-shadow hover:bg-gradient-to-b from-[#1F4DCD] to-[#173BA0] group h-max flex items-center justify-between"
     >
       <div className="flex items-start gap-3 sm:gap-5">
