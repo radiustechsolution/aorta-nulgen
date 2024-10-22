@@ -1,4 +1,5 @@
 import { OnboardSelectionCard } from "@/components/onboard/OnboardSelectionCard";
+import { siteConfig } from "@/config/site";
 import AuthLayout from "@/layouts/auth";
 import { useRouter } from "next/router";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
@@ -41,9 +42,11 @@ const Flow2 = () => {
         <div className="mt-10 flex flex-col gap-3">
           <OnboardSelectionCard
             title="Join waiting list"
+            path={siteConfig.path.paths.waitingList}
             subtitle="Be the first to access exclusive learning opportunities and resources."
           />
           <OnboardSelectionCard
+            path={siteConfig.path.paths.getInternship}
             title="Apply for internship"
             subtitle="Gain real-world experience and kickstart your professional journey."
           />

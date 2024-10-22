@@ -41,6 +41,11 @@ export const siteConfig = {
 
     paths: {
       flow1: "/auth/flow",
+      waitingList: "/wait-list",
+      getInternship: "/auth/flow/internship",
+      highSchool: "/auth/flow/highschool",
+      undergraduate: "/auth/flow/undergraduate",
+      jobBoard: "/jobs",
     },
   },
 };

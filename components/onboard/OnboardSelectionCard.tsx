@@ -18,7 +18,7 @@ export const OnboardSelectionCard = ({ title, path, subtitle }: Types) => {
     setIsLoading(true);
     setTimeout(() => {
       path ? router.push(path) : setIsLoading(false);
-    }, 2000);
+    }, 500);
   };
 
   return (
@@ -57,7 +57,11 @@ export const OnboardSelectionCard = ({ title, path, subtitle }: Types) => {
           className="text-[#455065] group-hover:text-white"
         />
       ) : (
-        <Spinner size="sm" />
+        <Spinner
+          size="sm"
+          color="current"
+          className="text-black group-hover:text-white"
+        />
       )}
     </div>
   );

@@ -2,19 +2,17 @@ import { OnboardSelectionCard } from "@/components/onboard/OnboardSelectionCard"
 import { siteConfig } from "@/config/site";
 import AuthLayout from "@/layouts/auth";
 import { useRouter } from "next/router";
-import { BsArrowLeft } from "react-icons/bs";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
-const Flow2 = () => {
-  //
+const Flow3 = () => {
   const router = useRouter();
-
   return (
     <AuthLayout>
       <div className="max-w-[750px] mt-[35px] flex-1 w-full">
         {/* Details */}
         <div className="w-full flex items-center px-5 bg-[#EDF1FD] h-max py-5 rounded-md border-l-2 border-[#2552D0]">
           <p className="text-[13px] text-[#262d3d] leading-[20px]">
-            Find and apply for Internship positions
+            Our AI powered search engine will help you find your best match
           </p>
         </div>
 
@@ -32,25 +30,30 @@ const Flow2 = () => {
               />
             </div>
             <p className="text-[#90949D] font-semibold text-[14px] font-ProximaNova">
-              STEP 2
+              STEP 3
             </p>
           </div>
-          <h1 className="text-[18px] md:text-[24px] font-ProximaNova font-semibold text-black">
-            Which of these best describes you?
-          </h1>
+          {/* <h1 className="text-[18px] md:text-[24px] font-ProximaNova font-semibold text-black">
+            AI Powered free learning coming soon
+          </h1> */}
         </div>
 
         {/* Selections */}
         <div className="mt-10 flex flex-col gap-3">
           <OnboardSelectionCard
-            path={siteConfig.path.paths.highSchool}
-            title="High school student"
-            subtitle="Begin your journey with foundational skills and hands-on learning experiences."
+            title="Apply for Internship"
+            path={siteConfig.path.paths.jobBoard}
+            subtitle="Be the first to access exclusive learning opportunities and gain practical experience in your field."
           />
           <OnboardSelectionCard
-            path={siteConfig.path.paths.undergraduate}
-            title="Undergraduate"
-            subtitle="Gain practical experience and prepare for a successful professional career."
+            path={siteConfig.path.paths.jobBoard}
+            title="Apply for Ausbildung"
+            subtitle="Gain hands-on experience and develop practical skills to build a strong professional foundation."
+          />
+          <OnboardSelectionCard
+            path={siteConfig.path.paths.jobBoard}
+            title="Apply for mini job"
+            subtitle="Explore flexible job opportunities to gain experience while balancing other commitments."
           />
         </div>
       </div>
@@ -58,4 +61,4 @@ const Flow2 = () => {
   );
 };
 
-export default Flow2;
+export default Flow3;
