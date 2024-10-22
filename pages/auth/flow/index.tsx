@@ -9,8 +9,8 @@ const Flow1 = () => {
         <div className="w-full flex items-center px-5 bg-[#EDF1FD] h-max py-5 rounded-md border-l-2 border-[#2552D0]">
           <p className="text-[13px] text-[#262d3d] leading-[20px]">
             Thanks for your interest in hiring through Toptal! Before we get
-            started, we'd like to ask a few questions to better understand your
-            business needs.
+            started, we&apos;d like to ask a few questions to better understand
+            your business needs.
           </p>
         </div>
 
