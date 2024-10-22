@@ -24,7 +24,7 @@ export const OnboardSelectionCard = ({ title, path, subtitle }: Types) => {
   return (
     <div
       role="presentation"
-      onClick={goNext}
+      onClick={() => router.push(path)}
       className="w-full cursor-pointer p-4 sm:p-5 mid-shadow hover:bg-gradient-to-b from-[#1F4DCD] to-[#173BA0] group h-max flex items-center justify-between"
     >
       <div className="flex items-start gap-3 sm:gap-5">
