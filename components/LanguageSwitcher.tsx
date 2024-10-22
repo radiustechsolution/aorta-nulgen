@@ -15,9 +15,9 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center outline-none items-center">
       <select
-        className="px-2 py-1 text-black bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+        className="px-2 py-1 text-black bg-transparent outline-none focus:outline-none  transition-all duration-200"
         value={locale}
         onChange={(e) => changeLanguage(e.target.value)}
         aria-label="Select language"
