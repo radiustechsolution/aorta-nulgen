@@ -1,10 +1,18 @@
 import Image from "next/image";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import { BsArrowRight } from "react-icons/bs";
+import { useState } from "react";
+import { Spinner } from "@nextui-org/react";
 
 export const OnboardSelectionCard = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   return (
-    <div className="w-full cursor-pointer p-4 sm:p-5 mid-shadow hover:bg-gradient-to-b from-[#1F4DCD] to-[#173BA0] group h-max flex items-center justify-between">
+    <div
+      role="presentation"
+      onClick={() => setIsLoading(true)}
+      className="w-full cursor-pointer p-4 sm:p-5 mid-shadow hover:bg-gradient-to-b from-[#1F4DCD] to-[#173BA0] group h-max flex items-center justify-between"
+    >
       <div className="flex items-start gap-3 sm:gap-5">
         <Image
           alt="comp-icon"
@@ -29,10 +37,14 @@ export const OnboardSelectionCard = () => {
           </p>
         </div>
       </div>
-      <BsArrowRight
-        size={25}
-        className="text-[#455065] group-hover:text-white"
-      />
+      {!isLoading ? (
+        <BsArrowRight
+          size={25}
+          className="text-[#455065] group-hover:text-white"
+        />
+      ) : (
+        <Spinner size="sm" />
+      )}
     </div>
   );
 };
