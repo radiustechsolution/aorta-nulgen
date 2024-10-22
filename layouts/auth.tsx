@@ -10,7 +10,7 @@ export default function AuthLayout({
     <div className="relative bg-white flex items-center flex-col h-svh">
       <Head />
       <Navbar />
-      <main className="bg-white w-full px-5 lg:px-0 flex-1 flex items-center flex-col">
+      <main className="bg-white w-full px-8 lg:px-0 flex-1 flex items-center flex-col">
         {children}
       </main>
     </div>
