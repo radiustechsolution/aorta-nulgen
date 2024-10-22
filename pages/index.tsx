@@ -66,11 +66,11 @@ export default function IndexPage() {
           <TrustedByMany />
         </div>
 
-        <div className="flex flex-col mt-10 items-center">
+        {/* <div className="flex flex-col mt-10 items-center">
           <div className="max-w-[1220px] overflow-hidden">
             <ProfileSlider />
           </div>
-        </div>
+        </div> */}
 
         {/* Talents */}
         <SectionWithTitle
