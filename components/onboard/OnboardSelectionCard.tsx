@@ -4,7 +4,12 @@ import { BsArrowRight } from "react-icons/bs";
 import { useState } from "react";
 import { Spinner } from "@nextui-org/react";
 
-export const OnboardSelectionCard = () => {
+interface Types {
+  title: string;
+  subtitle: string;
+}
+
+export const OnboardSelectionCard = ({ title, subtitle }: Types) => {
   const [isLoading, setIsLoading] = useState(false);
 
   return (
@@ -30,10 +35,10 @@ export const OnboardSelectionCard = () => {
         />
         <div className=" leading-[20px]">
           <h1 className="text-black group-hover:text-white font-ProximaNova font-medium">
-            Developers
+            {title}
           </h1>
           <p className="text-[#666C77] group-hover:text-white group-hover:opacity-70 text-[12px] sm:text-[14px]">
-            Software developers, AI Experts, Data Scientists, DevOps and QA
+            {subtitle}
           </p>
         </div>
       </div>
