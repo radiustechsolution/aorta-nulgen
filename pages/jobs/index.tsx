@@ -1,3 +1,4 @@
+import JobBoardLayout from "@/layouts/jobboard";
 import React from "react";
 
 export default function JobBoard() {
@@ -32,38 +33,12 @@ export default function JobBoard() {
   ];
 
   return (
-    <div className=" bg-gray-100 py-10 h-svh">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-10">
-          Demo Job Board
-        </h1>
-
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {jobs.map((job, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl transition-shadow"
-            >
-              <h2 className="text-2xl font-bold text-blue-600 mb-2">
-                {job.title}
-              </h2>
-              <p className="text-gray-600 font-semibold">{job.company}</p>
-              <p className="text-gray-500 mb-4">
-                {job.location} • {job.type}
-              </p>
-              <p className="text-gray-700">{job.description}</p>
-              <div className="mt-4">
-                <span className="text-sm text-gray-500">
-                  Posted {job.postedDate}
-                </span>
-              </div>
-              <button className="mt-4 w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition-colors">
-                Apply Now
-              </button>
-            </div>
-          ))}
+    <JobBoardLayout>
+      <section>
+        <div>
+          <p>Jobs</p>
         </div>
-      </div>
-    </div>
+      </section>
+    </JobBoardLayout>
   );
 }
