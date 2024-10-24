@@ -57,7 +57,7 @@ export const JobBoardHero = () => {
       <div className="absolute bottom-[-200px] md:bottom-[-85px] lg:bottom-[-50px] xl:bottom-[-45px] z-10 left-0 px-5 xl:px-0 flex flex-col w-full items-center">
         <div className="max-w-[1100px] w-full">
           <div className="w-full p-7 shadow-md rounded-md bg-white border border-gray-100 flex-col lg:flex-row gap-4 flex items-center justify-between">
-            <div className="border border-gray-200 px-2 h-[38px] rounded-md flex items-center justify-between w-full lg:w-[30%]">
+            <div className="border border-gray-200 px-2 h-[42px] md:h-[38px] rounded-md flex items-center justify-between w-full lg:w-[30%]">
               <div className="w-[75%] flex items-center ">
                 <CiSearch color="#A0A2B3" />
                 <input
@@ -73,9 +73,9 @@ export const JobBoardHero = () => {
               </button>
             </div>
             <div className="w-full lg:w-[70%] flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="w-full border border-gray-200 h-[38px] rounded-md"></div>
-              <div className="w-full border border-gray-200 h-[38px] rounded-md"></div>
-              <div className="w-full border border-gray-200 h-[38px] rounded-md"></div>
+              <div className="w-full border border-gray-200 h-[42px] md:h-[38px] rounded-md"></div>
+              <div className="w-full border border-gray-200 h-[42px] md:h-[38px] rounded-md"></div>
+              <div className="w-full border border-gray-200 h-[42px] md:h-[38px] rounded-md"></div>
             </div>
           </div>
         </div>
