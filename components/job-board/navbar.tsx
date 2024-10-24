@@ -7,7 +7,7 @@ const NavbarJobBoard = () => {
     <div className="h-[60px] sm:h-[80px] max-w-[1100px] w-full flex items-center justify-between">
       <div className="flex items-center cursor-pointer gap-1">
         <HiOutlineBriefcase size={24} className="text-[#4E6CFF]" />
-        <p className="text-[17px] font-semibold">NulgenJobs</p>
+        <p className="text-[17px] text-black font-semibold">NulgenJobs</p>
       </div>
       <div className="flex items-center font-ProximaNova gap-4">
         <Link
