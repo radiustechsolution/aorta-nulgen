@@ -1,8 +1,7 @@
-import { Link } from "@nextui-org/link";
-import { Head } from "./head";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Footer } from "@/components/landing-page/footer";
 import { Navbar } from "@/components/navbar";
+import { Head } from "./head";
 
 export default function DefaultLayout({
   children,
@@ -10,21 +9,29 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const mainRef = useRef<HTMLDivElement>(null); // Ref to the main tag
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      // Check if the main div has been scrolled past 700px
+      if (mainRef.current && mainRef.current.scrollTop > 700) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    const mainElement = mainRef.current;
+
+    if (mainElement) {
+      mainElement.addEventListener("scroll", handleScroll);
+    }
 
     // Cleanup event listener on component unmount
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (mainElement) {
+        mainElement.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
 
@@ -38,7 +45,10 @@ export default function DefaultLayout({
       >
         <Navbar />
       </div>
-      <main className="w-full flex-1 scrollbar-hide overflow-auto">
+      <main
+        ref={mainRef} // Attach ref to main
+        className="w-full flex-1 scrollbar-hide overflow-auto"
+      >
         {children}
       </main>
     </div>
