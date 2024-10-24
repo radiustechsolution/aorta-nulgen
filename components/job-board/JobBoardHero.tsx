@@ -15,6 +15,8 @@ export const JobBoardHero = () => {
         <Image
           src="/asset/job/hero-bg.jpg"
           layout="fill"
+          quality={40}
+          priority
           objectFit="cover"
           alt="hero-bg-jobboard"
           className="z-0"
