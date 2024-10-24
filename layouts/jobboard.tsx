@@ -11,7 +11,7 @@ export default function JobBoardLayout({
     <div className="relative bg-white flex items-center h-svh flex-col">
       <Head />
       <div
-        className={`flex z-50 bg-white px-5 xl:px-0 flex-col items-center w-full shadow-md`} // Added shadow class here
+        className={`flex z-50 bg-white px-5 xl:px-0 flex-col items-center w-full shadow-sm`} // Added shadow class here
       >
         <NavbarJobBoard />
       </div>

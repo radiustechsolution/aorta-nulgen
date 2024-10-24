@@ -131,3 +131,7 @@ body::-webkit-scrollbar {
     0 0 6px rgba(0, 0, 0, 0.1),
     0 0 3px rgba(0, 0, 0, 0.08);
 }
+
+.test-color {
+  color: #484b62;
+}
