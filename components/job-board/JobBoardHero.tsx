@@ -62,6 +62,7 @@ export const JobBoardHero = () => {
           <ul className="absolute z-10 w-full p-2 border scrollbar-hide border-gray-200 bg-white rounded-md mt-1 h-max overflow-y-auto">
             {options.map((option: string, index: number) => (
               <li
+                role="presentation"
                 key={index}
                 className={`px-2 py-3 cursor-pointer hover:bg-gray-100 ${index !== options.length - 1 ? "border-b border-gray-200" : ""}`}
                 onClick={() => onSelect(option)}
