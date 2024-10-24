@@ -187,3 +187,24 @@ export const TalentsObject = [
     path: "/",
   },
 ];
+
+export const jobBoardLocations = [
+  { id: 1, name: "Zurich, Switzerland" },
+  { id: 2, name: "Vienna, Austria" },
+  { id: 3, name: "Luxembourg City, Luxembourg" },
+  { id: 4, name: "Brussels, Belgium" },
+  { id: 5, name: "Amsterdam, Netherlands" },
+  { id: 6, name: "Copenhagen, Denmark" },
+  { id: 7, name: "Prague, Czech Republic" },
+  { id: 8, name: "Warsaw, Poland" },
+  { id: 9, name: "Paris, France" },
+  { id: 10, name: "Strasbourg, France" },
+];
+
+// Logos array for company icons
+export const jobBoardHerologos = [
+  { src: "/asset/job/comp1.svg", width: 100 },
+  { src: "/asset/job/comp2.svg", width: 100 },
+  { src: "/asset/job/comp7.svg", width: 70 },
+  { src: "/asset/job/comp4.svg", width: 100 },
+];

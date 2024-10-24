@@ -1,6 +1,7 @@
 import { HiOutlineBriefcase } from "react-icons/hi2";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { CiLock } from "react-icons/ci";
 
 const NavbarJobBoard = () => {
   return (
@@ -24,8 +25,9 @@ const NavbarJobBoard = () => {
         </Link>
         <Link
           href={siteConfig.path.paths.jobBoard}
-          className="text-[15px] px-5 py-1 border rounded-sm bg-[#F6F6F9] border-gray-200 font-medium text-gray-700 hover:text-[#4E6CFF]"
+          className="text-[15px] flex items-center gap-1 px-5 py-1 border rounded-sm bg-[#F6F6F9] border-gray-200 font-medium text-gray-700 hover:text-[#4E6CFF]"
         >
+          <CiLock color="black" />
           Login
         </Link>
       </div>
