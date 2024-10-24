@@ -1,3 +1,4 @@
+import { HiOutlineBriefcase } from "react-icons/hi2";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
@@ -5,8 +6,8 @@ const NavbarJobBoard = () => {
   return (
     <div className="h-[80px] max-w-[1100px] w-full flex items-center justify-between">
       <div className="flex items-center cursor-pointer gap-1">
-        {/* <HiOutlineBriefcase size={24} className="text-[#4E6CFF]" /> */}
-        <p className="text-[19px] font-semibold">NulgenJobs</p>
+        <HiOutlineBriefcase size={24} className="text-[#4E6CFF]" />
+        <p className="text-[17px] font-semibold">NulgenJobs</p>
       </div>
       <div className="flex items-center font-ProximaNova gap-4">
         <Link

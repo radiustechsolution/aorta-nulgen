@@ -1,3 +1,4 @@
+import { Footer } from "@/components/landing-page/footer";
 import JobBoardLayout from "@/layouts/jobboard";
 import React from "react";
 
@@ -34,10 +35,360 @@ export default function JobBoard() {
 
   return (
     <JobBoardLayout>
-      <section>
-        <div>
-          <p>Jobs</p>
+      <section className="h-full w-full">
+        <div className="flex-1 flex flex-col px-5 xl:px-0 items-center gap-0 overflow-auto scrollbar-hide">
+          <div className="max-w-[1100px] h-full pb-10">
+            <p>
+              sLorem, ipsum dolor sit amet consectetur adipisicing elit. Ad
+              dicta aut excepturi quis consequatur iure ipsum sequi quam.
+              Placeat culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!
+            </p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad dicta
+              aut excepturi quis consequatur iure ipsum sequi quam. Placeat
+              culpa hic ut assumenda molestiae quas sed harum nesciunt
+              architecto quam!s
+            </p>
+          </div>
         </div>
+        <Footer />
       </section>
     </JobBoardLayout>
   );
