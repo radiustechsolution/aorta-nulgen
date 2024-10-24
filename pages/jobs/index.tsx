@@ -42,7 +42,7 @@ export default function JobBoard() {
             <JobBoardHero />
           </div>
         </div>
-        <Footer />
+        <Footer bgColor="bg-[#2a2a2f]" />
       </section>
     </JobBoardLayout>
   );

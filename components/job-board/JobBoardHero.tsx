@@ -31,7 +31,7 @@ export const JobBoardHero = () => {
             <p className="text-[30px] sm:text-[36px] max-w-[380px] text-[#232535] font-[600] leading-[39px] sm:leading-[47.988px]">
               Find your perfect job in the tech industry
             </p>
-            <p className="text-[15px] my-4 text-[#484b62] max-w-[400px] leading-[26px] font-[400]">
+            <p className="text-[15px] my-2 sm:my-4 text-[#484b62] max-w-[400px] leading-[26px] font-[400]">
               Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
               eiusmod tempor incididunt ut labore et dolore.
             </p>
@@ -41,6 +41,7 @@ export const JobBoardHero = () => {
                   key={i}
                   src={v.src}
                   width={v.width}
+                  className={`w-[65px] sm:w-[${v.width}px]`}
                   height={30}
                   alt="comp-logo"
                 />

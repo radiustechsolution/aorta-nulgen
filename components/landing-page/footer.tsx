@@ -1,8 +1,10 @@
 import Link from "next/link";
 
-export const Footer = () => {
+export const Footer = ({ bgColor }: any) => {
   return (
-    <footer className="flex px-5 xl:px-0 flex-col items-center bg-primary w-full text-white py-12">
+    <footer
+      className={`flex px-5 xl:px-0 flex-col items-center ${bgColor ? bgColor : "bg-primary"} w-full text-white py-12`}
+    >
       <div className="max-w-[1220px] w-full">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
           {/* Hire Talent Section */}
