@@ -20,6 +20,7 @@ import { HomeHero } from "@/components/Hero";
 import { ProfileCard } from "@/components/landing-page/profile-card";
 import { SectionWithTitle } from "@/components/landing-page/section-with-title";
 import { TrustedByMany } from "@/components/landing-page/TrustedByMany";
+import { Footer } from "@/components/landing-page/footer";
 
 const OnDemandObject = [
   {
@@ -300,6 +301,7 @@ export default function IndexPage() {
           </div>
         </SectionWithTitle>
       </section>
+      <Footer />
     </DefaultLayout>
   );
 }
