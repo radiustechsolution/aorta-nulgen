@@ -54,7 +54,7 @@ export const JobBoardHero = () => {
       </div>
 
       {/* Search */}
-      <div className="absolute bottom-[-200px] md:bottom-[-85px] xl:bottom-[-45px] z-10 left-0 px-5 xl:px-0 flex flex-col w-full items-center">
+      <div className="absolute bottom-[-200px] md:bottom-[-85px] lg:bottom-[-50px] xl:bottom-[-45px] z-10 left-0 px-5 xl:px-0 flex flex-col w-full items-center">
         <div className="max-w-[1100px] w-full">
           <div className="w-full p-7 shadow-md rounded-md bg-white border border-gray-100 flex-col lg:flex-row gap-4 flex items-center justify-between">
             <div className="border border-gray-200 h-[38px] w-full lg:w-[30%]"></div>
