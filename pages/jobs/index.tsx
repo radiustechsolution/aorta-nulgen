@@ -38,8 +38,10 @@ export default function JobBoard() {
     <JobBoardLayout>
       <section className="h-full w-full">
         <div className="flex-1 flex flex-col items-center gap-0 overflow-auto scrollbar-hide">
-          <div className=" w-full h-full pb-10">
-            <JobBoardHero />
+          <div className=" w-full h-full">
+            <div className="h-[700px] md:h-[600px]">
+              <JobBoardHero />
+            </div>
           </div>
         </div>
         <Footer bgColor="bg-[#2a2a2f]" />

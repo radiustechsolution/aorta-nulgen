@@ -25,7 +25,7 @@ export const JobBoardHero = () => {
 
       {/* Content on top of the background */}
       <div className="relative z-10 flex flex-col w-full items-center justify-center h-full">
-        <div className="max-w-[1100px] w-full">
+        <div className="max-w-[1100px] relative w-full">
           <div className="max-w-[430px]">
             <p className="text-[#376fff] mb-1 uppercase text-[13px] leading-[15.99px] font-[700]">
               Best tech jobs
@@ -48,6 +48,20 @@ export const JobBoardHero = () => {
                   alt="comp-logo"
                 />
               ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Search */}
+      <div className="absolute bottom-[-200px] md:bottom-[-85px] xl:bottom-[-45px] z-10 left-0 px-5 xl:px-0 flex flex-col w-full items-center">
+        <div className="max-w-[1100px] w-full">
+          <div className="w-full p-7 shadow-md rounded-md bg-white border border-gray-100 flex-col lg:flex-row gap-4 flex items-center justify-between">
+            <div className="border border-gray-200 h-[38px] w-full lg:w-[30%]"></div>
+            <div className="w-full lg:w-[70%] flex flex-col md:flex-row items-center justify-between gap-4">
+              <div className="w-full border border-gray-200 h-[38px]"></div>
+              <div className="w-full border border-gray-200 h-[38px]"></div>
+              <div className="w-full border border-gray-200 h-[38px]"></div>
             </div>
           </div>
         </div>
