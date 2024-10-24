@@ -64,7 +64,7 @@ export const JobBoardHero = () => {
                   placeholder="Search for jobs"
                   type="text"
                   name=""
-                  className="text-[14px] text-black placeholder-[#6F7185] px-2 w-[90%]"
+                  className="text-[14px] bg-transparent text-black placeholder-[#6F7185] px-2 w-[90%]"
                   id=""
                 />
               </div>
