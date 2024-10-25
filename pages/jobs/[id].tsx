@@ -102,7 +102,7 @@ export default function BlogDetails() {
 
             {/* Bottom */}
             <div className="px-6 md:px-9">
-              <p>
+              <p className="text-black">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
                 dolor minima eum laborum qui, porro dignissimos vero in incidunt
                 error facere. Quis magnam quasi deleniti ipsum, quas nulla
@@ -142,7 +142,7 @@ export default function BlogDetails() {
               </p>
             </div>
           </div>
-          <div className="rounded-md hidden md:block w-[27%] bg-red-300">
+          <div className="rounded-md sticky top-10 hidden md:block w-[27%] bg-red-300">
             <p>Right</p>
           </div>
         </div>
