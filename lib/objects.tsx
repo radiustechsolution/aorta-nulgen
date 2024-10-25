@@ -1,3 +1,5 @@
+import { JobPostTypes, LatestType } from "./types";
+
 export const WhyObjects = [
   {
     id: 0,
@@ -66,18 +68,6 @@ export const testimonials = [
     rating: 5,
   },
 ];
-
-type LatestType = {
-  id: number;
-  title: string;
-  author: string;
-  category: string;
-  subcategory: string;
-  description?: string;
-  time?: string;
-  image: string;
-  bgImage: string;
-};
 
 export const Latest: LatestType[][] = [
   [
@@ -209,13 +199,19 @@ export const jobBoardHerologos = [
   { src: "/asset/job/comp4.svg", width: 100 },
 ];
 
-export const jobCard = [
+export const jobCard: JobPostTypes[] = [
   {
-    id: 0,
+    id: "000001-compliance-manager-consumer-protection",
     position: "Compliance Manager, Consumer Protection",
     company: "Coinbase",
     location: "Ireland; Remote",
     posted: "Today",
+    more: {
+      location: "Remote",
+      category: "Blockchain",
+      level: "Senior",
+      type: "Full Time",
+    },
     categories: [
       "Blockchain and Crypto",
       "Finance",
@@ -223,147 +219,207 @@ export const jobCard = [
       "Software",
     ],
     employees: "51 - 200 employees",
-    companyLogo: "/path-to-coinbase-logo.png", // Update this with the actual logo path
+    companyLogo: "/path-to-coinbase-logo.png",
     action: {
       label: "Read more",
       link: "#",
     },
   },
   {
-    id: 1,
+    id: "000002-frontend-developer",
     position: "Frontend Developer",
     company: "Google",
     location: "California, USA; Remote",
     posted: "1 day ago",
+    more: {
+      location: "Remote",
+      category: "Software Development",
+      level: "Mid-level",
+      type: "Full Time",
+    },
     categories: ["Software", "Frontend Development", "JavaScript", "React"],
     employees: "10,000+ employees",
-    companyLogo: "/path-to-google-logo.png", // Update this with the actual logo path
+    companyLogo: "/path-to-google-logo.png",
     action: {
       label: "Read more",
       link: "#",
     },
   },
   {
-    id: 2,
+    id: "000003-data-scientist",
     position: "Data Scientist",
     company: "Microsoft",
     location: "Seattle, USA",
     posted: "2 days ago",
+    more: {
+      location: "On-site",
+      category: "Data Science",
+      level: "Senior",
+      type: "Full Time",
+    },
     categories: ["AI", "Data Science", "Machine Learning"],
     employees: "10,000+ employees",
-    companyLogo: "/path-to-microsoft-logo.png", // Update this with the actual logo path
+    companyLogo: "/path-to-microsoft-logo.png",
     action: {
       label: "Read more",
       link: "#",
     },
   },
   {
-    id: 3,
+    id: "000004-devops-engineer",
     position: "DevOps Engineer",
     company: "Amazon",
     location: "London, UK",
     posted: "3 days ago",
+    more: {
+      location: "On-site",
+      category: "Cloud and DevOps",
+      level: "Mid-level",
+      type: "Full Time",
+    },
     categories: ["Cloud", "DevOps", "AWS", "Automation"],
     employees: "10,000+ employees",
-    companyLogo: "/path-to-amazon-logo.png", // Update this with the actual logo path
+    companyLogo: "/path-to-amazon-logo.png",
     action: {
       label: "Read more",
       link: "#",
     },
   },
   {
-    id: 4,
+    id: "000005-backend-developer",
     position: "Backend Developer",
     company: "Netflix",
     location: "Los Angeles, USA",
     posted: "Today",
+    more: {
+      location: "On-site",
+      category: "Backend Development",
+      level: "Mid-level",
+      type: "Full Time",
+    },
     categories: ["Software", "Backend Development", "Node.js", "Microservices"],
     employees: "5,000 - 10,000 employees",
-    companyLogo: "/path-to-netflix-logo.png", // Update this with the actual logo path
+    companyLogo: "/path-to-netflix-logo.png",
     action: {
       label: "Read more",
       link: "#",
     },
   },
   {
-    id: 5,
+    id: "000006-product-manager",
     position: "Product Manager",
     company: "Spotify",
     location: "Stockholm, Sweden",
     posted: "4 days ago",
+    more: {
+      location: "On-site",
+      category: "Product Management",
+      level: "Senior",
+      type: "Full Time",
+    },
     categories: ["Product Management", "Agile", "Tech"],
     employees: "1,000 - 5,000 employees",
-    companyLogo: "/path-to-spotify-logo.png", // Update this with the actual logo path
+    companyLogo: "/path-to-spotify-logo.png",
     action: {
       label: "Read more",
       link: "#",
     },
   },
   {
-    id: 6,
+    id: "000007-ux-designer",
     position: "UX Designer",
     company: "Adobe",
     location: "San Francisco, USA",
     posted: "5 days ago",
+    more: {
+      location: "On-site",
+      category: "Design",
+      level: "Mid-level",
+      type: "Full Time",
+    },
     categories: ["Design", "UX", "UI", "Software"],
     employees: "10,000+ employees",
-    companyLogo: "/path-to-adobe-logo.png", // Update this with the actual logo path
+    companyLogo: "/path-to-adobe-logo.png",
     action: {
       label: "Read more",
       link: "#",
     },
   },
   {
-    id: 7,
+    id: "000008-blockchain-engineer",
     position: "Blockchain Engineer",
     company: "Ripple",
     location: "Singapore",
     posted: "6 days ago",
+    more: {
+      location: "On-site",
+      category: "Blockchain",
+      level: "Mid-level",
+      type: "Full Time",
+    },
     categories: ["Blockchain", "Crypto", "Software", "Finance"],
     employees: "201 - 500 employees",
-    companyLogo: "/path-to-ripple-logo.png", // Update this with the actual logo path
+    companyLogo: "/path-to-ripple-logo.png",
     action: {
       label: "Read more",
       link: "#",
     },
   },
   {
-    id: 8,
+    id: "000009-fullstack-developer",
     position: "Fullstack Developer",
     company: "Meta",
     location: "Remote",
     posted: "1 week ago",
+    more: {
+      location: "Remote",
+      category: "Fullstack Development",
+      level: "Mid-level",
+      type: "Full Time",
+    },
     categories: ["Fullstack", "Software", "React", "Node.js"],
     employees: "10,000+ employees",
-    companyLogo: "/path-to-meta-logo.png", // Update this with the actual logo path
+    companyLogo: "/path-to-meta-logo.png",
     action: {
       label: "Read more",
       link: "#",
     },
   },
   {
-    id: 9,
+    id: "000010-cybersecurity-analyst",
     position: "Cybersecurity Analyst",
     company: "IBM",
     location: "New York, USA",
     posted: "2 weeks ago",
+    more: {
+      location: "On-site",
+      category: "Cybersecurity",
+      level: "Mid-level",
+      type: "Full Time",
+    },
     categories: ["Security", "Cybersecurity", "Software"],
     employees: "10,000+ employees",
-    companyLogo: "/path-to-ibm-logo.png", // Update this with the actual logo path
+    companyLogo: "/path-to-ibm-logo.png",
     action: {
       label: "Read more",
       link: "#",
     },
   },
   {
-    id: 10,
+    id: "000011-ai-research-scientist",
     position: "AI Research Scientist",
     company: "OpenAI",
     location: "San Francisco, USA; Remote",
     posted: "2 weeks ago",
+    more: {
+      location: "Remote",
+      category: "AI Research",
+      level: "Senior",
+      type: "Full Time",
+    },
     categories: ["AI", "Research", "Machine Learning", "Deep Learning"],
     employees: "51 - 200 employees",
-    companyLogo: "/path-to-openai-logo.png", // Update this with the actual logo path
+    companyLogo: "/path-to-openai-logo.png",
     action: {
       label: "Read more",
       link: "#",

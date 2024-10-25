@@ -18,7 +18,7 @@ export default function JobBoard() {
 
             {/* Job Posts */}
             <div className="w-full px-5 xl:px-0 flex flex-col items-center">
-              <div className="max-w-[1100px] flex flex-col gap-1 w-full">
+              <div className="max-w-[1100px] flex flex-col gap-2 w-full">
                 {jobCard.map((v) => (
                   <JobPostComp data={v} key={v.id} />
                 ))}
