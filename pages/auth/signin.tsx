@@ -116,7 +116,7 @@ const SignIn = () => {
                       onValueChange={setIsSelected}
                     />
                     <p className="text-[14px] md:text-[16px] font-medium text-[#484b62] mt-[-1px] max-w-[100%] md:max-w-[80%]">
-                      Remember me
+                      Remember me.
                     </p>
                   </div> */}
                   <div></div>
