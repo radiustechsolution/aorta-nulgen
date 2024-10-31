@@ -117,7 +117,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="relative h-svh w-full flex overflow-y-scroll">
+    <div className="relative h-svh w-full bg-white flex">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
