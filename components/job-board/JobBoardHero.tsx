@@ -1,31 +1,42 @@
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { CiSearch, CiLocationOn } from "react-icons/ci";
 import { LuBarChart2 } from "react-icons/lu";
 import { PiBagSimple } from "react-icons/pi";
-import { jobBoardHerologos } from "@/lib/objects";
 import { RxCaretDown } from "react-icons/rx";
 
 const INPUT_HEIGHT = "h-[47px] md:h-[40px]";
 const ICON_COLOR = "#A0A2B3";
 const BUTTON_BG_COLOR = "#4E64FF";
 
-export const JobBoardHero = () => {
+export const JobBoardHero = ({
+  searchQuery,
+  setSearchQuery,
+  locationFilter,
+  setLocationFilter,
+  jobLevelFilter,
+  setJobLevelFilter,
+  departmentFilter,
+  setDepartmentFilter,
+}: any) => {
   // State for rotating caret icons
   const [isLocationOpen, setLocationOpen] = useState(false);
   const [isJobLevelOpen, setJobLevelOpen] = useState(false);
   const [isDepartmentOpen, setDepartmentOpen] = useState(false);
 
-  // State for each dropdown
-  const [selectedLocation, setSelectedLocation] = useState("Location");
-  const [selectedJobLevel, setSelectedJobLevel] = useState("Job level");
-  const [selectedDepartment, setSelectedDepartment] = useState("Department");
-
   // Dropdown options
   const dropdownOptions = {
-    location: ["Berlin", "Munich", "Frankfurt", "Hamburg"],
-    jobLevel: ["Junior", "Mid-level", "Senior", "Lead"],
-    department: ["Engineering", "Marketing", "Sales", "Product"],
+    location: [
+      "All",
+      "Ireland",
+      "California",
+      "London",
+      "Los Angeles",
+      "Stockholm",
+      "USA",
+    ],
+    jobLevel: ["All", "Junior", "Mid-level", "Senior", "Lead"],
+    department: ["All", "Engineering", "Marketing", "Sales", "Product"],
   };
 
   // Reusable Input Field Component
@@ -106,19 +117,6 @@ export const JobBoardHero = () => {
               world. Let us help you find the right fit for your skills and
               aspirations.
             </p>
-            {/* Company Logos */}
-            <div className="flex items-center w-full justify-between">
-              {jobBoardHerologos.map((logo, index) => (
-                <Image
-                  key={index}
-                  src={logo.src}
-                  width={logo.width}
-                  height={30}
-                  className="w-[65px] sm:w-auto"
-                  alt={`company logo ${index + 1}`}
-                />
-              ))}
-            </div>
           </div>
         </div>
       </div>
@@ -136,12 +134,15 @@ export const JobBoardHero = () => {
                 <input
                   placeholder="Search for jobs"
                   type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                   className="text-[14px] bg-transparent text-black placeholder-[#6F7186] px-2 w-[90%]"
                   aria-label="Search for jobs"
                 />
               </div>
               <button
                 className={`h-[77%] text-white font-semibold rounded-md w-[25%] bg-[${BUTTON_BG_COLOR}] text-[13px]`}
+                onClick={() => setSearchQuery("")}
               >
                 Search
               </button>
@@ -149,12 +150,12 @@ export const JobBoardHero = () => {
 
             {/* Other Search Filters */}
             <div className="w-full lg:w-[70%] flex flex-col md:flex-row items-center gap-4">
-              {/* Location Input Field with Custom Dropdown */}
+              {/* Location Input Field */}
               <JobBoardHeroInputField
                 placeholder="Location"
                 icon={CiLocationOn}
                 isOpen={isLocationOpen}
-                selectedValue={selectedLocation}
+                selectedValue={locationFilter}
                 options={dropdownOptions.location}
                 onClick={() => {
                   setLocationOpen(!isLocationOpen);
@@ -162,17 +163,17 @@ export const JobBoardHero = () => {
                   setDepartmentOpen(false);
                 }}
                 onSelect={(value: string) => {
-                  setSelectedLocation(value);
+                  setLocationFilter(value);
                   setLocationOpen(false);
                 }}
               />
 
-              {/* Job Level Input Field with Custom Dropdown */}
+              {/* Job Level Input Field */}
               <JobBoardHeroInputField
                 placeholder="Job level"
                 icon={LuBarChart2}
                 isOpen={isJobLevelOpen}
-                selectedValue={selectedJobLevel}
+                selectedValue={jobLevelFilter}
                 options={dropdownOptions.jobLevel}
                 onClick={() => {
                   setJobLevelOpen(!isJobLevelOpen);
@@ -180,17 +181,17 @@ export const JobBoardHero = () => {
                   setDepartmentOpen(false);
                 }}
                 onSelect={(value: string) => {
-                  setSelectedJobLevel(value);
+                  setJobLevelFilter(value);
                   setJobLevelOpen(false);
                 }}
               />
 
-              {/* Department Input Field with Custom Dropdown */}
+              {/* Department Input Field */}
               <JobBoardHeroInputField
                 placeholder="Department"
                 icon={PiBagSimple}
                 isOpen={isDepartmentOpen}
-                selectedValue={selectedDepartment}
+                selectedValue={departmentFilter}
                 options={dropdownOptions.department}
                 onClick={() => {
                   setDepartmentOpen(!isDepartmentOpen);
@@ -198,7 +199,7 @@ export const JobBoardHero = () => {
                   setJobLevelOpen(false);
                 }}
                 onSelect={(value: string) => {
-                  setSelectedDepartment(value);
+                  setDepartmentFilter(value);
                   setDepartmentOpen(false);
                 }}
               />

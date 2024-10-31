@@ -5,6 +5,9 @@ export interface JobPostTypes {
   company: string;
   location: string;
   posted: string;
+  jobDescription: string;
+  Responsibilities: string;
+  jobRequirements: string;
   categories: string[];
   employees: string;
   companyLogo: string;

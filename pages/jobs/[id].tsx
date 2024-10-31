@@ -4,11 +4,14 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { CiLocationOn } from "react-icons/ci";
 import { BiLogoCPlusPlus } from "react-icons/bi";
-import { MdCategory, MdOutlineCategory, MdOutlineWork } from "react-icons/md";
-import { RiTimeFill, RiTimeLine } from "react-icons/ri";
+import { MdOutlineCategory } from "react-icons/md";
+import { RiTimeLine } from "react-icons/ri";
 import { PiBagLight } from "react-icons/pi";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { IoNewspaperOutline } from "react-icons/io5";
+import { Button } from "@nextui-org/button";
+import { SiTrustpilot } from "react-icons/si";
+import { siteConfig } from "@/config/site";
 
 export default function BlogDetails() {
   const router = useRouter();
@@ -79,7 +82,7 @@ export default function BlogDetails() {
                       </div>
                     </div>
 
-                    <p className="text-[15px] my-2 sm:my-6 text-[#484b62] leading-[26px] font-normal">
+                    <p className="text-[16px] my-2 sm:my-6 text-[#484b62] leading-[26px] font-normal">
                       Explore various opportunities in top tech companies around
                       the world. Let us help you find the right fit for your
                       skills and aspirations.
@@ -103,81 +106,69 @@ export default function BlogDetails() {
             </div>
 
             {/* Bottom */}
-            <div className="px-6 md:px-9">
-              <p className="text-black">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
-                dolor minima eum laborum qui, porro dignissimos vero in incidunt
-                error facere. Quis magnam quasi deleniti ipsum, quas nulla
-                facilis porro! Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Rem dolor minima eum laborum qui, porro
-                dignissimos vero in incidunt error facere. Quis magnam quasi
-                deleniti ipsum, quas nulla facilis porro! Lorem ipsum dolor sit
-                amet consectetur, adipisicing elit. Rem dolor minima eum laborum
-                qui, porro dignissimos vero in incidunt error facere. Quis
-                magnam quasi deleniti ipsum, quas nulla facilis porro! Lorem
-                ipsum dolor sit amet consectetur, adipisicing elit. Rem dolor
-                minima eum laborum qui, porro dignissimos vero in incidunt error
-                facere. Quis magnam quasi deleniti ipsum, quas nulla facilis
-                porro! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Rem dolor minima eum laborum qui, porro dignissimos vero in
-                incidunt error facere. Quis magnam quasi deleniti ipsum, quas
-                nulla facilis porro! Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Rem dolor minima eum laborum qui, porro
-                dignissimos vero in incidunt error facere. Quis magnam quasi
-                deleniti ipsum, quas nulla facilis porro! Lorem ipsum dolor sit
-                amet consectetur, adipisicing elit. Rem dolor minima eum laborum
-                qui, porro dignissimos vero in incidunt error facere. Quis
-                magnam quasi deleniti ipsum, quas nulla facilis porro! Lorem
-                ipsum dolor sit amet consectetur, adipisicing elit. Rem dolor
-                minima eum laborum qui, porro dignissimos vero in incidunt error
-                facere. Quis magnam quasi deleniti ipsum, quas nulla facilis
-                porro! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Rem dolor minima eum laborum qui, porro dignissimos vero in
-                incidunt error facere. Quis magnam quasi deleniti ipsum, quas
-                nulla facilis porro! Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Rem dolor minima eum laborum qui, porro
-                dignissimos vero in incidunt error facere. Quis magnam quasi
-                deleniti ipsum, quas nulla facilis porro! Lorem ipsum dolor sit
-                amet consectetur, adipisicing elit. Rem dolor minima eum laborum
-                qui, porro dignissimos vero in incidunt error facere. Quis
-                magnam quasi deleniti ipsum, quas nulla facilis porro! Lorem
-                ipsum dolor sit amet consectetur, adipisicing elit. Rem dolor
-                minima eum laborum qui, porro dignissimos vero in incidunt error
-                facere. Quis magnam quasi deleniti ipsum, quas nulla facilis
-                porro! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Rem dolor minima eum laborum qui, porro dignissimos vero in
-                incidunt error facere. Quis magnam quasi deleniti ipsum, quas
-                nulla facilis porro! Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Rem dolor minima eum laborum qui, porro
-                dignissimos vero in incidunt error facere. Quis magnam quasi
-                deleniti ipsum, quas nulla facilis porro! Lorem ipsum dolor sit
-                amet consectetur, adipisicing elit. Rem dolor minima eum laborum
-                qui, porro dignissimos vero in incidunt error facere. Quis
-                magnam quasi deleniti ipsum, quas nulla facilis porro! Lorem
-                ipsum dolor sit amet consectetur, adipisicing elit. Rem dolor
-                minima eum laborum qui, porro dignissimos vero in incidunt error
-                facere. Quis magnam quasi deleniti ipsum, quas nulla facilis
-                porro! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Rem dolor minima eum laborum qui, porro dignissimos vero in
-                incidunt error facere. Quis magnam quasi deleniti ipsum, quas
-                nulla facilis porro! Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Rem dolor minima eum laborum qui, porro
-                dignissimos vero in incidunt error facere. Quis magnam quasi
-                deleniti ipsum, quas nulla facilis porro! Lorem ipsum dolor sit
-                amet consectetur, adipisicing elit. Rem dolor minima eum laborum
-                qui, porro dignissimos vero in incidunt error facere. Quis
-                magnam quasi deleniti ipsum, quas nulla facilis porro! Lorem
-                ipsum dolor sit amet consectetur, adipisicing elit. Rem dolor
-                minima eum laborum qui, porro dignissimos vero in incidunt error
-                facere. Quis magnam quasi deleniti ipsum, quas nulla facilis
-                porro! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Rem dolor minima eum laborum qui, porro dignissimos vero in
-                incidunt error facere. Quis magnam quasi deleniti ipsum, quas
-                nulla facilis porro! Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Rem dolor minima eum laborum qui, porro
-                dignissimos vero in incidunt error facere. Quis magnam quasi
-                deleniti ipsum, quas nulla facilis porro!
-              </p>
+            <div className="px-3 md:px-9">
+              <div>
+                {/* Description */}
+                <div className="flex flex-col gap-2">
+                  <h1 className="text-[20px] font-semibold text-[#232535] leading-[30px]">
+                    Job Description
+                  </h1>
+                  <p className="text-[#484b62] text-[16px] leading-[26px]">
+                    {job.jobDescription}
+                  </p>
+                </div>
+                <br />
+                {/* Responsibility */}
+                <div className="flex flex-col gap-2">
+                  <h1 className="text-[20px] font-semibold text-[#232535] leading-[30px]">
+                    Responsibilities
+                  </h1>
+                  <p className="text-[#484b62] text-[16px] leading-[26px]">
+                    {job.Responsibilities.split("•").map(
+                      (responsibility, index) =>
+                        responsibility && (
+                          <span key={index} className="block mb-1">
+                            • {responsibility.trim()}
+                          </span>
+                        )
+                    )}
+                  </p>
+                </div>
+
+                <br />
+
+                {/* Request */}
+                <div className="flex flex-col gap-2">
+                  <h1 className="text-[20px] font-semibold text-[#232535] leading-[30px]">
+                    Job requirements
+                  </h1>
+                  <p className="text-[#484b62] text-[16px] leading-[26px]">
+                    {job.jobRequirements.split("•").map(
+                      (responsibility, index) =>
+                        responsibility && (
+                          <span key={index} className="block mb-1">
+                            • {responsibility.trim()}
+                          </span>
+                        )
+                    )}
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col my-8 gap-1 items-center">
+                <Button
+                  onClick={() => router.push(siteConfig.path.paths.signup)}
+                  className="bg-[#136EF5] rounded-md font-semibold border border-[#EAEBF4] w-[75%] sm:w-[50%] p-2"
+                >
+                  <p className="text-white text-[14px]">Apply</p>
+                </Button>
+                <div className="flex items-center gap-1">
+                  <SiTrustpilot size={12} className="text-success" />
+                  <p className="text-black text-sm opacity-70">
+                    Powered by Nulgen
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 

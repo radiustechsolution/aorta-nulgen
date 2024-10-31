@@ -204,7 +204,13 @@ export const jobCard: JobPostTypes[] = [
     id: "000001-compliance-manager-consumer-protection",
     position: "Compliance Manager, Consumer Protection",
     company: "Coinbase",
-    location: "Ireland; Remote",
+    jobDescription:
+      "Lead Coinbase's consumer protection compliance efforts by managing and ensuring regulatory adherence across all programs and operations. Design and implement compliance frameworks to safeguard customer interests and ensure legal standards are upheld.",
+    Responsibilities:
+      "• Develop and maintain robust compliance policies for consumer protection.\n• Conduct regular audits and risk assessments to ensure regulatory compliance.\n• Collaborate with legal teams to manage regulatory filings and reporting.\n• Provide strategic advice on compliance issues and improve compliance programs.",
+    jobRequirements:
+      "• Bachelor's degree in Finance, Law, or related field.\n• 5+ years of compliance experience, preferably in finance or blockchain.\n• Strong knowledge of consumer protection laws and regulatory frameworks.\n• Excellent communication and analytical skills.",
+    location: "Ireland",
     posted: "Today",
     more: {
       location: "Remote",
@@ -229,7 +235,13 @@ export const jobCard: JobPostTypes[] = [
     id: "000002-frontend-developer",
     position: "Frontend Developer",
     company: "Google",
-    location: "California, USA; Remote",
+    jobDescription:
+      "Design and implement cutting-edge user interfaces for Google's web applications, working closely with UX/UI designers to ensure a seamless user experience.",
+    Responsibilities:
+      "• Collaborate with UX/UI designers to transform designs into responsive interfaces.\n• Write clean, maintainable, and scalable code using JavaScript, HTML, CSS, and React.\n• Optimize applications for maximum speed and scalability.\n• Debug and troubleshoot issues across browsers and platforms.",
+    jobRequirements:
+      "• Proficiency in JavaScript, HTML, CSS, and modern frameworks such as React.\n• 3+ years of experience in frontend development.\n• Strong understanding of web performance optimization and cross-browser compatibility.\n• Excellent problem-solving skills and attention to detail.",
+    location: "California",
     posted: "1 day ago",
     more: {
       location: "Remote",
@@ -249,7 +261,13 @@ export const jobCard: JobPostTypes[] = [
     id: "000003-data-scientist",
     position: "Data Scientist",
     company: "Microsoft",
-    location: "Seattle, USA",
+    jobDescription:
+      "Drive business impact through advanced data analysis, creating predictive models and actionable insights from large datasets.",
+    Responsibilities:
+      "• Collect, process, and analyze large data sets to uncover trends and insights.\n• Develop machine learning models to solve complex business problems.\n• Create data visualizations to communicate findings to stakeholders.\n• Collaborate with cross-functional teams to integrate data-driven decisions.",
+    jobRequirements:
+      "• Master's degree in Data Science, Statistics, or related field.\n• 3+ years of experience in data science, with proficiency in Python and R.\n• Strong knowledge of machine learning algorithms and statistical techniques.\n• Excellent communication and data visualization skills.",
+    location: "USA",
     posted: "2 days ago",
     more: {
       location: "On-site",
@@ -269,7 +287,13 @@ export const jobCard: JobPostTypes[] = [
     id: "000004-devops-engineer",
     position: "DevOps Engineer",
     company: "Amazon",
-    location: "London, UK",
+    jobDescription:
+      "Manage infrastructure for development and production environments, enabling rapid and reliable deployment of software applications.",
+    Responsibilities:
+      "• Automate deployment pipelines using CI/CD tools.\n• Monitor and maintain cloud-based infrastructure for scalability and performance.\n• Troubleshoot issues and ensure high availability of services.\n• Implement security best practices and disaster recovery plans.",
+    jobRequirements:
+      "• 3+ years of experience in DevOps, with expertise in AWS and containerization.\n• Experience with CI/CD tools such as Jenkins or CircleCI.\n• Strong knowledge of cloud infrastructure and automation frameworks.\n• Problem-solving mindset and strong communication skills.",
+    location: "London",
     posted: "3 days ago",
     more: {
       location: "On-site",
@@ -289,7 +313,13 @@ export const jobCard: JobPostTypes[] = [
     id: "000005-backend-developer",
     position: "Backend Developer",
     company: "Netflix",
-    location: "Los Angeles, USA",
+    jobDescription:
+      "Develop and maintain high-performance backend services and APIs to power Netflix's streaming platform and other services.",
+    Responsibilities:
+      "• Design and implement scalable server-side logic.\n• Collaborate with frontend developers to integrate user-facing elements.\n• Write efficient, testable, and reusable code for database integration.\n• Troubleshoot and debug applications for reliability and performance.",
+    jobRequirements:
+      "• Proficiency in Node.js and backend frameworks.\n• 3+ years of experience in backend development.\n• Strong understanding of databases, API development, and microservices architecture.\n• Excellent problem-solving skills and attention to detail.",
+    location: "Los Angeles",
     posted: "Today",
     more: {
       location: "On-site",
@@ -309,7 +339,13 @@ export const jobCard: JobPostTypes[] = [
     id: "000006-product-manager",
     position: "Product Manager",
     company: "Spotify",
-    location: "Stockholm, Sweden",
+    jobDescription:
+      "Lead the development and execution of product strategies for Spotify's global user base, from conception to delivery.",
+    Responsibilities:
+      "• Define and communicate the product vision and strategy.\n• Collaborate with cross-functional teams to gather and prioritize product requirements.\n• Oversee product development from ideation to launch.\n• Monitor product performance and iterate based on feedback.",
+    jobRequirements:
+      "• 5+ years of experience in product management.\n• Strong understanding of product lifecycle management and agile methodologies.\n• Excellent communication, leadership, and analytical skills.\n• Experience working with engineering teams to deliver tech products.",
+    location: "Stockholm",
     posted: "4 days ago",
     more: {
       location: "On-site",
@@ -329,7 +365,13 @@ export const jobCard: JobPostTypes[] = [
     id: "000007-ux-designer",
     position: "UX Designer",
     company: "Adobe",
-    location: "San Francisco, USA",
+    jobDescription:
+      "Design user-centered solutions for Adobe's suite of software products, ensuring exceptional user experiences across platforms.",
+    Responsibilities:
+      "• Conduct user research to understand pain points and needs.\n• Create wireframes, prototypes, and high-fidelity designs.\n• Collaborate with developers to ensure design feasibility.\n• Test and iterate on designs based on user feedback.",
+    jobRequirements:
+      "• 3+ years of experience in UX design, with proficiency in tools like Sketch or Figma.\n• Strong portfolio showcasing UX/UI design skills.\n• Understanding of user research methods and design principles.\n• Excellent communication and teamwork skills.",
+    location: "USA",
     posted: "5 days ago",
     more: {
       location: "On-site",
@@ -349,77 +391,23 @@ export const jobCard: JobPostTypes[] = [
     id: "000008-blockchain-engineer",
     position: "Blockchain Engineer",
     company: "Ripple",
-    location: "Singapore",
+    jobDescription:
+      "Design and implement blockchain-based systems and smart contracts to support Ripple's financial solutions.",
+    Responsibilities:
+      "• Develop and maintain blockchain applications and services.\n• Implement smart contracts and consensus algorithms.\n• Collaborate with software engineers to integrate blockchain technology into products.\n• Monitor and optimize blockchain network performance.",
+    jobRequirements:
+      "• 3+ years of experience in blockchain development.\n• Proficiency in Solidity, smart contracts, and consensus algorithms.\n• Strong understanding of distributed systems and cryptography.\n• Excellent problem-solving skills and attention to detail.",
+    location: "USA",
     posted: "6 days ago",
     more: {
       location: "On-site",
       category: "Blockchain",
-      level: "Mid-level",
+      level: "Lead",
       type: "Full Time",
     },
-    categories: ["Blockchain", "Crypto", "Software", "Finance"],
-    employees: "201 - 500 employees",
+    categories: ["Blockchain", "Cryptography", "Distributed Systems"],
+    employees: "500 - 1,000 employees",
     companyLogo: "/path-to-ripple-logo.png",
-    action: {
-      label: "Read more",
-      link: "#",
-    },
-  },
-  {
-    id: "000009-fullstack-developer",
-    position: "Fullstack Developer",
-    company: "Meta",
-    location: "Remote",
-    posted: "1 week ago",
-    more: {
-      location: "Remote",
-      category: "Fullstack Development",
-      level: "Mid-level",
-      type: "Full Time",
-    },
-    categories: ["Fullstack", "Software", "React", "Node.js"],
-    employees: "10,000+ employees",
-    companyLogo: "/path-to-meta-logo.png",
-    action: {
-      label: "Read more",
-      link: "#",
-    },
-  },
-  {
-    id: "000010-cybersecurity-analyst",
-    position: "Cybersecurity Analyst",
-    company: "IBM",
-    location: "New York, USA",
-    posted: "2 weeks ago",
-    more: {
-      location: "On-site",
-      category: "Cybersecurity",
-      level: "Mid-level",
-      type: "Full Time",
-    },
-    categories: ["Security", "Cybersecurity", "Software"],
-    employees: "10,000+ employees",
-    companyLogo: "/path-to-ibm-logo.png",
-    action: {
-      label: "Read more",
-      link: "#",
-    },
-  },
-  {
-    id: "000011-ai-research-scientist",
-    position: "AI Research Scientist",
-    company: "OpenAI",
-    location: "San Francisco, USA; Remote",
-    posted: "2 weeks ago",
-    more: {
-      location: "Remote",
-      category: "AI Research",
-      level: "Senior",
-      type: "Full Time",
-    },
-    categories: ["AI", "Research", "Machine Learning", "Deep Learning"],
-    employees: "51 - 200 employees",
-    companyLogo: "/path-to-openai-logo.png",
     action: {
       label: "Read more",
       link: "#",

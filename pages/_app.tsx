@@ -9,6 +9,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { NextIntlClientProvider } from "next-intl";
 import { useEffect, useState } from "react";
 import { Progress } from "@nextui-org/react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { SessionProvider } from "next-auth/react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -41,7 +44,10 @@ export default function App({ Component, pageProps }: AppProps) {
           timeZone="Europe/London"
           messages={pageProps.messages}
         >
-          <Component {...pageProps} />
+          <SessionProvider session={pageProps.session}>
+            <Component {...pageProps} />
+            <ToastContainer />
+          </SessionProvider>
         </NextIntlClientProvider>
       </NextThemesProvider>
     </NextUIProvider>

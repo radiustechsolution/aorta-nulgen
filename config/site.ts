@@ -46,6 +46,10 @@ export const siteConfig = {
       highSchool: "/auth/flow/highschool",
       undergraduate: "/auth/flow/undergraduate",
       jobBoard: "/jobs",
+      signup: "/auth/signup",
+      signin: "/auth/signin",
+      dashboard: "/dashboard",
+      error: "/error",
     },
   },
 };
