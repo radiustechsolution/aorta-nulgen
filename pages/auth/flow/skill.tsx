@@ -41,8 +41,8 @@ const Flow2 = () => {
         {/* Selections */}
         <div className="mt-10 flex flex-col gap-3">
           <OnboardSelectionCard
-            title="Join waiting list"
-            path={siteConfig.path.paths.waitingList}
+            title="Apply for a Course"
+            path={siteConfig.path.paths.course}
             subtitle="Be the first to access exclusive learning opportunities and resources."
           />
           <OnboardSelectionCard
