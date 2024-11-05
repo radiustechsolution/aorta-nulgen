@@ -33,6 +33,8 @@ export const CourseHero = () => {
               alt="course-bg"
               height={570}
               width={570}
+              quality={40}
+              priority
             />
           </div>
           <div className="lg:hidden mt-16">
@@ -41,6 +43,8 @@ export const CourseHero = () => {
               alt="course-bg"
               height={400}
               width={400}
+              quality={40}
+              priority
             />
           </div>
         </div>

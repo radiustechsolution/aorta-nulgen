@@ -61,7 +61,7 @@ const CoursePage = () => {
                 {courseFilterObject.map((course) => (
                   <div
                     key={course.id}
-                    className={`min-w-[165px] ${course.id == 0 && "ml-5 lg:ml-0"} h-[155px] bg-[#F0F5FF] rounded-sm flex flex-col items-center justify-center`}
+                    className={`min-w-[160px] p-2 ${course.id == 0 && "ml-5 lg:ml-0"} ${course.id == 6 && "mr-5 lg:mr-0"} h-[155px] bg-[#F0F5FF] rounded-sm flex flex-col items-center justify-center`}
                   >
                     <Image
                       src={course.icon}
