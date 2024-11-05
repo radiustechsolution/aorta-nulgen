@@ -1,11 +1,7 @@
 import { siteConfig } from "@/config/site";
-import { GetStaticPropsContext } from "next";
-import Image from "next/image";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdMenu } from "react-icons/io";
 import { useTranslations } from "next-intl";
-import { loadTranslations } from "@/lib/loadTranslations";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { NulgenButton } from "@/components/button";
 import { useRouter } from "next/router";
