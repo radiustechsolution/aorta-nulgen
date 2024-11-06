@@ -45,7 +45,7 @@ export const FilterByComp = () => {
         Explore courses by job function
       </p>
       {/* Add wrapper to handle horizontal scroll */}
-      <div className="flex items-center gap-3 overflow-x-auto group w-full">
+      <div className="flex items-center gap-3 overflow-x-auto justify-between w-full">
         {courseFilterObject.map((course) => (
           <div
             key={course.id}
