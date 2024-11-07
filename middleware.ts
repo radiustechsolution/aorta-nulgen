@@ -38,8 +38,8 @@ export async function middleware(req: NextRequest) {
 
     // Redirect to /jobs if user is already signed in and trying to access /auth/flow
     if (pathname === authFlowPath && session) {
-      const jobsUrl = new URL(siteConfig.path.paths.jobBoard, req.url); // Update this to your actual jobs URL
-      return NextResponse.redirect(jobsUrl);
+      const dashboardUrl = new URL(siteConfig.path.paths.dashboard, req.url); // Update this to your actual jobs URL
+      return NextResponse.redirect(dashboardUrl);
     }
 
     // Continue to the requested page

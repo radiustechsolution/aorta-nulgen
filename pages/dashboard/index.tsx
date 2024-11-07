@@ -10,7 +10,7 @@ import DashboardLayout from "@/layouts/dashboard";
 
 const Dashboard = () => {
   // Hooks
-  const { data: session, status } = useSession();
+  const { data: session, status }: any = useSession();
 
   if (status === "loading") {
     return <div></div>;
@@ -18,15 +18,52 @@ const Dashboard = () => {
 
   return (
     <DashboardLayout>
-      <p className="text-black">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-        adipisci eum debitis reiciendis possimus corporis molestias, fuga
-        voluptas ipsa unde consequatur a sed voluptatem, vitae eaque autem sunt
-        natus incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Officiis adipisci eum debitis reiciendis possimus corporis molestias,
-        fuga voluptas ipsa unde consequatur a sed voluptatem, vitae eaque autem
-        sunt natus incidunt. Lorem ipsum dolor sit amet consectetur adipisicing
-      </p>
+      <p className={`text-black text-[26px]`}>Profile</p>
+
+      <form action="" className="mt-4 flex flex-col gap-7">
+        {/* Double */}
+        <div className="flex flex-col lg:flex-row items-center gap-3">
+          {/* Fullname */}
+          <div className="w-full flex flex-col gap-2">
+            <p className="text-black text-[px] font-medium">Name</p>
+            <input
+              type="text"
+              className="bg-transparent px-3 text-black text-[16px] border border-black w-full h-[50px] rounded-md"
+              name=""
+              value={session?.user.fullname}
+              readOnly
+              id=""
+            />
+          </div>
+          {/* Email */}
+          <div className="w-full flex flex-col gap-2">
+            <p className="text-black text-[px] font-medium">Email Address</p>
+            <input
+              type="email"
+              value={session?.user.email}
+              className="bg-transparent px-3 text-black text-[16px] border border-black w-full h-[50px] rounded-md"
+              name=""
+              readOnly
+              id=""
+            />
+          </div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row items-center gap-3">
+          {/* Phone Number */}
+          <div className="w-full flex flex-col gap-2">
+            <p className="text-black text-[px] font-medium">Phone Number</p>
+            <input
+              type="email"
+              value={session?.user.phone_number}
+              className="bg-transparent px-3 text-black text-[16px] border border-black w-full lg:w-1/2 h-[50px] rounded-md"
+              name=""
+              readOnly
+              id=""
+            />
+          </div>
+        </div>
+      </form>
     </DashboardLayout>
   );
 };

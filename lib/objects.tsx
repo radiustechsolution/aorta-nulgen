@@ -661,18 +661,13 @@ export const dashboardLinks = [
   },
   {
     id: 1,
-    title: "Subscription",
-    link: "/subscription",
+    title: "Job",
+    link: siteConfig.path.paths.dashboardJob,
   },
   {
     id: 2,
-    title: "Purchases",
-    link: "/purchases",
-  },
-  {
-    id: 3,
-    title: "Linked Accounts",
-    link: "/linked-accounts",
+    title: "Course / Skill",
+    link: siteConfig.path.paths.dashboardSkill,
   },
   {
     id: 4,
@@ -681,7 +676,7 @@ export const dashboardLinks = [
   },
   {
     id: 5,
-    title: "Learning Preferences",
-    link: "/learning-preferences",
+    title: "Preferences",
+    link: siteConfig.path.paths.dashboardPreferences,
   },
 ];

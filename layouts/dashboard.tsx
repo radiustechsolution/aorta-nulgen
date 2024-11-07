@@ -68,7 +68,6 @@ export default function DashboardLayout({
                 {dashboardLinks.map((v) => (
                   <Link href={v.link} key={v.id}>
                     <div
-                      onClick={() => setActiveLink(v.id)} // Update the active link on click
                       className={`${
                         activeLink == v.id
                           ? "bg-[#E9E8FF] border-l-4 border-[#2016FF]"
@@ -84,7 +83,7 @@ export default function DashboardLayout({
               </div>
 
               {/* Dropdown for smaller screens */}
-              <div className="w-full block md:hidden mb-4">
+              <div className="w-full block md:hidden">
                 <div className="w-full px-4 bg-white border border-gray-300">
                   <select
                     className="w-full py-4 text-black bg-white rounded-md cursor-pointer"
@@ -107,7 +106,9 @@ export default function DashboardLayout({
               </div>
 
               {/* Right - Content */}
-              <div className="bg-white w-full p-10">{children}</div>
+              <div className="bg-white w-full p-4 md:p-10 h-max">
+                {children}
+              </div>
             </div>
           </div>
         </section>
