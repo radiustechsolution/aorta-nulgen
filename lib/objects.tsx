@@ -1,3 +1,4 @@
+import { siteConfig } from "@/config/site";
 import { JobPostTypes, LatestType } from "./types";
 
 export const WhyObjects = [
@@ -648,5 +649,39 @@ export const LearnNewSkill = [
     rating: 5,
     duration: 2,
     level: "Intermediate",
+  },
+];
+
+// Link Object
+export const dashboardLinks = [
+  {
+    id: 0,
+    title: "Personal account",
+    link: siteConfig.path.paths.dashboard,
+  },
+  {
+    id: 1,
+    title: "Subscription",
+    link: "/subscription",
+  },
+  {
+    id: 2,
+    title: "Purchases",
+    link: "/purchases",
+  },
+  {
+    id: 3,
+    title: "Linked Accounts",
+    link: "/linked-accounts",
+  },
+  {
+    id: 4,
+    title: "Notifications",
+    link: siteConfig.path.paths.dashboardNotification,
+  },
+  {
+    id: 5,
+    title: "Learning Preferences",
+    link: "/learning-preferences",
   },
 ];

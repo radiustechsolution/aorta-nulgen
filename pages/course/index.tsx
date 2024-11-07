@@ -1,6 +1,6 @@
 import { FilterByComp } from "@/components/course/filterby";
 import { CourseHero } from "@/components/course/hero";
-import { CoursesDisplayComp } from "@/components/course/recomemdedForYou";
+import { CoursesDisplayComp } from "@/components/course/CoursesDisplayComp";
 import { Footer } from "@/components/landing-page/footer";
 import CourseLayout from "@/layouts/course";
 import { loadTranslations } from "@/lib/loadTranslations";

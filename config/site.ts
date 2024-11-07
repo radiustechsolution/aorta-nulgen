@@ -50,6 +50,7 @@ export const siteConfig = {
       signup: "/auth/signup",
       signin: "/auth/signin",
       dashboard: "/dashboard",
+      dashboardNotification: "/dashboard/notification",
       error: "/error",
     },
   },

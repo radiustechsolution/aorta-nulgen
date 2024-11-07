@@ -17,10 +17,9 @@ export const CourseHero = () => {
             Udacity creates job opportunities with GDP impact for nations
             embracing the global digital era.
           </p>
-
           <Button
             radius="none"
-            className="w-full lg:w-[177px] text-[16px] mt-[45px] text-white h-[48px] bg-[#2016FF]"
+            className="w-full lg:w-[180px] text-[16px] mt-[45px] text-white h-[48px] bg-[#2016FF]"
             endContent={<HiOutlineArrowLongRight color="white" />}
           >
             Learn More
