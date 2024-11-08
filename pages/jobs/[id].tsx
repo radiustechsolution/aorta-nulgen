@@ -12,10 +12,19 @@ import { IoNewspaperOutline } from "react-icons/io5";
 import { Button } from "@nextui-org/button";
 import { SiTrustpilot } from "react-icons/si";
 import { siteConfig } from "@/config/site";
+import { useSession } from "next-auth/react";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function BlogDetails() {
+  // Hook
+  const { data: session } = useSession();
   const router = useRouter();
   const { id } = router.query;
+
+  // State
+  const [loading, setLoading] = useState(false);
+
   // Find the company details by name
   const job = jobCard.find((c) => c.id.toLowerCase() === id);
   if (!job) {
@@ -31,6 +40,36 @@ export default function BlogDetails() {
     category: <MdOutlineCategory size={14} color="#136EF5" />,
     level: <PiBagLight size={14} color="#136EF5" />,
     type: <RiTimeLine size={14} color="#136EF5" />,
+  };
+
+  const Apply = async (id: any) => {
+    setLoading(true);
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/v1/job/apply`,
+        {
+          method: "POST",
+          body: JSON.stringify({
+            job_id: id,
+          }),
+          headers: {
+            "Content-Type": "application/json", // Ensure content type is set
+            Accept: "application/json",
+            Authorization: `Bearer ${session?.user.token}`, // Use bearer token for authorization
+          },
+        }
+      );
+
+      const json = await response.json();
+      if (!response.ok) {
+        return toast(json.status, { toastId: "nksx" });
+      }
+      router.push(siteConfig.path.paths.dashboardJob);
+    } catch (error) {
+      console.error("Error fetching jobs:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -157,7 +196,8 @@ export default function BlogDetails() {
 
               <div className="flex flex-col my-8 gap-1 items-center">
                 <Button
-                  onClick={() => router.push(siteConfig.path.paths.signup)}
+                  isLoading={loading}
+                  onClick={() => Apply(job.id)}
                   className="bg-[#136EF5] rounded-md font-semibold border border-[#EAEBF4] w-[75%] sm:w-[50%] p-2"
                 >
                   <p className="text-white text-[14px]">Apply</p>
