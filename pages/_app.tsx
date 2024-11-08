@@ -12,6 +12,7 @@ import { Progress } from "@nextui-org/react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { SessionProvider } from "next-auth/react";
+import React from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -45,7 +46,9 @@ export default function App({ Component, pageProps }: AppProps) {
           messages={pageProps.messages}
         >
           <SessionProvider session={pageProps.session}>
-            <Component {...pageProps} />
+            <React.StrictMode>
+              <Component {...pageProps} />
+            </React.StrictMode>
             <ToastContainer />
           </SessionProvider>
         </NextIntlClientProvider>

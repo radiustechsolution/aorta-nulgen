@@ -202,7 +202,7 @@ export const jobBoardHerologos = [
 
 export const jobCard: JobPostTypes[] = [
   {
-    id: "000001-compliance-manager-consumer-protection",
+    id: "1",
     position: "Compliance Manager, Consumer Protection",
     company: "Coinbase",
     jobDescription:
@@ -233,7 +233,7 @@ export const jobCard: JobPostTypes[] = [
     },
   },
   {
-    id: "000002-frontend-developer",
+    id: "2",
     position: "Frontend Developer",
     company: "Google",
     jobDescription:
@@ -259,7 +259,7 @@ export const jobCard: JobPostTypes[] = [
     },
   },
   {
-    id: "000003-data-scientist",
+    id: "3",
     position: "Data Scientist",
     company: "Microsoft",
     jobDescription:
@@ -285,7 +285,7 @@ export const jobCard: JobPostTypes[] = [
     },
   },
   {
-    id: "000004-devops-engineer",
+    id: "4",
     position: "DevOps Engineer",
     company: "Amazon",
     jobDescription:
@@ -311,7 +311,7 @@ export const jobCard: JobPostTypes[] = [
     },
   },
   {
-    id: "000005-backend-developer",
+    id: "5",
     position: "Backend Developer",
     company: "Netflix",
     jobDescription:
@@ -337,7 +337,7 @@ export const jobCard: JobPostTypes[] = [
     },
   },
   {
-    id: "000006-product-manager",
+    id: "6",
     position: "Product Manager",
     company: "Spotify",
     jobDescription:
@@ -363,7 +363,7 @@ export const jobCard: JobPostTypes[] = [
     },
   },
   {
-    id: "000007-ux-designer",
+    id: "7",
     position: "UX Designer",
     company: "Adobe",
     jobDescription:
@@ -389,7 +389,7 @@ export const jobCard: JobPostTypes[] = [
     },
   },
   {
-    id: "000008-blockchain-engineer",
+    id: "8",
     position: "Blockchain Engineer",
     company: "Ripple",
     jobDescription:

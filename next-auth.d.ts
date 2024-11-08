@@ -12,6 +12,7 @@ declare module "next-auth" {
       user_data?: any | null;
       balance?: any | null;
       promo_code?: any | null;
+      token?: string;
       xagonn?: any | null;
       username?: string | null;
       account_number?: string | null;

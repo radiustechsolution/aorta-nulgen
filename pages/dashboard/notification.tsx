@@ -15,12 +15,7 @@ const Notification = () => {
 
   return (
     <DashboardLayout>
-      <p className="text-black">
-        Notification Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Officiis adipisci eum debitis reiciendis possimus corporis molestias,
-        fuga voluptas ipsa unde consequatur a sed voluptatem, vitae eaque autem
-        sunt natus incidunt.
-      </p>
+      <p className={`text-black text-[26px]`}>Notifications</p>
     </DashboardLayout>
   );
 };

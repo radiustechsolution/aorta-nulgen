@@ -18,15 +18,7 @@ const DashboardSkill = () => {
 
   return (
     <DashboardLayout>
-      <p className="text-black">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
-        adipisci eum debitis reiciendis possimus corporis molestias, fuga
-        voluptas ipsa unde consequatur a sed voluptatem, vitae eaque autem sunt
-        natus incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Officiis adipisci eum debitis reiciendis possimus corporis molestias,
-        fuga voluptas ipsa unde consequatur a sed voluptatem, vitae eaque autem
-        sunt natus incidunt. Lorem ipsum dolor sit amet consectetur adipisicing
-      </p>
+      <p className={`text-black text-[26px]`}>Skill / Course</p>
     </DashboardLayout>
   );
 };

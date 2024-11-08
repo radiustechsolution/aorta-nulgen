@@ -2,19 +2,77 @@ import { JobBoardHero } from "@/components/job-board/JobBoardHero";
 import { JobPostComp } from "@/components/job-board/JobPostComp";
 import { Footer } from "@/components/landing-page/footer";
 import JobBoardLayout from "@/layouts/jobboard";
-import { jobCard } from "@/lib/objects";
-import React, { useState, useMemo } from "react";
+import { Button, Spinner } from "@nextui-org/react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 
 export default function JobBoard() {
+  // Ref to track if the initial fetch has already occurred
+  const isInitialRender = useRef(true);
+
   // State for search query and filters
   const [searchQuery, setSearchQuery] = useState("");
   const [locationFilter, setLocationFilter] = useState("All");
   const [jobLevelFilter, setJobLevelFilter] = useState("All");
   const [departmentFilter, setDepartmentFilter] = useState("All");
 
-  // Filter the jobCard array based on the selected filters and search query
+  // State for jobs and pagination
+  const [jobs, setJobs] = useState<any[]>([]);
+  const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(false);
+  const [hasMore, setHasMore] = useState(true);
+
+  // Function to fetch jobs with pagination
+  const FetchJobs = async () => {
+    if (loading || !hasMore) return; // Prevent multiple fetches if already loading or no more data
+    setLoading(true);
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/v1/jobs?page=${page}`,
+        {
+          headers: {
+            Accept: "application/json",
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch jobs");
+      }
+
+      const data = await response.json();
+      console.log(data.data);
+
+      // Check if more jobs exist for pagination
+      setHasMore(data.data.length > 0);
+
+      // Deduplicate by checking if the job already exists
+      setJobs((prevJobs) => {
+        const newJobs = data.data.filter(
+          (newJob: any) => !prevJobs.some((job) => job.id === newJob.id)
+        );
+        return [...prevJobs, ...newJobs]; // Append only unique jobs
+      });
+
+      // Increment page number for next fetch
+      setPage((prevPage) => prevPage + 1);
+    } catch (error) {
+      console.error("Error fetching jobs:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Initial fetch on component mount (only once)
+  useEffect(() => {
+    if (isInitialRender.current) {
+      FetchJobs();
+      isInitialRender.current = false;
+    }
+  }, []); // Empty dependency array
+
+  // Filter the jobs array based on the selected filters and search query
   const filteredJobs = useMemo(() => {
-    return jobCard.filter((job) => {
+    return jobs.filter((job) => {
       const matchesSearch =
         searchQuery === "" ||
         job.position.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -29,7 +87,7 @@ export default function JobBoard() {
 
       const matchesDepartment =
         departmentFilter === "All" ||
-        job.categories.some((category) =>
+        job.categories.some((category: any) =>
           category.toLowerCase().includes(departmentFilter.toLowerCase())
         );
 
@@ -37,7 +95,7 @@ export default function JobBoard() {
         matchesSearch && matchesLocation && matchesJobLevel && matchesDepartment
       );
     });
-  }, [searchQuery, locationFilter, jobLevelFilter, departmentFilter]);
+  }, [jobs, searchQuery, locationFilter, jobLevelFilter, departmentFilter]);
 
   return (
     <JobBoardLayout>
@@ -65,6 +123,22 @@ export default function JobBoard() {
                   <JobPostComp data={job} key={job.id} />
                 ))}
               </div>
+              {loading && jobs.length < 1 && (
+                <div className="flex items-center gap-2">
+                  <Spinner size="sm" />
+                  <p className="text-black text-[16px]">Fetching...</p>
+                </div>
+              )}
+              {/* Display "Load More" button if there are more jobs to load */}
+              {hasMore && jobs.length > 1 && (
+                <Button
+                  onClick={FetchJobs}
+                  isLoading={loading}
+                  className="bg-[#3670FF] text-white py-2 px-4 rounded mt-4"
+                >
+                  Load More
+                </Button>
+              )}
             </div>
           </div>
         </div>

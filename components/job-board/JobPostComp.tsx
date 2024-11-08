@@ -8,7 +8,7 @@ export const JobPostComp = ({ data }: any) => {
 
   // Navigate to a Job
   const handleNavigate = () => {
-    router.push(`/jobs/${data.id.toLowerCase()}`);
+    router.push(`/jobs/${data.id}`);
   };
 
   return (
@@ -44,7 +44,7 @@ export const JobPostComp = ({ data }: any) => {
       </div>
       <div className="hidden items-center lg:flex gap-1">
         <p className="text-[#4900FF] text-[14px] font-semibold">
-          {data.action.label}
+          {data.action_label}
         </p>
         <PiCaretRightLight size={13} color="#4900FF" />
       </div>
