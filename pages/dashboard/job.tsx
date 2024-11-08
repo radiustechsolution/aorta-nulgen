@@ -68,7 +68,7 @@ const DashboardJob = () => {
       {!loading && jobs.length < 1 && (
         <div className="w-full bg-[#FAFAFA] gap-3 mt-5 md:gap-0 p-4 border border-[#C7C7C7] h-max">
           <p className="text-center text-black">
-            You haven't applied for any jobs yet.
+            You haven&apos;t applied for any jobs yet.
           </p>
         </div>
       )}
