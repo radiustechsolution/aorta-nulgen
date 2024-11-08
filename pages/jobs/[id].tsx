@@ -62,7 +62,7 @@ export default function BlogDetails() {
 
       const json = await response.json();
       if (!response.ok) {
-        return toast(json.status, { toastId: "nksx" });
+        return toast(json.message, { toastId: "nksx" });
       }
       router.push(siteConfig.path.paths.dashboardJob);
     } catch (error) {
