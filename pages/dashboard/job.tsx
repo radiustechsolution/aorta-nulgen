@@ -95,7 +95,6 @@ const DashboardJob = () => {
       {/* Link to job board */}
       <div className="flex flex-col items-center mt-8">
         <button
-          role="presentation"
           onClick={() => router.push(siteConfig.path.paths.jobBoard)}
           className="w-full md:w-[40%] cursor-pointer font-[500] text-white text-[18px] py-2 bg-[#2016FF]"
         >
