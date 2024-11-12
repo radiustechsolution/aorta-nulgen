@@ -1,0 +1,54 @@
+
+{
+  "common": {
+    "general_previously_at": "Zuvor bei",
+    "general_verified_expert": "Verifizierter Experte",
+    "hero_heading_text": "Der KI-gesteuerte Karrierekamerad!",
+    "hero_sub_heading_text": "Erlerne gefragte Berufskompetenzen kostenlos und steigere deine Karriere. Erhalte personalisierte Lernpfade und bewerbe dich direkt für Praktika, die zu deinen Ambitionen passen. Beginne deine Reise zu einer erfolgreichen Karriere mit der Kraft der KI an deiner Seite.",
+    "hero_get_started": "Loslegen",
+    "hero_trusted_by": "Vertrauenswürdig für Studierende und Arbeitgeber",
+    "hero_testimonial_name": "Anna D. Fischer",
+    "hero_testimonial_city": "Berlin",
+    "hero_testimonial_text": "Der Prozess, mein Studentenpraktikum zu bekommen, war schmerzlos und reibungslos. Ich hatte den gesamten Prozess in wenigen Minuten abgeschlossen.",
+    "trusted_by_leading": "Vertrauenswürdig bei führenden Marken und Startups",
+    "landing_talent": {
+      "title": "Beherrsche gefragte Berufskompetenzen",
+      "subtitle": "Wir sind das größte, global verteilte Netzwerk von Top-Talenten aus Wirtschaft, Design und Technologie, bereit, deine wichtigsten Projekte anzugehen.",
+      "talent_developers": "Entwickler",
+      "description_developers": "Erfahrene Software-Ingenieure, Programmierer und Architekten mit Fachkenntnissen in hunderten Technologien.",
+      "talent_marketing_experts": "Marketing-Experten",
+      "description_marketing_experts": "Experten für digitales Marketing, Wachstum, Content-Erstellung, Marktforschung, Markenstrategie, Social Media Marketing und mehr.",
+      "talent_designers": "Designer",
+      "description_designers": "Kreative Fachleute, die sich auf visuelle Ästhetik, Benutzererlebnisse und Markenidentität spezialisieren.",
+      "talent_engineers": "Ingenieure",
+      "description_engineers": "Problemlöser und Innovatoren, die an Technologien und Systemen arbeiten, die Effizienz und Produktivität fördern.",
+      "talent_product_managers": "Produktmanager",
+      "description_product_managers": "Führungskräfte, die die Produktvision, Strategie und Umsetzung in verschiedenen Märkten vorantreiben.",
+      "talent_content_creators": "Content Creator",
+      "description_content_creators": "Erfahrene Fachleute, die fesselnde und informative Inhalte auf mehreren Plattformen produzieren."
+    },
+    "on_demands": {
+      "title": "Stelle großartige Teams\nauf Abruf zusammen",
+      "subtitle": "Stelle schnell die Teams zusammen, die du benötigst, genau dann, wenn du sie benötigst.",
+      "object": {
+        "on_demand_hire_quickly": "Schnell einstellen",
+        "on_demand_hire_quickly_description": "Stelle in weniger als 48 Stunden ein. Skalierbar nach Bedarf, ohne Verpflichtungen. Wir bieten flexible Engagements von stundenweise bis Vollzeit.",
+        "on_demand_top_3_percent": "Die Top 3%",
+        "on_demand_top_3_percent_description": "Jeder Bewerber im Toptal-Netzwerk wird streng geprüft und getestet. Unser hochselektiver Prozess führt zu einer Erfolgsquote von 98% bei der Einstellung.",
+        "on_demand_leading_future_work": "Die Zukunft der Arbeit anführen",
+        "on_demand_leading_future_work_description": "Unser Netzwerk ist bereit für die Herausforderungen von morgen durch den Einsatz fortschrittlicher und spezialisierter Fähigkeiten, einschließlich Blockchain und KI.",
+        "on_demand_a_level_above": "Eine Stufe darüber",
+        "on_demand_a_level_above_description": "Jeder Freelancer in unserem globalen Netzwerk verkörpert höchste Integrität, Professionalität und Kommunikation."
+      }
+    }
+  },
+  "navbar": {
+    "getInternship": "Praktikum finden",
+    "masterSkill": "Fähigkeiten meistern",
+    "aboutUs": "Über uns",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "postInternship": "Praktikum veröffentlichen",
+    "login": "Anmelden"
+  }
+}
