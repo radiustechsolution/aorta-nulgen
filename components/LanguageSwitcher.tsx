@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 // Type-safe language name mapping
 const languageNames: { [key: string]: string } = {
   "en-US": "English",
+  "de-DE": "Deutsch",
   "nl-NL": "Dutch",
-  "de-DE":"Deutsch"
 };
 
 const LanguageSwitcher = () => {

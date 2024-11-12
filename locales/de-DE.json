@@ -1,4 +1,3 @@
-
 {
   "common": {
     "general_previously_at": "Zuvor bei",
@@ -42,6 +41,7 @@
       }
     }
   },
+
   "navbar": {
     "getInternship": "Praktikum finden",
     "masterSkill": "Fähigkeiten meistern",
