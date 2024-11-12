@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 const languageNames: { [key: string]: string } = {
   "en-US": "English",
   "nl-NL": "Dutch",
+  "de-DE":"Deutsch"
 };
 
 const LanguageSwitcher = () => {
