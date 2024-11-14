@@ -48,7 +48,11 @@ export const Navbar = () => {
           <NulgenButton
             action={() => router.push(siteConfig.path.paths.flow1)}
           />
-          <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
+          <p
+            role="presentation"
+            onClick={() => router.push(siteConfig.path.paths.signin)}
+            className="text-[#262d3d] cursor-pointer text-[13px] font-normal"
+          >
             {tn("login")}
           </p>
         </div>

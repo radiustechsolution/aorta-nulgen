@@ -12,7 +12,7 @@ const SignUp = () => {
   const router = useRouter();
   const [isSelected, setIsSelected] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
-
+  const { query } = router;
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -73,6 +73,7 @@ const SignUp = () => {
         body: JSON.stringify({
           fullname,
           email,
+          job_id: query.xbz,
           phone_number,
           password,
         }),
@@ -90,7 +91,7 @@ const SignUp = () => {
 
         if (loginRes?.ok) {
           // If login was successful, redirect to dashboard
-          router.push("/dashboard");
+          router.push(siteConfig.path.paths.dashboard);
           toast("success", { type: "success", toastId: "xkqa" });
         } else {
           toast(
@@ -207,7 +208,7 @@ const SignUp = () => {
                   />
                 </div>
                 {/* Single */}
-                <div className="flex flex-col gap-1 md:gap-3 w-full">
+                {/* <div className="flex flex-col gap-1 md:gap-3 w-full">
                   <p className="text-[15px] font-[500] text-[#232535] leading-[17.99px]">
                     Confirm Password
                   </p>
@@ -217,7 +218,7 @@ const SignUp = () => {
                     placeholder="Confirm password"
                     className="h-[38px] text-black md:h-[45px] w-full bg-white rounded-md border border-gray-300 px-2 outline-[#4368FF]"
                   />
-                </div>
+                </div> */}
 
                 {/* Consent */}
                 <div className="mt-1 md:mt-3 flex flex-col gap-5">

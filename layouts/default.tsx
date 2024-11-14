@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { Footer } from "@/components/landing-page/footer";
 import { Navbar } from "@/components/navbar";
 import { Head } from "./head";
 

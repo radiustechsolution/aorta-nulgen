@@ -43,6 +43,10 @@ export default function BlogDetails() {
   };
 
   const Apply = async (id: any) => {
+    if (!session) {
+      return router.push(`${siteConfig.path.paths.signup}?xbz=${id}`);
+    }
+
     setLoading(true);
     try {
       const response = await fetch(
