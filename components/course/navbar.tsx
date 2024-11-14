@@ -5,16 +5,22 @@ import { useTranslations } from "next-intl";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { NulgenButton } from "@/components/button";
 import { useRouter } from "next/router";
+import { useSession } from "next-auth/react";
 
 export const CourseNavbar = () => {
   const router = useRouter();
+  const { data: session } = useSession();
   const t = useTranslations("common");
   const tn = useTranslations("navbar");
 
   return (
     <nav className="max-w-[1250px] flex items-center justify-between h-[64px] w-full">
       <div className="flex items-center gap-10">
-        <p className="font-bold font-ProximaNova text-black text-[20px]">
+        <p
+          role="presentation"
+          onClick={() => router.push(siteConfig.path.paths.index)}
+          className="font-bold cursor-pointer font-ProximaNova text-black text-[20px]"
+        >
           {siteConfig.shortName}
         </p>
         <ul className="hidden xl:flex items-center gap-5">
@@ -37,20 +43,22 @@ export const CourseNavbar = () => {
       <div className="flex items-center gap-8">
         {/* Language Switcher */}
         <LanguageSwitcher />
-        <div className="hidden lg:flex items-center gap-5">
-          {/* <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
-            {tn("postInternship")}
-          </p> */}
-          <NulgenButton
-            bgColor="bg-[#2016FF]"
-            title="Join Now"
-            notRounded
-            action={() => router.push(siteConfig.path.paths.flow1)}
-          />
-          <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
-            {tn("login")}
-          </p>
-        </div>
+        {!session && (
+          <div className="hidden lg:flex items-center gap-5">
+            {/* <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
+              {tn("postInternship")}
+            </p> */}
+            <NulgenButton
+              bgColor="bg-[#2016FF]"
+              title="Join Now"
+              notRounded
+              action={() => router.push(siteConfig.path.paths.flow1)}
+            />
+            <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
+              {tn("login")}
+            </p>
+          </div>
+        )}
         <IoMdMenu className="flex xl:hidden" size={33} color="#262d3d" />
       </div>
     </nav>

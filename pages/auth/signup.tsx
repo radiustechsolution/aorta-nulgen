@@ -13,6 +13,12 @@ const SignUp = () => {
   const [isSelected, setIsSelected] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
   const { query } = router;
+
+  /*
+    ====
+    Submit 
+    Form
+  */
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -47,11 +53,6 @@ const SignUp = () => {
         type: "error",
         toastId: "akd",
       });
-      return;
-    }
-
-    if (!passwordConfirm || passwordConfirm !== password) {
-      toast("Passwords do not match.", { type: "error", toastId: "awk" });
       return;
     }
 

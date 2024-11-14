@@ -1,6 +1,7 @@
 import { NulgenButton } from "@/components/button";
 import { siteConfig } from "@/config/site";
 import { Image } from "@nextui-org/react";
+import { useSession } from "next-auth/react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
 
@@ -17,6 +18,7 @@ const object = [
 
 export const HomeHero = () => {
   const router = useRouter();
+  const { data: session } = useSession();
   const t = useTranslations("common");
 
   return (
@@ -33,6 +35,7 @@ export const HomeHero = () => {
             <NulgenButton
               action={() => router.push(siteConfig.path.paths.flow1)}
               height={52}
+              title={!session ? "Get Started" : "Continue"}
               fontSize={20}
               width={264}
             />

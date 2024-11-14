@@ -40,6 +40,7 @@ export const siteConfig = {
     ],
 
     paths: {
+      index: "/",
       flow1: "/auth/flow",
       waitingList: "/wait-list",
       getInternship: "/auth/flow/internship",
