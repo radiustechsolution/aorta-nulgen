@@ -13,8 +13,9 @@ import { Button } from "@nextui-org/button";
 import { SiTrustpilot } from "react-icons/si";
 import { siteConfig } from "@/config/site";
 import { useSession } from "next-auth/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import { title } from "@/components/primitives";
 
 export default function BlogDetails() {
   // Hook
@@ -24,16 +25,30 @@ export default function BlogDetails() {
 
   // State
   const [loading, setLoading] = useState(false);
+  const [isLoading, setisLoading] = useState(true);
 
   // Find the company details by name
   const job = jobCard.find((c) => c.id.toLowerCase() === id);
   if (!job) {
     return (
-      <div>
-        <p></p>
-      </div>
+      <JobBoardLayout>
+        {!isLoading && (
+          <section className="items-center h-[300px] justify-center flex">
+            <div className="flex flex-col items-center gap-3 ">
+              <p className={`text-black ${title({ size: "sm" })}`}>404</p>
+              <p className={`text-black ${title({ size: "sm" })}`}>
+                Job was not found
+              </p>
+            </div>
+          </section>
+        )}
+      </JobBoardLayout>
     );
   }
+
+  // useEffect(() => {
+  //   setisLoading(false);
+  // }, []);
 
   const iconMap: { [key: string]: JSX.Element } = {
     location: <CiLocationOn size={14} color="#136EF5" />,

@@ -65,12 +65,6 @@ export default function IndexPage() {
           <TrustedByMany />
         </div>
 
-        {/* <div className="flex flex-col mt-10 items-center">
-          <div className="max-w-[1220px] overflow-hidden">
-            <ProfileSlider />
-          </div>
-        </div> */}
-
         {/* Talents */}
         <SectionWithTitle
           title={t("landing_talent.title")}

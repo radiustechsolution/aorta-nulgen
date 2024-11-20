@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { RatingComp } from "../rating";
+import router from "next/router";
 
 interface Types {
   id: number;
@@ -8,6 +9,9 @@ interface Types {
   rating: number;
   duration: number;
   level: string;
+  course_id: string;
+  subtitle: string;
+  skillsToLearn: any;
 }
 
 export const CoursesDisplayComp = ({
@@ -17,6 +21,11 @@ export const CoursesDisplayComp = ({
   title: string;
   data: Types[];
 }) => {
+  // Navigate to a Job
+  const handleNavigate = (id: any) => {
+    router.push(`/course/${id}`);
+  };
+
   return (
     <div className="flex flex-col gap-7 w-full">
       <p className="text-[24px] px-5 lg:px-0 font-[500] leading-[32px] text-[#0b0b0b]">
@@ -28,6 +37,8 @@ export const CoursesDisplayComp = ({
           {data.map((v) => (
             <div
               key={v.id}
+              onClick={() => handleNavigate(v.course_id)}
+              role="presentation"
               className={`h-[320px] ${v.id == 0 && "ml-5 xl:ml-0"} rounded-md cursor-pointer relative min-w-[190px] xl:flex-grow xl:basis-1/6 bg-gray-200 snap-none group overflow-hidden`}
             >
               <Image
