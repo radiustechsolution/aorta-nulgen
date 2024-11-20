@@ -47,8 +47,8 @@ export default function CourseDetails() {
         {/* Skills to learn */}
         <SkillToLearn data={course.skillsToLearn} />
 
-        {/* Course in the program */}
-        <CourseProgram />
+        {/* Course in the programs */}
+        <CourseProgram title={course.title} />
       </section>
     </CourseLayoutDetails>
   );
