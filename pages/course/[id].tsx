@@ -1,4 +1,5 @@
 import { CourseLevelDuration } from "@/components/course/dynamic-components/courseInfo";
+import { CourseProgram } from "@/components/course/dynamic-components/courseProgram";
 import { DynamicHeroComp } from "@/components/course/dynamic-components/hero";
 import { SkillToLearn } from "@/components/course/dynamic-components/skillsToLearn";
 import CourseLayoutDetails from "@/layouts/courseLayout";
@@ -39,8 +40,15 @@ export default function CourseDetails() {
       <section>
         {/* Hero */}
         <DynamicHeroComp data={course} />
+
+        {/* Level and duration */}
         <CourseLevelDuration />
+
+        {/* Skills to learn */}
         <SkillToLearn data={course.skillsToLearn} />
+
+        {/* Course in the program */}
+        <CourseProgram />
       </section>
     </CourseLayoutDetails>
   );
