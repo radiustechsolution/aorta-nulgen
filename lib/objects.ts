@@ -437,7 +437,155 @@ export const courseFilterObject = [
       "Spreadsheet functions",
       "Quantitative data visualization",
     ],
+
+    courses: [
+      {
+        course: 1,
+        duration: "60 minutes",
+        title: "Introduction to Data Science",
+        welcome:
+          "Welcome to the Data Science course! This module will guide you through the foundational concepts of data analysis and introduce the tools and methods used in data science.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "What is Data Science?",
+            description:
+              "An overview of data science, including its applications and why it's important in today's data-driven world.",
+          },
+          {
+            lesson: 2,
+            title: "Introduction to Jupyter Notebook",
+            description:
+              "Learn how to set up and use Jupyter Notebook for data analysis projects.",
+          },
+        ],
+      },
+      {
+        course: 2,
+        duration: "90 minutes",
+        title: "Data Cleaning and Preparation",
+        welcome:
+          "In this module, you'll learn how to clean and prepare raw data for analysis using pandas and other Python tools.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Handling Missing Data",
+            description:
+              "Learn techniques to identify, handle, and impute missing data.",
+          },
+          {
+            lesson: 2,
+            title: "Data Transformation",
+            description:
+              "Learn how to transform and normalize data for analysis using pandas.",
+          },
+          {
+            lesson: 3,
+            title: "Dealing with Outliers",
+            description:
+              "Understand what outliers are and how to handle them in your data set.",
+          },
+          {
+            lesson: 4,
+            title: "Working with Time Series Data",
+            description:
+              "Learn how to manage and process time series data in pandas.",
+          },
+        ],
+      },
+      {
+        course: 3,
+        duration: "120 minutes",
+        title: "Data Visualization and Insights",
+        welcome:
+          "This module will introduce you to Matplotlib and how to use visualizations to extract and communicate insights from data.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Introduction to Matplotlib",
+            description:
+              "Learn the basics of Matplotlib and how to create visual representations of your data.",
+          },
+          {
+            lesson: 2,
+            title: "Creating Bar Charts and Histograms",
+            description:
+              "Learn how to use Matplotlib to create bar charts and histograms for data comparison.",
+          },
+          {
+            lesson: 3,
+            title: "Line Charts and Scatter Plots",
+            description:
+              "Visualize trends and relationships between variables using line charts and scatter plots.",
+          },
+          {
+            lesson: 4,
+            title: "Advanced Data Visualization",
+            description:
+              "Learn advanced plotting techniques, such as subplots, dual-axis plots, and 3D plots.",
+          },
+          {
+            lesson: 5,
+            title: "Interactive Data Visualization",
+            description:
+              "Explore interactive plotting libraries like Plotly for creating dynamic, web-based visualizations.",
+          },
+        ],
+      },
+      {
+        course: 4,
+        duration: "180 minutes",
+        title: "Statistical Analysis and Hypothesis Testing",
+        welcome:
+          "Dive deep into statistical methods and learn how to perform hypothesis testing using Python.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Introduction to Descriptive Statistics",
+            description:
+              "Learn about measures of central tendency, variability, and how to describe data sets.",
+          },
+          {
+            lesson: 2,
+            title: "Probability Distributions",
+            description:
+              "Understand the different types of probability distributions, such as normal, binomial, and Poisson distributions.",
+          },
+          {
+            lesson: 3,
+            title: "Sampling Methods",
+            description:
+              "Learn about various sampling techniques and how to select samples for statistical analysis.",
+          },
+          {
+            lesson: 4,
+            title: "Hypothesis Testing",
+            description:
+              "Learn the fundamentals of hypothesis testing, including null and alternative hypotheses, p-values, and significance levels.",
+          },
+          {
+            lesson: 5,
+            title: "T-tests and Chi-Square Tests",
+            description:
+              "Perform t-tests and chi-square tests to compare groups and examine relationships between categorical variables.",
+          },
+          {
+            lesson: 6,
+            title: "Correlation and Regression Analysis",
+            description:
+              "Explore correlation and regression techniques to analyze the relationships between variables.",
+          },
+          {
+            lesson: 7,
+            title: "ANOVA (Analysis of Variance)",
+            description:
+              "Learn how to use ANOVA to compare multiple groups and determine if there are significant differences between them.",
+          },
+        ],
+      },
+    ],
   },
+
   {
     id: 1,
     course_id: "PD102",
@@ -457,7 +605,112 @@ export const courseFilterObject = [
       "Debugging and testing",
       "RESTful APIs",
     ],
+    courses: [
+      {
+        course: 1,
+        duration: "60 minutes",
+        title: "Introduction to Programming",
+        welcome:
+          "Welcome to the world of coding! This module covers the fundamentals of programming, including data types, control structures, and basic algorithms.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Programming Basics",
+            description:
+              "Learn the basics of programming, including variables, loops, and conditionals.",
+          },
+          {
+            lesson: 2,
+            title: "Data Types and Variables",
+            description:
+              "Explore the different data types and how to work with variables in programming.",
+          },
+        ],
+      },
+      {
+        course: 2,
+        duration: "90 minutes",
+        title: "Frontend Development",
+        welcome:
+          "Learn how to create visually appealing and interactive websites using HTML, CSS, and JavaScript.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "HTML Basics",
+            description:
+              "Get familiar with the structure and syntax of HTML for building webpages.",
+          },
+          {
+            lesson: 2,
+            title: "CSS Styling",
+            description:
+              "Learn how to style your webpages and make them visually attractive using CSS.",
+          },
+          {
+            lesson: 3,
+            title: "JavaScript Basics",
+            description:
+              "Understand the basics of JavaScript to add interactivity to your webpages.",
+          },
+        ],
+      },
+      {
+        course: 3,
+        duration: "120 minutes",
+        title: "Backend Development with Node.js",
+        welcome:
+          "Master server-side development with Node.js and Express to create scalable web applications.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Node.js Basics",
+            description:
+              "Learn the basics of Node.js, a JavaScript runtime environment for server-side development.",
+          },
+          {
+            lesson: 2,
+            title: "Express Framework",
+            description:
+              "Understand how to use Express.js to build backend APIs and handle HTTP requests.",
+          },
+          {
+            lesson: 3,
+            title: "Connecting to a Database",
+            description:
+              "Learn how to connect your Node.js application to databases like MongoDB.",
+          },
+        ],
+      },
+      {
+        course: 4,
+        duration: "180 minutes",
+        title: "RESTful API Development",
+        welcome:
+          "Understand how to design and build RESTful APIs to enable communication between your frontend and backend.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "What is a RESTful API?",
+            description:
+              "Learn the principles of RESTful architecture and how it facilitates communication between systems.",
+          },
+          {
+            lesson: 2,
+            title: "Building APIs with Express",
+            description:
+              "Build RESTful APIs using Express and handle HTTP requests effectively.",
+          },
+          {
+            lesson: 3,
+            title: "API Authentication",
+            description:
+              "Learn about authentication methods for securing your APIs, including JWT and OAuth.",
+          },
+        ],
+      },
+    ],
   },
+
   {
     id: 2,
     course_id: "AI103",
@@ -469,15 +722,119 @@ export const courseFilterObject = [
       "Dive into the fascinating world of AI and machine learning. Build intelligent systems and learn to solve real-world problems using cutting-edge AI techniques.",
     level: "Master",
     skillsToLearn: [
-      "Python programming for AI",
       "Machine learning algorithms",
-      "Neural networks",
-      "Data preprocessing and feature engineering",
-      "Model evaluation",
-      "Natural Language Processing (NLP)",
-      "Computer vision basics",
+      "Natural language processing (NLP)",
+      "Computer vision",
+      "Deep learning",
+      "TensorFlow and Keras",
+      "Model evaluation and optimization",
+    ],
+    courses: [
+      {
+        course: 1,
+        duration: "60 minutes",
+        title: "Introduction to AI",
+        welcome:
+          "Welcome to the AI course! This module covers the basic concepts of artificial intelligence, including its history and future potential.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "What is Artificial Intelligence?",
+            description:
+              "Get an overview of artificial intelligence and its key subfields, including machine learning, NLP, and computer vision.",
+          },
+          {
+            lesson: 2,
+            title: "History of AI",
+            description:
+              "Learn about the history of artificial intelligence and how it has evolved over the years.",
+          },
+        ],
+      },
+      {
+        course: 2,
+        duration: "90 minutes",
+        title: "Machine Learning Fundamentals",
+        welcome:
+          "In this module, you'll explore the core principles of machine learning, including supervised and unsupervised learning.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Supervised vs Unsupervised Learning",
+            description:
+              "Understand the difference between supervised and unsupervised learning and their respective use cases.",
+          },
+          {
+            lesson: 2,
+            title: "Linear Regression",
+            description:
+              "Learn the fundamentals of linear regression and its application in predicting continuous values.",
+          },
+          {
+            lesson: 3,
+            title: "Classification Algorithms",
+            description:
+              "Explore classification algorithms such as decision trees and k-nearest neighbors (KNN).",
+          },
+        ],
+      },
+      {
+        course: 3,
+        duration: "120 minutes",
+        title: "Deep Learning and Neural Networks",
+        welcome:
+          "Understand deep learning and neural networks, and learn how to implement these techniques using TensorFlow.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Introduction to Neural Networks",
+            description:
+              "Learn the basics of neural networks and how they are used in deep learning.",
+          },
+          {
+            lesson: 2,
+            title: "Building Neural Networks with TensorFlow",
+            description:
+              "Learn how to implement neural networks using TensorFlow and Keras for machine learning tasks.",
+          },
+          {
+            lesson: 3,
+            title: "Training Neural Networks",
+            description:
+              "Understand how to train neural networks and optimize their performance using backpropagation and gradient descent.",
+          },
+        ],
+      },
+      {
+        course: 4,
+        duration: "180 minutes",
+        title: "Natural Language Processing (NLP)",
+        welcome:
+          "Explore NLP techniques and learn how to process and analyze text data.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Text Preprocessing",
+            description:
+              "Learn how to clean and preprocess text data for NLP tasks.",
+          },
+          {
+            lesson: 2,
+            title: "Sentiment Analysis",
+            description:
+              "Understand how to use NLP techniques for sentiment analysis in social media or customer reviews.",
+          },
+          {
+            lesson: 3,
+            title: "Named Entity Recognition",
+            description:
+              "Learn how to identify named entities like names, dates, and locations in text data.",
+          },
+        ],
+      },
     ],
   },
+
   {
     id: 3,
     course_id: "BU104",
@@ -497,7 +854,100 @@ export const courseFilterObject = [
       "Project management",
       "Risk assessment",
     ],
+    courses: [
+      {
+        course: 1,
+        duration: "60 minutes",
+        title: "Introduction to Business Fundamentals",
+        welcome:
+          "Welcome to the Business course! This module introduces key concepts in business, including entrepreneurship and organizational management.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "What is Business?",
+            description:
+              "Learn the basic principles of business, including types of businesses, business models, and key concepts.",
+          },
+          {
+            lesson: 2,
+            title: "Understanding Business Structures",
+            description:
+              "Explore different types of business structures and how they affect operations, taxation, and management.",
+          },
+        ],
+      },
+      {
+        course: 2,
+        duration: "90 minutes",
+        title: "Strategic Business Planning",
+        welcome:
+          "This module focuses on strategic planning, including SWOT analysis and how to create effective business plans.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Strategic Planning Basics",
+            description:
+              "Learn the fundamentals of strategic planning and its importance in business success.",
+          },
+          {
+            lesson: 2,
+            title: "SWOT Analysis",
+            description:
+              "Learn how to conduct a SWOT (Strengths, Weaknesses, Opportunities, Threats) analysis for business strategy.",
+          },
+        ],
+      },
+      {
+        course: 3,
+        duration: "120 minutes",
+        title: "Market Research and Business Intelligence",
+        welcome:
+          "Understand the role of market research and business intelligence in identifying opportunities and making informed decisions.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Market Research Techniques",
+            description:
+              "Learn various methods of market research, including surveys, focus groups, and data analytics.",
+          },
+          {
+            lesson: 2,
+            title: "Business Intelligence Tools",
+            description:
+              "Understand how to use business intelligence tools to gather, analyze, and interpret business data.",
+          },
+        ],
+      },
+      {
+        course: 4,
+        duration: "180 minutes",
+        title: "Leadership and Management",
+        welcome:
+          "Learn essential leadership and management skills to lead teams and organizations effectively.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Leadership Styles",
+            description:
+              "Explore different leadership styles and determine which one suits your approach to management.",
+          },
+          {
+            lesson: 2,
+            title: "Team Building and Management",
+            description:
+              "Learn how to build high-performing teams and manage them effectively.",
+          },
+          {
+            lesson: 3,
+            title: "Conflict Resolution",
+            description:
+              "Understand how to handle conflicts within teams and organizations to maintain a productive work environment.",
+          },
+        ],
+      },
+    ],
   },
+
   {
     id: 4,
     course_id: "AS105",
@@ -517,7 +967,94 @@ export const courseFilterObject = [
       "Control systems",
       "Simulating autonomous systems",
     ],
+    courses: [
+      {
+        course: 1,
+        duration: "60 minutes",
+        title: "Introduction to Autonomous Systems",
+        welcome:
+          "In this module, you will learn the basics of autonomous systems, including key concepts and applications in robotics and AI.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "What are Autonomous Systems?",
+            description:
+              "Understand what autonomous systems are and explore the key components involved in building them.",
+          },
+          {
+            lesson: 2,
+            title: "AI in Robotics",
+            description:
+              "Learn how AI is integrated into robotics to create self-operating systems.",
+          },
+        ],
+      },
+      {
+        course: 2,
+        duration: "90 minutes",
+        title: "Robotics Fundamentals",
+        welcome:
+          "Dive deeper into robotics, covering sensors, actuators, and control systems that are essential for autonomous systems.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Sensors in Robotics",
+            description:
+              "Explore different types of sensors used in robotics, such as vision sensors, motion sensors, and distance sensors.",
+          },
+          {
+            lesson: 2,
+            title: "Actuators and Motors",
+            description:
+              "Learn about actuators and how motors are used to control robot movement.",
+          },
+        ],
+      },
+      {
+        course: 3,
+        duration: "120 minutes",
+        title: "Embedded Systems for Autonomous Systems",
+        welcome:
+          "Learn the fundamentals of embedded systems, including microcontrollers and how they integrate with robots for control.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Introduction to Embedded Systems",
+            description:
+              "Understand the role of embedded systems in robotics and autonomous systems.",
+          },
+          {
+            lesson: 2,
+            title: "Microcontrollers and Sensors",
+            description:
+              "Learn how microcontrollers work with sensors to gather data and control robotic actions.",
+          },
+        ],
+      },
+      {
+        course: 4,
+        duration: "180 minutes",
+        title: "Path Planning and Control Algorithms",
+        welcome:
+          "This module covers advanced topics in path planning and control algorithms for autonomous systems.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Path Planning Algorithms",
+            description:
+              "Learn different algorithms for path planning in robotics, such as A* and Dijkstra's algorithm.",
+          },
+          {
+            lesson: 2,
+            title: "Control Systems",
+            description:
+              "Explore various control systems used in robotics, including feedback loops and PID controllers.",
+          },
+        ],
+      },
+    ],
   },
+
   {
     id: 5,
     course_id: "PM106",
@@ -537,7 +1074,94 @@ export const courseFilterObject = [
       "Prioritization frameworks",
       "User experience basics",
     ],
+    courses: [
+      {
+        course: 1,
+        duration: "60 minutes",
+        title: "Introduction to Product Management",
+        welcome:
+          "This module introduces the basics of product management, including the role of a product manager and the product lifecycle.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "What is Product Management?",
+            description:
+              "Learn about the product manager's role in a company and the stages of product development.",
+          },
+          {
+            lesson: 2,
+            title: "The Product Lifecycle",
+            description:
+              "Understand the different stages of the product lifecycle and how product managers contribute to each stage.",
+          },
+        ],
+      },
+      {
+        course: 2,
+        duration: "90 minutes",
+        title: "Agile Methodologies and Roadmap Planning",
+        welcome:
+          "Learn how Agile methodologies drive product development and how to create and manage a product roadmap.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Agile Principles",
+            description:
+              "Understand the principles of Agile development and how they apply to product management.",
+          },
+          {
+            lesson: 2,
+            title: "Building a Product Roadmap",
+            description:
+              "Learn how to plan and prioritize features for your product roadmap.",
+          },
+        ],
+      },
+      {
+        course: 3,
+        duration: "120 minutes",
+        title: "Stakeholder Management and Communication",
+        welcome:
+          "Master the skills needed to effectively communicate with stakeholders and manage their expectations.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Understanding Stakeholder Needs",
+            description:
+              "Learn how to identify and understand the needs and concerns of stakeholders.",
+          },
+          {
+            lesson: 2,
+            title: "Effective Communication Strategies",
+            description:
+              "Explore strategies for clear and effective communication with stakeholders, including presentation and reporting skills.",
+          },
+        ],
+      },
+      {
+        course: 4,
+        duration: "180 minutes",
+        title: "User Experience and Market Analysis",
+        welcome:
+          "Learn how to apply user experience principles and market research to build successful products.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "User Experience Design Basics",
+            description:
+              "Understand the principles of user experience (UX) and how to design user-centric products.",
+          },
+          {
+            lesson: 2,
+            title: "Market Research and Competitive Analysis",
+            description:
+              "Learn how to analyze market trends and conduct competitive analysis to inform product decisions.",
+          },
+        ],
+      },
+    ],
   },
+
   {
     id: 6,
     course_id: "CC107",
@@ -556,6 +1180,92 @@ export const courseFilterObject = [
       "Managing cloud resources",
       "Serverless computing",
       "Cost optimization in cloud computing",
+    ],
+    courses: [
+      {
+        course: 1,
+        duration: "60 minutes",
+        title: "Introduction to Cloud Computing",
+        welcome:
+          "This module covers the basics of cloud computing, including cloud models, services, and infrastructure.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "What is Cloud Computing?",
+            description:
+              "Understand the basic concepts of cloud computing, including the different cloud service models.",
+          },
+          {
+            lesson: 2,
+            title: "Cloud Deployment Models",
+            description:
+              "Explore different cloud deployment models, such as public, private, and hybrid clouds.",
+          },
+        ],
+      },
+      {
+        course: 2,
+        duration: "90 minutes",
+        title: "Cloud Security and Virtualization",
+        welcome:
+          "Learn about the key principles of cloud security and how virtualization plays a role in cloud computing.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Cloud Security Fundamentals",
+            description:
+              "Understand the essential concepts of cloud security and how to protect cloud-based resources.",
+          },
+          {
+            lesson: 2,
+            title: "Virtualization in Cloud Computing",
+            description:
+              "Learn how virtualization enables cloud computing and its role in resource management.",
+          },
+        ],
+      },
+      {
+        course: 3,
+        duration: "120 minutes",
+        title: "Deploying and Managing Cloud Applications",
+        welcome:
+          "Learn how to deploy and manage applications in the cloud using popular platforms like AWS, Azure, and Google Cloud.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Deploying Applications on AWS",
+            description:
+              "Learn how to deploy and manage cloud applications on AWS, a popular cloud computing platform.",
+          },
+          {
+            lesson: 2,
+            title: "Managing Cloud Resources",
+            description:
+              "Understand how to manage cloud resources, such as storage, compute, and networking services.",
+          },
+        ],
+      },
+      {
+        course: 4,
+        duration: "180 minutes",
+        title: "Serverless Computing and Cost Optimization",
+        welcome:
+          "Explore serverless computing and how to optimize cloud costs to maximize efficiency and reduce expenses.",
+        lessons: [
+          {
+            lesson: 1,
+            title: "Introduction to Serverless Computing",
+            description:
+              "Understand the concept of serverless computing and how it simplifies application deployment.",
+          },
+          {
+            lesson: 2,
+            title: "Cost Optimization in Cloud Computing",
+            description:
+              "Learn techniques to optimize cloud resources and minimize costs while maintaining performance.",
+          },
+        ],
+      },
     ],
   },
 ];

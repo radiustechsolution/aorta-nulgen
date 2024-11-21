@@ -1,7 +1,10 @@
 import { CourseLevelDuration } from "@/components/course/dynamic-components/courseInfo";
+import { CourseOutlineComp } from "@/components/course/dynamic-components/courseOutlineComp";
+import { CourseOutlineSectionComp } from "@/components/course/dynamic-components/CourseOutlineSection";
 import { CourseProgram } from "@/components/course/dynamic-components/courseProgram";
 import { DynamicHeroComp } from "@/components/course/dynamic-components/hero";
 import { SkillToLearn } from "@/components/course/dynamic-components/skillsToLearn";
+import { Footer } from "@/components/landing-page/footer";
 import CourseLayoutDetails from "@/layouts/courseLayout";
 import { courseFilterObject } from "@/lib/objects";
 import { useSession } from "next-auth/react";
@@ -47,9 +50,10 @@ export default function CourseDetails() {
         {/* Skills to learn */}
         <SkillToLearn data={course.skillsToLearn} />
 
-        {/* Course in the programs */}
-        <CourseProgram title={course.title} />
+        {/* Course Outline */}
+        <CourseOutlineComp data={course} />
       </section>
+      <Footer />
     </CourseLayoutDetails>
   );
 }
