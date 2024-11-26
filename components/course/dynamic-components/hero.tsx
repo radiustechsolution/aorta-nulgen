@@ -28,7 +28,7 @@ export const DynamicHeroComp = ({ data }: Types) => {
     setLoading(true);
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/v1/course/apply`,
+        `${process.env.NEXT_PUBLIC_API_URL}/v1/course/enroll`,
         {
           method: "POST",
           body: JSON.stringify({
@@ -48,7 +48,7 @@ export const DynamicHeroComp = ({ data }: Types) => {
         return toast(json.message, { toastId: "nksx" });
       }
       setLoading(false);
-      router.push(siteConfig.path.paths.dashboardJob);
+      router.push("/course/1/class?lesson=1");
     } catch (error) {
       console.error("Error fetching jobs:", error);
     } finally {
