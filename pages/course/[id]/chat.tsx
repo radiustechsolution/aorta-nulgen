@@ -13,7 +13,7 @@ import ChatLayout from "@/layouts/chat";
 import { getCurrentTimestamp } from "@/lib/functions";
 import { getChatGPTResponse } from "@/lib/helper";
 
-export const EzzraAiChatPage = () => {
+const EzzraAiChatPage = () => {
   // State
   const [message, setMessage] = useState(""); // Input message state
   const [messages, setMessages] = useState<MessageTypes[]>([]); // Empty initial messages
@@ -199,3 +199,5 @@ export const EzzraAiChatPage = () => {
     </section>
   );
 };
+
+export default EzzraAiChatPage;
