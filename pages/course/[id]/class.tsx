@@ -3,7 +3,7 @@ import { courseFilterObject } from "@/lib/objects";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import { EzzraAiChatPage } from "./chat";
+import EzzraAiChatPage from "./chat";
 
 const CourseClass = () => {
   // Hooks
