@@ -251,7 +251,7 @@ const SignUp = () => {
           </div>
 
           {/* Right */}
-          <div className="w-full hidden lg:flex  flex-col justify-center items-center">
+          {/* <div className="w-full hidden lg:flex  flex-col justify-center items-center">
             <div className="flex flex-col gap-2">
               <h1 className="text-[33px] text-center font-[600] leading-[37.996px] text-[#232535]">
                 Our numbers
@@ -292,7 +292,7 @@ const SignUp = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -2,7 +2,6 @@ import { siteConfig } from "@/config/site";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { IoMdMenu } from "react-icons/io";
 import { useTranslations } from "next-intl";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { NulgenButton } from "@/components/button";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
@@ -30,7 +29,7 @@ export const CourseNavbar = () => {
               key={data.title}
             >
               <span className="flex items-center">
-                {tn(data.title)}
+                {data.original}
                 {data.isDropDown && (
                   <MdOutlineKeyboardArrowDown color="#262d3d" />
                 )}
@@ -42,7 +41,7 @@ export const CourseNavbar = () => {
 
       <div className="flex items-center gap-8">
         {/* Language Switcher */}
-        <LanguageSwitcher />
+        {/* <LanguageSwitcher /> */}
         {!session && (
           <div className="hidden lg:flex items-center gap-5">
             {/* <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
@@ -55,7 +54,7 @@ export const CourseNavbar = () => {
               action={() => router.push(siteConfig.path.paths.flow1)}
             />
             <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
-              {tn("login")}
+              Login
             </p>
           </div>
         )}

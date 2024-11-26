@@ -10,32 +10,33 @@ export const siteConfig = {
     bgPrimary: "#D2D6E2",
     bgPrimaryFaint: "#F7F8FB",
   },
+
+  colors: {
+    primary: "#6B68DF",
+    cardLightColor: "#ffffff",
+    cardDarkColor: "#171717",
+    bgLightColor: "#F3F3F3",
+    bgDarkColor: "#212121",
+  },
   path: {
     navbarLinks: [
       {
-        title: "getInternship",
-        path: "/",
+        title: "exploreCareer",
+        path: "/course",
         isDropDown: false,
+        original: "Explorer Career",
       },
       {
-        title: "masterSkill",
-        path: "/",
-        isDropDown: true,
-      },
-      {
-        title: "aboutUs",
-        path: "/",
+        title: "findInternship",
+        path: "/jobs",
         isDropDown: false,
-      },
-      {
-        title: "blog",
-        path: "/",
-        isDropDown: false,
+        original: "Find Internship",
       },
       {
         title: "contact",
         path: "/",
         isDropDown: false,
+        original: "Contact",
       },
     ],
 
@@ -56,6 +57,7 @@ export const siteConfig = {
       dashboardSkill: "/dashboard/skill",
       dashboardPreferences: "/dashboard/preferences",
       error: "/error",
+      chatHome: "/chat",
     },
   },
 };

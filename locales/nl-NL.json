@@ -41,6 +41,7 @@
       }
     }
   },
+
   "navbar": {
     "getInternship": "Stage vinden",
     "masterSkill": "Beheers Vaardigheid",
@@ -48,6 +49,8 @@
     "blog": "Blog",
     "contact": "Contact",
     "postInternship": "Plaats Stage",
-    "login": "Inloggen"
+    "login": "Inloggen",
+    "exploreCareer": "Verken Carrière",
+    "findInternship": "Zoek Stage"
   }
 }

@@ -1,4 +1,5 @@
 import { OnboardSelectionCard } from "@/components/onboard/OnboardSelectionCard";
+import { siteConfig } from "@/config/site";
 import AuthLayout from "@/layouts/auth";
 
 const Flow1 = () => {
@@ -25,12 +26,12 @@ const Flow1 = () => {
         {/* Selections */}
         <div className="mt-10 flex flex-col gap-3">
           <OnboardSelectionCard
-            path={"/auth/flow/internship"}
+            path={siteConfig.path.paths.jobBoard}
             title="Get Internship"
             subtitle="Gain real-world experience and kickstart your professional journey."
           />
           <OnboardSelectionCard
-            path={"/auth/flow/skill"}
+            path={siteConfig.path.paths.course}
             title="Learn new skill"
             subtitle="Unlock your potential with hands-on learning and real-world experience"
           />

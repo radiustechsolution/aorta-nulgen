@@ -34,3 +34,11 @@ export type LatestType = {
   image: string;
   bgImage: string;
 };
+
+export type MessageTypes = {
+  id: number;
+  text: string;
+  sender: "user" | "bot";
+  timestamp: string;
+  timeago: string;
+};

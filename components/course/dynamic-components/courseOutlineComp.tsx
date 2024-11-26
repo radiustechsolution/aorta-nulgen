@@ -18,8 +18,8 @@ interface Types {
 
 export const CourseOutlineComp = ({ data }: any) => {
   // Navigate to a Job
-  const handleNavigate = (id: any) => {
-    router.push(`/course/${id}`);
+  const handleNavigate = (id: any, lesson: any) => {
+    router.push(`/course/${id}/class?lesson=${lesson}`);
   };
 
   return (
@@ -29,18 +29,18 @@ export const CourseOutlineComp = ({ data }: any) => {
           Courses In This Program
         </p>
 
-        {data.courses.map((v: any) => (
-          <div key={v.id} className="flex flex-col gap-9">
+        {data.courses.map((data: any) => (
+          <div key={data.id} className="flex flex-col gap-9">
             <div className=" gap-4 flex flex-col">
               <div className="bg-[#142580] w-full p-5 rounded-sm">
                 <p className="text-[#BDEA05] text-[14px]">
-                  Course {v.course} • {v.duration}
+                  Course {data.course} • {data.duration}
                 </p>
                 <p className="text-white text-[25px] font-medium py-3">
-                  Welcome to {v.title}
+                  Welcome to {data.title}
                 </p>
                 <p className="w-full md:max-w-[60%] text-white text-[17px]">
-                  {v.welcome}
+                  {data.welcome}
                 </p>
               </div>
             </div>
@@ -48,9 +48,10 @@ export const CourseOutlineComp = ({ data }: any) => {
             {/* Wrapper with snapping and horizontal scroll */}
             <div className="flex items-center gap-3 overflow-x-auto w-full xl:scrollbar-hide snap-x snap-mandatory">
               <div className="flex gap-5 w-full flex-nowrap">
-                {v.lessons.map((v: any) => (
+                {data.lessons.map((v: any) => (
                   <div
                     key={v.lesson}
+                    onClick={() => handleNavigate(data.course, v.lesson)}
                     //   onClick={() => handleNavigate(v.course_id)}
                     role="presentation"
                     className={`h-[234px] justify-between flex flex-col p-4 border border-[#C7C7C7] rounded-md flex-shrink-0 cursor-pointer relative min-w-[265px] max-w-[265px] snap-none group overflow-hidden`}

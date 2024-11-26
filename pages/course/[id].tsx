@@ -5,11 +5,13 @@ import { CourseProgram } from "@/components/course/dynamic-components/courseProg
 import { DynamicHeroComp } from "@/components/course/dynamic-components/hero";
 import { SkillToLearn } from "@/components/course/dynamic-components/skillsToLearn";
 import { Footer } from "@/components/landing-page/footer";
+import { siteConfig } from "@/config/site";
 import CourseLayoutDetails from "@/layouts/courseLayout";
 import { courseFilterObject } from "@/lib/objects";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 export default function CourseDetails() {
   // Hook
@@ -18,7 +20,7 @@ export default function CourseDetails() {
   const { id } = router.query;
 
   // State
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   // Find the company details by name
   const course = courseFilterObject.find((c) => c.course_id === id);

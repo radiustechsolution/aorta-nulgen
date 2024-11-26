@@ -2,7 +2,9 @@ import { JobBoardHero } from "@/components/job-board/JobBoardHero";
 import { JobPostComp } from "@/components/job-board/JobPostComp";
 import { Footer } from "@/components/landing-page/footer";
 import JobBoardLayout from "@/layouts/jobboard";
+import { loadTranslations } from "@/lib/loadTranslations";
 import { Button, Spinner } from "@nextui-org/react";
+import { GetStaticPropsContext } from "next";
 import React, { useState, useMemo, useEffect, useRef } from "react";
 
 export default function JobBoard() {
@@ -146,4 +148,15 @@ export default function JobBoard() {
       </section>
     </JobBoardLayout>
   );
+}
+
+// Fetch the translations based on the locale
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  const messages = await loadTranslations(locale || "en-US");
+
+  return {
+    props: {
+      messages,
+    },
+  };
 }

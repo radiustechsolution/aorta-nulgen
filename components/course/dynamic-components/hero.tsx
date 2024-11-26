@@ -1,14 +1,60 @@
 import { title } from "@/components/primitives";
 import { RatingComp } from "@/components/rating";
+import { siteConfig } from "@/config/site";
 import { Button } from "@nextui-org/button";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useState } from "react";
 import { IoArrowForwardSharp } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 interface Types {
   data: any;
 }
 
 export const DynamicHeroComp = ({ data }: Types) => {
+  const router = useRouter();
+  const { data: session } = useSession();
+
+  // State
+  const [loading, setLoading] = useState(false);
+
+  const Enroll = async (id: any) => {
+    if (!session) {
+      return router.push(`${siteConfig.path.paths.signup}?xbz=${id}`);
+    }
+
+    setLoading(true);
+    try {
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/v1/course/apply`,
+        {
+          method: "POST",
+          body: JSON.stringify({
+            id: id,
+          }),
+          headers: {
+            "Content-Type": "application/json", // Ensure content type is set
+            Accept: "application/json",
+            Authorization: `Bearer ${session?.user.token}`, // Use bearer token for authorization
+          },
+        }
+      );
+
+      const json = await response.json();
+      if (!response.ok) {
+        setLoading(false);
+        return toast(json.message, { toastId: "nksx" });
+      }
+      setLoading(false);
+      router.push(siteConfig.path.paths.dashboardJob);
+    } catch (error) {
+      console.error("Error fetching jobs:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div className="py-12 h-[85svh] md:h-max flex flex-col items-center justify-end relative">
       <Image
@@ -41,7 +87,11 @@ export const DynamicHeroComp = ({ data }: Types) => {
         </p>
 
         <div className="flex flex-col md:flex-row items-center gap-4">
-          <Button className="rounded-[5px] h-[55px] text-[17px] font-medium bg-[#BDEA05] text-black w-full md:w-[220px]">
+          <Button
+            isLoading={loading}
+            onClick={() => Enroll(data.course_id)}
+            className="rounded-[5px] h-[55px] text-[17px] font-medium bg-[#BDEA05] text-black w-full md:w-[220px]"
+          >
             Enroll Now <IoArrowForwardSharp color="black" size={22} />
           </Button>
           <Button className="rounded-[5px] h-[55px] text-[17px] bg-transparent border-[3px] border-[#00C5A1] text-[#00C5A1] w-full md:w-[220px]">
