@@ -33,6 +33,7 @@ export default function CourseLayout({
       >
         {/* <CourseNavbar /> */}
         <Navbar
+          getStartedPath={siteConfig.path.paths.signup}
           bgColor="bg-[#2016FF]"
           openState={menuOpen}
           toggleMenu={toggleMenu}

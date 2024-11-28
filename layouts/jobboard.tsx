@@ -6,13 +6,17 @@ import { useState } from "react";
 import { siteConfig } from "@/config/site";
 import { IoMdMenu } from "react-icons/io";
 import { useRouter } from "next/router";
+import { CourseNavbar } from "@/components/course/navbar";
+import { useSession } from "next-auth/react";
 
 export default function JobBoardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // Hooks
   const router = useRouter();
+  const { data: session } = useSession();
   // State to handle menu visibility
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -28,11 +32,13 @@ export default function JobBoardLayout({
         className={`flex z-50 bg-white px-5 xl:px-0 flex-col items-center w-full shadow-sm`} // Added shadow class here
       >
         {/* <NavbarJobBoard /> */}
-        <Navbar
+        {/* <Navbar
+          getStartedPath={siteConfig.path.paths.signup}
           bgColor="bg-[#4E6CFF]"
           openState={menuOpen}
           toggleMenu={toggleMenu}
-        />
+        /> */}
+        <CourseNavbar openNav={toggleMenu} />
       </div>
       <main className="w-full flex-1 scrollbar-hide overflow-auto">
         {children}
@@ -78,17 +84,19 @@ export default function JobBoardLayout({
                 </div>
               </li>
             ))}
-            <li>
-              <div
-                role="presentation"
-                onClick={() => router.push(siteConfig.path.paths.dashboard)}
-                className={`text-black cursor-pointer text-[13px] leading-[30px] w-full px-4 py-3 rounded-md transition-all duration-300 hover:bg-[#e0f7fa] ${
-                  router.pathname === "/about" ? "bg-[#051b22]" : ""
-                }`}
-              >
-                <p className="capitalize">Profile</p>
-              </div>
-            </li>
+            {session && (
+              <li>
+                <div
+                  role="presentation"
+                  onClick={() => router.push(siteConfig.path.paths.dashboard)}
+                  className={`text-black cursor-pointer text-[13px] leading-[30px] w-full px-4 py-3 rounded-md transition-all duration-300 hover:bg-[#e0f7fa] ${
+                    router.pathname === "/about" ? "bg-[#051b22]" : ""
+                  }`}
+                >
+                  <p className="capitalize">Profile</p>
+                </div>
+              </li>
+            )}
           </ul>
         </div>
       </div>

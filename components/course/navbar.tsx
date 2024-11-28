@@ -6,7 +6,7 @@ import { NulgenButton } from "@/components/button";
 import { useRouter } from "next/router";
 import { useSession } from "next-auth/react";
 
-export const CourseNavbar = () => {
+export const CourseNavbar = ({ openNav }: any) => {
   const router = useRouter();
   const { data: session } = useSession();
   const t = useTranslations("common");
@@ -22,9 +22,11 @@ export const CourseNavbar = () => {
         >
           {siteConfig.shortName}
         </p>
-        <ul className="hidden xl:flex items-center gap-5">
+        <ul className="hidden md:flex items-center gap-5">
           {siteConfig.path.navbarLinks.map((data) => (
             <li
+              role="presentation"
+              onClick={() => router.push(data.path)}
               className="text-[#262d3d] cursor-pointer text-[13px] font-normal"
               key={data.title}
             >
@@ -43,7 +45,7 @@ export const CourseNavbar = () => {
         {/* Language Switcher */}
         {/* <LanguageSwitcher /> */}
         {!session && (
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="hidden md:flex items-center gap-5">
             {/* <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
               {tn("postInternship")}
             </p> */}
@@ -51,14 +53,24 @@ export const CourseNavbar = () => {
               bgColor="bg-[#2016FF]"
               title="Join Now"
               notRounded
-              action={() => router.push(siteConfig.path.paths.flow1)}
+              action={() => router.push(siteConfig.path.paths.signup)}
             />
-            <p className="text-[#262d3d] cursor-pointer text-[13px] font-normal">
+            <p
+              role="presentation"
+              onClick={() => router.push(siteConfig.path.paths.signin)}
+              className="text-[#262d3d] cursor-pointer text-[13px] font-normal"
+            >
               Login
             </p>
           </div>
         )}
-        <IoMdMenu className="flex xl:hidden" size={33} color="#262d3d" />
+        <IoMdMenu
+          role="presentation"
+          onClick={() => openNav()}
+          className="flex xl:hidden"
+          size={33}
+          color="#262d3d"
+        />
       </div>
     </nav>
   );

@@ -21,9 +21,15 @@ interface NavbarProps {
   toggleMenu: () => void;
   openState: boolean;
   bgColor: string;
+  getStartedPath?: string;
 }
 
-export const Navbar = ({ toggleMenu, bgColor, openState }: NavbarProps) => {
+export const Navbar = ({
+  toggleMenu,
+  bgColor,
+  openState,
+  getStartedPath,
+}: NavbarProps) => {
   const router = useRouter();
   const { data: session } = useSession();
   const t = useTranslations("common");
@@ -66,7 +72,11 @@ export const Navbar = ({ toggleMenu, bgColor, openState }: NavbarProps) => {
             </p> */}
             <NulgenButton
               bgColor={bgColor}
-              action={() => router.push(siteConfig.path.paths.flow1)}
+              action={() =>
+                router.push(
+                  getStartedPath ? getStartedPath : siteConfig.path.paths.flow1
+                )
+              }
             />
             <p
               role="presentation"

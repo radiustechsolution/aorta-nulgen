@@ -70,7 +70,7 @@ export default function DefaultLayout({
 
       {/* Sliding Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-full bg-white bg-herobg z-50 transform transition-transform duration-300 ${
+        className={`fixed md:hidden top-0 right-0 h-full w-full bg-white bg-herobg z-50 transform transition-transform duration-300 ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
