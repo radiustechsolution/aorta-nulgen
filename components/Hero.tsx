@@ -44,7 +44,7 @@ export const HomeHero = () => {
             onClick={() => router.push(siteConfig.path.paths.flow1)}
             className="font-semibold font-ProximaNova sm:hidden text-[20px] h-[52px] w-full bg-secondary rounded-[5px] text-white"
           >
-            {t("hero_get_started")}
+            {!session ? t("hero_get_started") : "Continue"}
           </button>
 
           <div className="mt-10">
